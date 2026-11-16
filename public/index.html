@@ -238,7 +238,8 @@ table.stages td b{display:block;font-weight:600;font-size:16px;line-height:22px}
 table.stages td small{display:block;color:var(--muted);font-size:14px}
 table.stages tr:last-child td{border-bottom:0}
 .know{max-width:66ch}
-.know h3{font-size:24px;margin:24px 0 8px}.know h3:first-child{margin-top:0}
+.know h3{font-size:24px;margin:24px 0 8px}
+.know+.know{margin-top:24px}.know h3:first-child{margin-top:0}
 .bookbox{background:var(--deep);color:var(--on-deep);border-radius:8px;padding:32px;margin-top:24px;display:grid;gap:16px;justify-items:start}
 .bookbox .label{color:var(--ochre);margin:0}
 .bookbox p{max-width:60ch;font-size:18px;line-height:28px}
@@ -328,7 +329,8 @@ const REGIONS={
   islands:{name:'Atlantic islands',img:'madeira'},
   east:{name:'Balkans, Caucasus & Anatolia',img:'georgia'},
   africa:{name:'Africa & Middle East',img:'jordan'},
-  asia:{name:'Central Asia',img:'kyrgyzstan'}
+  asia:{name:'Asia',img:'kyrgyzstan'},
+  americas:{name:'The Americas',img:'inca'}
 };
 const TOPICS={
   first:{name:'A first trek',note:'gentle terrain, short days'},
@@ -612,7 +614,86 @@ const T=[
  pack:`A down jacket and a sleeping bag rated well below zero, layers from T-shirt to shell, warm gloves, a headtorch, and insurance that covers trekking to 6,000 m.`,
  diy:`There is no independent option: park rules require every climber to go with a licensed guide and crew. What you choose is the operator. Look for one that is a partner of the Kilimanjaro Porters Assistance Project, which checks that porters are paid and equipped fairly.`,
  book:{name:'The Kilimanjaro Trail',url:'https://thekilimanjarotrail.com/',line:`climbs Lemosho in eight days with one guide per two climbers, a porter-welfare partnership, daily health checks and park fees included`,from:'€2,489'},
- gal:[['kilimanjaro-2','A high camp with the shadow of the mountain on the clouds'],['kilimanjaro-3','Sunrise over the summit snow'],['kilimanjaro-4','A lone figure on a ridge at dusk']]}
+ gal:[['kilimanjaro-2','A high camp with the shadow of the mountain on the clouds'],['kilimanjaro-3','Sunrise over the summit snow'],['kilimanjaro-4','A lone figure on a ridge at dusk']]},
+{slug:'camino-de-santiago',name:'Camino de Santiago',sub:'The last 115 km of the Camino Francés',where:'Spain · Galicia',countries:1,region:'alps',days:5,trip:'7 days',km:115,sleep:'Pilgrim hostels and small hotels',st:'guest',level:1,months:[4,5,6,9,10],img:'camino',tags:['first'],
+ blurb:`The most walked long-distance route in Europe. The final five stages from Sarria cross green Galician hills to the cathedral in Santiago and earn you the pilgrim's certificate.`,
+ yes:`First-timers, solo walkers and anyone who likes company on the trail.`,no:`Walkers who want mountains or solitude. This stretch is busy from May to September.`,
+ intro:[`The Camino de Santiago is a web of medieval pilgrim routes that all end at the tomb of Saint James in Santiago de Compostela. The best known, the Camino Francés, runs about 780 km from Saint-Jean-Pied-de-Port in the French Pyrenees and takes around five weeks.`,
+ `Most people walk only the end of it. Sarria, 115 km from Santiago, is the favourite starting point because it lies just beyond the minimum distance needed for the Compostela, the certificate the cathedral has issued to pilgrims for centuries. The five stages from there run through oak woods, hamlets of stone and slate, and dairy farms, with a café every few kilometres and a steady stream of fellow walkers from all over the world.`],
+ hl:[`The stone marker showing 100 km to go, between Sarria and Portomarín`,`Crossing the long bridge over the Miño reservoir into Portomarín`,`Pulpo á feira, Galician octopus, in Melide`,`Monte do Gozo, where pilgrims first see the cathedral towers`,`Walking into the Praza do Obradoiro and collecting your Compostela`],
+ stages:[[`Sarria → Portomarín`,22,null,null,`5–6 h`,`Oak woods, hamlets and the 100 km marker`],[`Portomarín → Palas de Rei`,25,null,null,`6 h`,`A steady climb, then rolling farmland`],[`Palas de Rei → Arzúa`,29,null,null,`7 h`,`The longest stage; many people split it at Melide`],[`Arzúa → O Pedrouzo`,19,null,null,`5 h`,`Eucalyptus forest and easy tracks`],[`O Pedrouzo → Santiago de Compostela`,20,null,null,`5 h`,`Monte do Gozo, then the old town`]],
+ hard:`Accessible to almost anyone who can walk five hours a day. There are no mountains, though the path rises and falls constantly and the third stage is 29 km. The usual problems are blisters and doing too much too soon, so walk in shoes you already know.`,
+ nights:`Pilgrim hostels, called albergues, offer a bunk for a small fee and are found in every village. Small hotels and guesthouses are the alternative if you want a private room. A three-course pilgrim menu is served almost everywhere.`,
+ getting:`Fly to Santiago de Compostela and take a bus or train to Sarria by way of Lugo, or travel by train from Madrid. The walk ends in Santiago, so the return is simple.`,
+ when:`Spring and autumn are best. July and August are hot and crowded, and beds on this last section fill early in the day. Winter is quiet and wet, with some hostels closed.`,
+ pack:`A light pack of six to eight kilos, worn-in walking shoes or trail runners, a rain poncho, a sleeping-bag liner for the hostels, and your pilgrim passport.`,
+ diy:`Nothing is easier to organise yourself. Yellow arrows mark every junction. Buy a pilgrim passport (credencial) before you start and collect two stamps a day on the last 100 km; you show it at the Pilgrim's Office in Santiago to receive the Compostela.`,
+ org:`Agencies in Spain book private rooms for each night and move your bag from door to door, which is useful in high season when hostel beds run short.`,
+ gal:[]},
+
+{slug:'west-highland-way',name:'West Highland Way',sub:'Glasgow to Fort William on foot',where:'Scotland',countries:1,region:'nordic',days:8,trip:'9 to 10 days',km:154,up:3500,high:'550 m',sleep:'Inns, B&Bs, bunkhouses and campsites',st:'guest',level:2,months:[4,5,6,7,8,9,10],img:'whw',tags:[],
+ blurb:`Scotland's first and favourite long-distance path: from the edge of Glasgow along Loch Lomond, across Rannoch Moor and through Glencoe to the foot of Ben Nevis.`,
+ yes:`Walkers on a first long trail who want big scenery and a pub at the end of each day.`,no:`Anyone who hates rain or midges. Both are part of a Highland summer.`,
+ intro:[`The West Highland Way runs 154 km from Milngavie, a suburb of Glasgow, to Fort William. It opened in 1980 as Scotland's first official long-distance route and is still the most popular, walked by tens of thousands of people a year.`,
+ `Its appeal is the way the landscape builds. It begins in farmland, follows the whole eastern shore of Loch Lomond, climbs into the Highlands and then crosses Rannoch Moor, one of the emptiest places in Britain, before passing the great pyramid of Buachaille Etive Mòr at the head of Glencoe. Much of it follows eighteenth-century military roads and older cattle-droving tracks, so the walking is rarely steep.`],
+ hl:[`The view down Loch Lomond from Conic Hill on day two`,`Rannoch Moor in clear weather: 20 km without a house`,`Buachaille Etive Mòr from the Kingshouse hotel`,`The Devil's Staircase, the highest point of the route and easier than its name`,`Finishing under Ben Nevis, with the option of climbing it the next day`],
+ stages:[[`Milngavie → Drymen`,19,null,null,`5–6 h`,`Gentle start through woods and farmland`],[`Drymen → Rowardennan`,23,null,null,`6–7 h`,`Over Conic Hill to Loch Lomond`],[`Rowardennan → Inverarnan`,22,null,null,`6–7 h`,`Rough, rooty lochside path; the slowest day`],[`Inverarnan → Tyndrum`,19,null,null,`5–6 h`,`Glen Falloch and Strath Fillan`],[`Tyndrum → Inveroran`,14,null,null,`4 h`,`Easy day past Bridge of Orchy`],[`Inveroran → Kingshouse`,16,null,null,`4–5 h`,`Across Rannoch Moor, with no shelter`],[`Kingshouse → Kinlochleven`,14,null,null,`4–5 h`,`The Devil's Staircase, then a long descent`],[`Kinlochleven → Fort William`,24,null,null,`6–8 h`,`The Lairig Mòr and Glen Nevis`]],
+ hard:`Moderate. The total climb is about 3,500 m spread over eight days, and the path is clear and waymarked. The hard parts are the rough shore of Loch Lomond, the exposure on Rannoch Moor in bad weather, and simply walking for a week in wet boots. Fit walkers do it in five or six days.`,
+ nights:`Villages a day apart have hotels, B&Bs, bunkhouses and campsites. Places like Inveroran and Kingshouse have very few beds, so they dictate the whole itinerary. Wild camping is allowed in most places, with seasonal restrictions along Loch Lomond.`,
+ getting:`Milngavie is 25 minutes by train from central Glasgow. Fort William has trains and buses back to Glasgow, and the West Highland railway line is a fine way to see where you walked.`,
+ when:`April to October. May is drier and comes before the midges; June to August are warmer and busier; September is quiet with autumn colour.`,
+ pack:`Fully waterproof jacket and trousers, boots that cope with mud, a midge net and repellent in summer, and blister plasters.`,
+ diy:`Easy to plan yourself, provided you book early. Accommodation on the busiest nights sells out months ahead. Several companies carry luggage between overnight stops, so you can walk with a daypack.`,
+ org:`Walking-holiday companies sell self-guided packages with rooms and bag transfer arranged. They are worth considering mainly because they hold allocations at the small stops where beds are scarce.`,
+ gal:[['whw-2','Sun breaking over the ridges of Glencoe, with heather in the foreground'],['whw-3','Sunset over Loch Lomond and its islands'],['whw-4','Evening light on Loch Lomond, framed by pines']]},
+
+{slug:'inca-trail',name:'Inca Trail',sub:'Four days to Machu Picchu',where:'Peru',countries:1,region:'americas',days:4,trip:'8 to 9 days',km:43,high:'4,215 m',highN:4215,sleep:'Three nights in tents',st:'camp',level:3,months:[4,5,6,7,8,9,10],img:'inca',tags:['altitude','short'],
+ blurb:`An original Inca stone road over three high passes and past ruins you can only reach on foot, ending at the Sun Gate above Machu Picchu.`,
+ yes:`Walkers who want the journey to matter as much as the destination.`,no:`Last-minute planners. Permits are limited and sell out months ahead.`,
+ intro:[`The Incas built some 40,000 km of roads across the Andes. This 43 km fragment is the most famous because of where it leads. It leaves the Urubamba valley at a spot known as Kilometre 82, climbs through cloud forest to a pass at 4,215 m, and follows original paving, staircases and tunnels past a chain of Inca sites to Machu Picchu.`,
+ `Arriving on foot is what sets it apart. Train passengers enter through a turnstile. Trail walkers come over the ridge at Inti Punku, the Sun Gate, soon after dawn on the fourth day and see the city laid out below.`],
+ hl:[`Dead Woman's Pass, 4,215 m, the high point of day two`,`Sayacmarca, a ruin perched on a spur and reached by a single staircase`,`Wiñay Wayna, steep terraces above the valley near the last camp`,`First sight of Machu Picchu from the Sun Gate`],
+ stages:[[`Km 82 → Wayllabamba`,12,400,null,`5–6 h`,`Gentle start along the valley, past the Patallacta ruins`],[`Wayllabamba → Pacaymayo`,11,1215,615,`6–7 h`,`Over Dead Woman's Pass; the hardest day`],[`Pacaymayo → Wiñay Wayna`,16,null,null,`8–10 h`,`Two more passes and the best ruins; the longest day`],[`Wiñay Wayna → Machu Picchu`,5,null,null,`2 h`,`Pre-dawn start to the Sun Gate`]],
+ hard:`Sporty. The distances are short, but the second day climbs more than 1,200 m to 4,215 m and the Inca staircases are steep and uneven, especially going down. Altitude is the main factor. Spend at least two days in Cusco, at 3,400 m, before you start.`,
+ nights:`Fixed campsites, with tents, meals and cooking gear carried by porters. Facilities are basic. Most people add nights in Cusco before and after.`,
+ getting:`Fly to Cusco by way of Lima. Operators drive you to the trailhead beyond Ollantaytambo, and the return from Machu Picchu is by train from Aguas Calientes.`,
+ when:`The dry season from May to September has the clearest weather and the highest demand. April and October are good compromises. The trail is closed every February for maintenance.`,
+ pack:`A sleeping bag warm enough for nights near freezing, layers for sun and cold, a rain jacket, a headtorch, and your passport, which is checked against the permit.`,
+ diy:`You cannot walk it independently. Access is capped at 500 people a day including guides and porters, permits are issued only through licensed operators and are tied to your passport, and for the dry season they often sell out several months in advance.`,
+ org:`Choosing an operator is the real decision. Ask how many porters the group has, what weight each carries, and how they are paid and equipped. If permits are gone, the Salkantay and Lares treks reach Machu Picchu without one.`,
+ gal:[['inca-2','Layers of Andean ridges and snow peaks in morning haze']]},
+
+{slug:'annapurna-circuit',name:'Annapurna Circuit',sub:'Over the Thorong La',where:'Nepal',countries:1,region:'asia',days:7,trip:'14 to 16 days',km:86,high:'5,416 m',highN:5416,sleep:'Teahouse lodges',st:'guest',level:4,months:[3,4,5,10,11],img:'annapurna',tags:['altitude'],
+ blurb:`Nepal's classic teahouse trek: up the Marsyangdi valley through Buddhist villages, over a 5,416 m pass and down into the deepest gorge in the Himalaya.`,
+ yes:`Fit walkers with two weeks who want high mountains and village life together.`,no:`Anyone who cannot spare the days to acclimatise. The pass does not forgive shortcuts.`,
+ intro:[`The Annapurna Circuit opened to trekkers in 1977 and has been called the best long walk in the world many times since. It curls around the Annapurna massif, climbing one river valley and descending another, and in doing so passes from rice terraces to pine forest to the dry, Tibetan-influenced country of Manang and Mustang.`,
+ `Roads now reach far up both valleys, so most people walk the high central section. The version here starts in Chame and ends in Jomsom: seven walking days plus a rest day in Manang, built around the crossing of the Thorong La at 5,416 m.`],
+ hl:[`The upper trail from Pisang through Ghyaru and Ngawal, facing Annapurna II`,`A rest day in Manang, with side walks to a glacier lake`,`Sunrise on the Thorong La, 5,416 m`,`The temple and 108 water spouts at Muktinath`,`An optional finish at Poon Hill for sunrise over Dhaulagiri and Annapurna South`],
+ stages:[[`Chame → Upper Pisang`,14,null,null,`5–6 h`,`Pine forest below the huge rock slab of Paungda Danda`],[`Upper Pisang → Manang`,20,null,null,`7–8 h`,`High route by Ghyaru and Ngawal`],[`Manang → Yak Kharka`,10,null,null,`4–5 h`,`After a rest day in Manang; now above 4,000 m`],[`Yak Kharka → Thorong Phedi`,7,null,null,`3–4 h`,`Short day to the foot of the pass`],[`Thorong Phedi → Thorong La → Muktinath`,15,970,1620,`7–9 h`,`Start before dawn to beat the wind`],[`Muktinath → Kagbeni`,10,null,null,`3 h`,`Down into the Kali Gandaki valley`],[`Kagbeni → Jomsom`,10,null,null,`3 h`,`Along the riverbed; windy after midday`]],
+ hard:`Demanding. No day is technical, but you sleep above 3,500 m for five nights and cross a pass at 5,416 m, with a 1,600 m descent straight afterwards. Altitude sickness is a real risk: take the rest day in Manang and turn back if symptoms get worse. Distances in the table are approximate.`,
+ nights:`Family-run teahouses in every village: a simple twin room, shared bathroom and a dining room with a stove. The staple is dal bhat, rice and lentils, with unlimited refills.`,
+ getting:`Fly to Kathmandu, then travel by bus and jeep to Besisahar and on to Chame, a long day. From Jomsom there are flights and buses to Pokhara.`,
+ when:`October and November have the clearest skies. March to May is warmer, with rhododendrons in flower lower down. The pass is often closed by snow in winter, and summer is monsoon.`,
+ pack:`A warm sleeping bag, down jacket, hat and gloves for the pass, sun protection, water purification, and cash in rupees, since there are few cash machines.`,
+ diy:`You need a permit for the Annapurna Conservation Area. Nepal's rules on whether trekkers must hire a licensed guide have changed more than once since 2023 and are applied unevenly, so check the current requirement before you plan to go alone.`,
+ org:`Hiring a guide and porter through a registered Nepali agency is inexpensive and supports local incomes. Ask about their insurance and what they are provided with for the pass.`,
+ gal:[['annapurna-2','Sunrise over the Annapurna range from Poon Hill'],['annapurna-3','Snow peaks above forested ridges at dawn, near Poon Hill']]},
+
+{slug:'alta-via-1',name:'Alta Via 1',sub:'The classic Dolomites high route',where:'Italy',countries:1,region:'alps',days:10,trip:'11 to 12 days',km:120,up:6500,high:'2,752 m',highN:2752,sleep:'Rifugi (mountain huts)',st:'hut',level:4,months:[6,7,8,9],img:'dolomites-2',tags:['hut'],
+ blurb:`Ten days hut to hut from Lago di Braies to Belluno, through the Fanes, Lagazuoi, Pelmo and Civetta groups. The full version of the Dolomites' most famous walk.`,
+ yes:`Hikers who want a complete Alpine traverse without technical climbing.`,no:`Those who cannot book early. Huts on this route fill months ahead.`,
+ intro:[`The Alta Via 1 is the original Dolomites high route and still the best introduction to the range. It runs north to south for about 120 km, from the emerald Lago di Braies in South Tyrol to La Pissa, a bus stop in the valley near Belluno, and takes ten or eleven days.`,
+ `Each day crosses from one mountain group to the next: the high plateaux of Sennes and Fanes, the war-scarred summit of Lagazuoi, the towers of the Cinque Torri, the huge wall of the Civetta. It is the easiest of the numbered Alte Vie, with no compulsory via ferrata, and you sleep in a rifugio every night. A shorter five-day route through the same northern section is described on our Dolomites Hut to Hut page.`],
+ hl:[`Lago di Braies before the day visitors arrive`,`Rifugio Lagazuoi at 2,752 m, the high point, with First World War tunnels in the mountain below`,`The Cinque Torri and Rifugio Nuvolau on its rocky summit`,`Lago Coldai and the walk beneath the north-west face of the Civetta`,`The quiet, wilder final stages through the Belluno Dolomites`],
+ stages:[[`Lago di Braies → Rifugio Biella`,null,null,null,`3–4 h`,`A steep first climb out of the lake basin`],[`Rifugio Biella → Rifugio Fanes`,null,null,null,`5–6 h`,`Across the Sennes plateau, down to Pederü and up again`],[`Rifugio Fanes → Rifugio Lagazuoi`,null,null,null,`5–6 h`,`Forcella del Lago and the climb to the highest hut`],[`Rifugio Lagazuoi → Rifugio Nuvolau`,null,null,null,`5 h`,`Past the Cinque Torri`],[`Rifugio Nuvolau → Rifugio Città di Fiume`,null,null,null,`5 h`,`Towards Monte Pelmo`],[`Rifugio Città di Fiume → Rifugio Coldai`,null,null,null,`4 h`,`Short day to the lake under the Civetta`],[`Rifugio Coldai → Rifugio Vazzoler`,null,null,null,`4 h`,`Below the Civetta wall`],[`Rifugio Vazzoler → Rifugio Carestiato`,9.2,550,460,`4 h`,`Short, with more climbing than it looks`],[`Rifugio Carestiato → Rifugio Pramperet`,null,null,null,`5–6 h`,`Into the Belluno Dolomites national park`],[`Rifugio Pramperet → La Pissa`,null,null,null,`6 h`,`Long descent to the valley`]],
+ hard:`Demanding because of its length and cumulative climb of roughly 6,500 m. The paths are well marked and mostly straightforward, with a few stretches of scree and occasional cables or handrails on narrow sections. Stage distances are not listed here because they vary with the huts you choose.`,
+ nights:`Rifugi with dormitories or small rooms, hot dinners and breakfast. A sleeping-bag liner is required. Carrying a full pack with no tent is what keeps the days manageable.`,
+ getting:`Venice is the nearest major airport, with buses to Cortina d'Ampezzo. Reach Lago di Braies by bus from Dobbiaco; in summer, car access to the lake is restricted. From La Pissa a bus runs to Belluno, which has trains to Venice.`,
+ when:`Late June to mid-September, when the huts are open. Snow can linger on the high passes into July. September is quieter and often settled.`,
+ pack:`Boots with ankle support, poles, waterproofs, warm layers for evenings above 2,000 m, a liner, cash for the huts and earplugs.`,
+ diy:`The route is simple to follow. The challenge is booking ten huts in a row for consecutive dates: reservations open in winter and the best-placed rifugi fill quickly. Be ready to adjust stage lengths around what is available.`,
+ org:`Hut-booking services and trekking companies will reserve the whole chain for you. That mostly saves time, since the walking itself needs no guide.`,
+ gal:[['dolomites-3','A small lake in a bowl of pale rock'],['dolomites-4','A walker crossing a scree slope below rock towers']]}
 ];
 const NOTES=[
  ['How to choose your first multi-day trek','Distance, climb, sleeping and season, in that order'],
@@ -622,21 +703,21 @@ const NOTES=[
  ['The five-day packing list','Everything under nine kilos']
 ];
 const NEXT=[
- ['Alta Via 1','Italy'],['GR20','Corsica'],['West Highland Way','Scotland'],['Everest Base Camp','Nepal'],
- ['Annapurna Circuit','Nepal'],['Inca Trail','Peru'],['Torres del Paine W','Chile'],['Milford Track','New Zealand'],['Kumano Kodo','Japan']
+ ['Everest Base Camp','Nepal'],['John Muir Trail','USA'],['Salkantay Trek','Peru'],['Kumano Kodo','Japan'],
+ ['GR20','Corsica'],['Torres del Paine W','Chile'],['Milford Track','New Zealand']
 ];
 
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const season=t=>'<div class="season" role="img" aria-label="In season: '+t.months.map(m=>MONTHS[m-1]).join(', ')+'">'+M.map((m,i)=>'<i class="'+(t.months.includes(i+1)?'on':'')+'">'+m+'</i>').join('')+'</div>';
-const card=(t,big)=>'<a class="card'+(big?' big':'')+'" href="#trek-'+t.slug+'"><div class="ph"><img src="img/'+t.img+'.jpg" alt="'+esc(t.name)+', '+esc(t.where)+'" loading="lazy"><span class="lvl tt-badge tt-badge--dark">'+LEVELS[t.level]+'</span></div><div class="tx"><span class="where">'+esc(t.where)+'</span><h3>'+esc(t.name)+'</h3>'+(big?'<p>'+esc(t.blurb)+'</p>':'')+season(t)+'<div class="facts num"><span class="tt-badge tt-badge--forest">'+t.days+' days</span><span class="tt-badge tt-badge--dark">'+t.km+' km</span><span class="tt-badge tt-badge--outline">+'+t.up.toLocaleString('en')+' m</span></div></div></a>';
+const card=(t,big)=>'<a class="card'+(big?' big':'')+'" href="#trek-'+t.slug+'"><div class="ph"><img src="img/'+t.img+'.jpg" alt="'+esc(t.name)+', '+esc(t.where)+'" loading="lazy"><span class="lvl tt-badge tt-badge--dark">'+LEVELS[t.level]+'</span></div><div class="tx"><span class="where">'+esc(t.where)+'</span><h3>'+esc(t.name)+'</h3>'+(big?'<p>'+esc(t.blurb)+'</p>':'')+season(t)+'<div class="facts num"><span class="tt-badge tt-badge--forest">'+t.days+' days</span><span class="tt-badge tt-badge--dark">'+t.km+' km</span>'+(t.up?'<span class="tt-badge tt-badge--outline">+'+t.up.toLocaleString('en')+' m</span>':'<span class="tt-badge tt-badge--outline">'+esc(SLEEP[t.st])+'</span>')+'</div></div></a>';
 const bySlug=s=>T.find(t=>t.slug===s);
 
 let state={region:'',level:'',month:'',topic:'',sleep:'',sort:'name'};
 let pick=new Date().getMonth()+1;
 
 function home(){
-  const km=T.reduce((a,t)=>a+t.km,0), countries=19;
+  const km=T.reduce((a,t)=>a+t.km,0), countries=21;
   const f=[bySlug('ak-suu-traverse'),bySlug('tour-du-mont-blanc'),bySlug('laugavegur')];
   return `
 <div class="hero">
@@ -698,7 +779,7 @@ function home(){
 }
 function monthRows(){
   const list=T.filter(t=>t.months.includes(pick));
-  $('#monthrows').innerHTML=list.length?'<div class="rows">'+list.map(t=>'<a class="row" href="#trek-'+t.slug+'"><img src="img/'+t.img+'.jpg" alt="" loading="lazy"><div><h3>'+esc(t.name)+'</h3><span class="num">'+esc(t.where)+' · '+t.days+' days · '+t.km+' km · +'+t.up.toLocaleString('en')+' m · '+LEVELS[t.level]+'</span></div><span class="go" aria-hidden="true">→</span></a>').join('')+'</div>':'<p class="empty">Nothing in season in '+MONTHS[pick-1]+' yet. More southern-hemisphere and desert treks are on the list.</p>';
+  $('#monthrows').innerHTML=list.length?'<div class="rows">'+list.map(t=>'<a class="row" href="#trek-'+t.slug+'"><img src="img/'+t.img+'.jpg" alt="" loading="lazy"><div><h3>'+esc(t.name)+'</h3><span class="num">'+esc(t.where)+' · '+t.days+' days · '+t.km+' km'+(t.up?' · +'+t.up.toLocaleString('en')+' m':'')+' · '+LEVELS[t.level]+'</span></div><span class="go" aria-hidden="true">→</span></a>').join('')+'</div>':'<p class="empty">Nothing in season in '+MONTHS[pick-1]+' yet. More southern-hemisphere and desert treks are on the list.</p>';
   document.querySelectorAll('.months button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.month===pick)));
 }
 
@@ -751,7 +832,7 @@ function detail(t){
     <div><dt>Days on trail</dt><dd>${t.days}</dd></div>
     <div><dt>Allow in total</dt><dd>${esc(t.trip)}</dd></div>
     <div><dt>Distance</dt><dd>${t.km} km</dd></div>
-    <div><dt>Total climb</dt><dd>+${n0(t.up)} m</dd></div>
+    <div><dt>${t.up?'Total climb':'Longest day'}</dt><dd>${t.up?'+'+n0(t.up)+' m':Math.max(...t.stages.map(g=>g[1]||0))+' km'}</dd></div>
     <div><dt>Level</dt><dd><span class="pips" aria-hidden="true">${[1,2,3,4,5].map(x=>'<i class="'+(x<=t.level?'on':'')+'"></i>').join('')}</span>${LEVELS[t.level]}</dd></div>
     <div><dt>${t.high?'Highest point':'Average per day'}</dt><dd>${t.high?esc(t.high):Math.round(t.km/t.days)+' km'}</dd></div>
     <div><dt>Sleeping</dt><dd class="small">${esc(t.sleep)}</dd></div>
@@ -767,11 +848,11 @@ function detail(t){
       </div>
       <h2>Highlights</h2>
       <ul class="hl">${t.hl.map(x=>'<li><img class="mark" src="img/mark.png" alt="" aria-hidden="true"><span>'+esc(x)+'</span></li>').join('')}</ul>
-      <div class="gallery g${t.gal.length}">${t.gal.map(g=>'<img src="img/'+g[0]+'.jpg" alt="'+esc(g[1])+'" loading="lazy">').join('')}</div>
+      ${t.gal.length?`<div class="gallery g${t.gal.length}">${t.gal.map(g=>'<img src="img/'+g[0]+'.jpg" alt="'+esc(g[1])+'" loading="lazy">').join('')}</div>`:''}
       <h2>Stage by stage</h2>
       <div class="tablewrap"><table class="stages num">
         <thead><tr><th scope="col">Day</th><th scope="col">Stage</th><th scope="col">Km</th><th scope="col">Up</th><th scope="col">Down</th><th scope="col">Time</th></tr></thead>
-        <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+g[1]+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
+        <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+(g[1]==null?'–':g[1])+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
       </table></div>
       <h2>Good to know</h2>
       <div class="know">
@@ -779,19 +860,19 @@ function detail(t){
       </div>
       <h2>How to book it</h2>
       <div class="know"><h3>On your own</h3><p>${esc(t.diy)}</p></div>
-      <div class="bookbox">
+      ${t.book?`      <div class="bookbox">
         <span class="label">Without the hassle</span>
         <p>If you would rather walk than organise, <b>${esc(t.book.name)}</b> ${esc(t.book.line)}. Prices start from about ${esc(t.book.from)} per person.</p>
         <a class="btn solid" href="${t.book.url}" target="_blank" rel="noopener">See ${esc(t.book.name)}</a>
-      </div>
+      </div>`:`<div class="know"><h3>With an organiser</h3><p>${esc(t.org)}</p></div>`}
     </article>
     <aside>
       <div class="box"><h3>When to go</h3>${season(t)}<p class="cap">${t.months.map(m=>MONTHS[m-1]).join(', ')}</p></div>
       <div class="box"><h3>In short</h3><ul class="todo">
-        <li><span>Longest day</span><b>${Math.max(...t.stages.map(g=>g[1]))} km</b></li>
+        <li><span>Longest day</span><b>${Math.max(...t.stages.map(g=>g[1]||0))} km</b></li>
         <li><span>Biggest climb</span><b>+${n0(Math.max(...t.stages.map(g=>g[2]||0)))} m</b></li>
         <li><span>Nights</span><b>${esc(SLEEP[t.st])}</b></li>
-        <li><span>Organised from</span><b>${esc(t.book.from)}</b></li>
+        ${t.book?'<li><span>Organised from</span><b>'+esc(t.book.from)+'</b></li>':''}
       </ul></div>
       <div class="box"><h3>Still to come</h3><ul class="todo">${['Elevation profile per stage','GPX download','Weather by week'].map(b=>'<li><span>'+b+'</span><span class="tag">Planned</span></li>').join('')}</ul></div>
     </aside>
