@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TrekTrails</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
@@ -246,6 +248,16 @@ table.stages tr:last-child td{border-bottom:0}
 .cap{font-size:14px;line-height:20px;color:var(--muted);margin-top:10px}
 .todo b{font-weight:600;text-align:right}
 
+
+/* badge logo */
+.brand img{width:56px;height:56px;display:block}
+header.site .wrap{height:76px}
+footer .brand img{width:112px;height:112px}
+.mark{width:22px;height:22px;border-radius:4px;flex:none;display:block}
+.promises .mark{margin-top:4px}
+.hl .mark{width:18px;height:18px;margin-top:4px}
+@media (max-width:560px){header.site .wrap{height:auto}.brand img{width:48px;height:48px}}
+
 /* about */
 .prose{max-width:66ch;display:grid;gap:18px;padding-bottom:72px}
 .prose h2{font-size:32px;margin-top:20px}
@@ -286,7 +298,7 @@ footer :focus-visible{outline-color:var(--parchment)}
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#home"><span class="patch" aria-hidden="true"></span>Trek Trails</a>
+    <a class="brand" href="#home" aria-label="Trek Trails, home"><img src="img/logo.png" alt="Trek Trails" width="56" height="56"></a>
     <nav class="main" aria-label="Main">
       <a href="#home" data-nav="home">Home</a>
       <a href="#trails" data-nav="trails">All treks</a>
@@ -299,7 +311,7 @@ footer :focus-visible{outline-color:var(--parchment)}
   <div class="stripe" aria-hidden="true"></div>
   <div class="wrap">
     <div>
-      <a class="brand" href="#home"><span class="patch" aria-hidden="true"></span>Trek Trails</a>
+      <a class="brand" href="#home" aria-label="Trek Trails, home"><img src="img/logo.png" alt="Trek Trails" width="56" height="56"></a>
       <p style="margin-top:12px;max-width:44ch">A personal project about the world's great multi-day walks.</p>
     </div>
     <nav aria-label="Footer"><a href="#trails">All treks</a><a href="#about">About</a></nav>
@@ -646,9 +658,9 @@ function home(){
 <section><div class="wrap purpose">
   <p class="lead">Some places only make sense at walking speed. Trek Trails collects the world's great long walks in one place and describes each of them the same way, so you can <em>compare, choose and go</em>.</p>
   <ul class="promises">
-    <li><span class="patch" aria-hidden="true"></span><div><h3>Same facts for every trek</h3><p>Days, distance, sleeping, level and season in one fixed sheet, so a week in Iceland can sit next to a week in Jordan.</p></div></li>
-    <li><span class="patch" aria-hidden="true"></span><div><h3>Who it suits and who it doesn't</h3><p>Every trek says plainly who will love it and who should pick something else.</p></div></li>
-    <li><span class="patch" aria-hidden="true"></span><div><h3>Written to get you outside</h3><p>The goal is simple: more people discovering the world on their own two feet.</p></div></li>
+    <li><img class="mark" src="img/mark.png" alt="" aria-hidden="true"><div><h3>Same facts for every trek</h3><p>Days, distance, sleeping, level and season in one fixed sheet, so a week in Iceland can sit next to a week in Jordan.</p></div></li>
+    <li><img class="mark" src="img/mark.png" alt="" aria-hidden="true"><div><h3>Who it suits and who it doesn't</h3><p>Every trek says plainly who will love it and who should pick something else.</p></div></li>
+    <li><img class="mark" src="img/mark.png" alt="" aria-hidden="true"><div><h3>Written to get you outside</h3><p>The goal is simple: more people discovering the world on their own two feet.</p></div></li>
   </ul>
 </div></section>
 
@@ -754,7 +766,7 @@ function detail(t){
         <div><h3>Think twice</h3><p>${esc(t.no)}</p></div>
       </div>
       <h2>Highlights</h2>
-      <ul class="hl">${t.hl.map(x=>'<li><span class="patch" aria-hidden="true"></span><span>'+esc(x)+'</span></li>').join('')}</ul>
+      <ul class="hl">${t.hl.map(x=>'<li><img class="mark" src="img/mark.png" alt="" aria-hidden="true"><span>'+esc(x)+'</span></li>').join('')}</ul>
       <div class="gallery g${t.gal.length}">${t.gal.map(g=>'<img src="img/'+g[0]+'.jpg" alt="'+esc(g[1])+'" loading="lazy">').join('')}</div>
       <h2>Stage by stage</h2>
       <div class="tablewrap"><table class="stages num">
