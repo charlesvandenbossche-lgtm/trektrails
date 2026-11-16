@@ -200,7 +200,7 @@ table.cal tr:last-child td{border-bottom:0}
 .sheet dd{margin:6px 0 0;font-family:var(--display);font-size:28px;line-height:1.1}
 .sheet dd.small{font-family:var(--sans);font-weight:500;font-size:16px;line-height:24px}
 .dbody{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;padding-bottom:56px}
-.dbody h2{font-size:32px;margin:0 0 12px}
+.dbody h2{font-size:32px;margin:0 0 16px}
 .dbody .ov{font-size:20px;line-height:30px;font-weight:500;max-width:62ch}
 .fit{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
 .fit div{background:var(--raised);border:1px solid var(--border);border-radius:8px;padding:24px}
@@ -216,6 +216,34 @@ aside h3{font-size:24px;margin-bottom:12px}
 .pn{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid var(--border);padding:24px 0 64px}
 .pn a{text-decoration:none}.pn a:last-child{text-align:right}
 .pn b{display:block;font-family:var(--display);font-weight:400;font-size:28px;line-height:1.1}
+
+
+/* long-form trek pages */
+.dbody article h2{margin-top:48px}.dbody article h2:first-child{margin-top:0}
+.para{margin-top:16px;max-width:66ch}
+.hl{list-style:none;margin:0;padding:0;display:grid;gap:12px;max-width:66ch}
+.hl li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.hl .patch{width:14px;height:14px;margin-top:6px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+.gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:8px}
+.gallery.g1 img,.gallery.g3 img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+table.stages{border-collapse:collapse;width:100%;min-width:560px;font-size:14px;line-height:20px}
+table.stages th,table.stages td{padding:12px 10px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap;vertical-align:top}
+table.stages th{font-family:var(--cond);text-transform:uppercase;letter-spacing:.08em;font-size:13px;font-weight:600;color:var(--muted)}
+table.stages th:nth-child(-n+2),table.stages td:nth-child(-n+2){text-align:left}
+table.stages td:nth-child(2){white-space:normal;min-width:220px}
+table.stages td b{display:block;font-weight:600;font-size:16px;line-height:22px}
+table.stages td small{display:block;color:var(--muted);font-size:14px}
+table.stages tr:last-child td{border-bottom:0}
+.know{max-width:66ch}
+.know h3{font-size:24px;margin:24px 0 8px}.know h3:first-child{margin-top:0}
+.bookbox{background:var(--deep);color:var(--on-deep);border-radius:8px;padding:32px;margin-top:24px;display:grid;gap:16px;justify-items:start}
+.bookbox .label{color:var(--ochre);margin:0}
+.bookbox p{max-width:60ch;font-size:18px;line-height:28px}
+.bookbox .disc{font-size:14px;line-height:20px;opacity:.85}
+.bookbox :focus-visible{outline-color:var(--parchment)}
+.cap{font-size:14px;line-height:20px;color:var(--muted);margin-top:10px}
+.todo b{font-weight:600;text-align:right}
 
 /* about */
 .prose{max-width:66ch;display:grid;gap:18px;padding-bottom:72px}
@@ -271,7 +299,7 @@ footer :focus-visible{outline-color:var(--parchment)}
   <div class="wrap">
     <div>
       <a class="brand" href="#home"><span class="patch" aria-hidden="true"></span>Trek Trails</a>
-      <p style="margin-top:12px;max-width:44ch">A personal project about the world's great multi-day walks. First draft: figures and seasons are still being checked.</p>
+      <p style="margin-top:12px;max-width:44ch">A personal project about the world's great multi-day walks. Some pages link to trips organised by Travelbase, which the author also runs.</p>
     </div>
     <nav aria-label="Footer"><a href="#trails">All treks</a><a href="#about">About</a></nav>
   </div>
@@ -300,58 +328,279 @@ const TOPICS={
 };
 const SLEEP={hut:'Mountain huts',camp:'Tent',guest:'Guesthouses & hotels',yurt:'Yurts'};
 
+const DISCLOSURE='The person behind Trek Trails also runs Travelbase, the company that organises this trip.';
 const T=[
-{slug:'tour-du-mont-blanc',name:'Tour du Mont Blanc',sub:'The highlights in five stages',where:'France · Italy · Switzerland',countries:3,region:'alps',days:5,trip:'7 days',km:82,sleep:'Tents, with hut and hotel options',st:'camp',level:4,months:[6,7,8],img:'montblanc',tags:[],
- blurb:'Three countries around the highest massif in the Alps. The full loop runs about 170 km. This five-stage version keeps the balcony paths and glacier views and leaves out the long valley sections.',
- yes:'Fit walkers who want classic Alpine scenery without taking two weeks off.',no:'Anyone who dislikes long climbs. Every day has a big ascent and a big descent.'},
-{slug:'laugavegur',name:'Laugavegur',sub:'Iceland\'s rhyolite highlands',where:'Iceland',countries:1,region:'nordic',days:5,trip:'8 days',km:80,sleep:'Mountain huts or tent',st:'hut',level:3,months:[6,7,8,9],img:'iceland',tags:['hut','island'],
- blurb:'Painted rhyolite hills, steaming vents, black sand deserts and glacier rivers you wade through. The landscape changes completely from one day to the next.',
- yes:'Walkers who want scenery unlike anywhere else in Europe and can handle wet feet.',no:'People who need stable weather. Wind, rain and fog arrive in any month.'},
-{slug:'jotunheimen',name:'Jotunheimen Traverse',sub:'Norway\'s home of the giants',where:'Norway',countries:1,region:'nordic',days:5,trip:'8 days',km:70,sleep:'Mountain huts and a hotel',st:'hut',level:4,months:[7,8],img:'norway',tags:['hut'],
- blurb:'Hut to hut through the highest mountains in northern Europe, across boulder fields, past green glacial lakes and along airy ridges.',
- yes:'Sure-footed hikers who like rough ground and a hot meal waiting in the hut.',no:'Those uneasy on exposed passages. Some sections need a steady head.'},
-{slug:'isle-of-skye',name:'Isle of Skye',sub:'Ridge and coast in the Hebrides',where:'Scotland',countries:1,region:'nordic',days:5,trip:'8 days',km:91,sleep:'Tent, with pods on some nights',st:'camp',level:3,months:[5],img:'scotland',tags:['island'],
- blurb:'A largely unmarked line down the island: the Trotternish ridge, sea cliffs and empty glens. May brings long days and the first dry spells.',
- yes:'Walkers comfortable with pathless ground who enjoy wild, quiet places.',no:'Anyone hoping for sunshine guarantees. Skye makes its own weather.'},
-{slug:'kungsleden-winter',name:'Kungsleden in Winter',sub:'The King\'s Trail on snow',where:'Sweden · Lapland',countries:1,region:'nordic',days:5,trip:'8 days',km:75,sleep:'Mountain huts and fell stations',st:'hut',level:3,months:[2,3],img:'kings',tags:['hut','winter'],
- blurb:'The northern stretch of Sweden\'s most famous trail when it lies under snow. You pull your gear on a pulka sled between wood-heated huts.',
- yes:'People who want a real winter journey with the safety net of huts every evening.',no:'Anyone who struggles with cold. Days below minus fifteen are normal.'},
-{slug:'dolomites',name:'Dolomites Hut to Hut',sub:'Pale towers and high meadows',where:'Italy',countries:1,region:'alps',days:5,trip:'5 to 6 days',km:73,sleep:'Rifugi, a hotel and a night in a tent',st:'hut',level:4,months:[6,7,8,9],img:'dolomites',tags:['hut'],
- blurb:'Limestone spires, scree basins and rifugi serving proper Italian food at 2,000 metres. An optional sixth day adds about 12 km.',
- yes:'Hikers who want Alpine drama with good paths and better dinners.',no:'Solitude seekers in August. The famous valleys get busy.'},
-{slug:'vosges-ridge',name:'Vosges Ridge',sub:'Three days on the Route des Crêtes',where:'France',countries:1,region:'alps',days:3,trip:'4 days',km:40,sleep:'Mountain huts',st:'hut',level:2,months:[8,9],img:'vosges',tags:['first','hut','short'],
- blurb:'Rounded summits, glacial lakes and farm inns along the crest between Alsace and Lorraine. The first climb is the hardest part.',
- yes:'First-time trekkers and anyone with only a long weekend.',no:'Walkers after high-mountain terrain. These are big hills, not peaks.'},
-{slug:'mullerthal-trail',name:'Mullerthal Trail',sub:'Luxembourg\'s sandstone gorges',where:'Luxembourg',countries:1,region:'alps',days:3,trip:'4 days',km:45,sleep:'Furnished tipi camps',st:'camp',level:1,months:[6,7,8,9],img:'mullerthal',tags:['first','short'],
- blurb:'Forest paths squeeze through mossy rock corridors and over wooden bridges. Short scrambles keep it interesting and shorter variants exist for each day.',
- yes:'Beginners, families with teenagers and walkers testing new boots.',no:'Anyone looking for open views. Most of the route is under trees.'},
-{slug:'madeira-crossing',name:'Madeira Crossing',sub:'Above the clouds on the Atlantic',where:'Portugal · Madeira',countries:1,region:'islands',days:5,trip:'7 days',km:82,sleep:'Hotels, a cottage and a mountain hut',st:'guest',level:4,months:[3,4,5,6,9,10,11],img:'madeira',tags:['island'],
- blurb:'From laurel forest and levada channels to the knife-edge path between the island\'s highest peaks. Steep stairs cut into the rock are part of the deal.',
- yes:'Hikers who want big mountains outside the Alpine summer season.',no:'People with vertigo. Several sections are narrow with long drops.'},
-{slug:'gran-canaria-traverse',name:'Gran Canaria Traverse',sub:'Coast to coast over Roque Nublo',where:'Spain · Canary Islands',countries:1,region:'islands',days:4,trip:'6 to 7 days',km:74,sleep:'Hotels and a mountain hut',st:'guest',level:4,months:[4,5,11],img:'canary',tags:['island','short'],
- blurb:'Four long days across a volcanic island: pine forest, deep ravines and old trade paths. A reliable choice when the Alps are closed.',
- yes:'Strong walkers who want sun and real distance in spring or late autumn.',no:'Those who prefer short stages. Days are long with a lot of up and down.'},
-{slug:'peaks-of-the-balkans',name:'Peaks of the Balkans',sub:'The Accursed Mountains',where:'Albania · Montenegro · Kosovo',countries:3,region:'east',days:5,trip:'7 days',km:75,sleep:'Camping at family guesthouses',st:'camp',level:3,months:[6,7,8,9],img:'balkan',tags:[],
- blurb:'Limestone peaks, shepherd villages and border crossings on foot. One of Europe\'s least developed mountain ranges, with home cooking at the end of each pass.',
- yes:'Hikers who value hospitality and quiet trails over polished infrastructure.',no:'Anyone who needs hot showers and phone signal every evening.'},
-{slug:'mestia-to-ushguli',name:'Mestia to Ushguli',sub:'Svaneti\'s tower villages',where:'Georgia · Caucasus',countries:1,region:'east',days:4,trip:'8 days',km:62,sleep:'Guesthouses and small hotels',st:'guest',level:3,months:[7,8,9],img:'georgia',tags:['short'],
- blurb:'Four days between medieval stone towers under 5,000-metre Caucasus summits, sleeping in village homes. One river is crossed on foot or on horseback.',
- yes:'Walkers who want culture and mountains in equal measure.',no:'Those short on travel time. Getting to Svaneti takes a while.'},
-{slug:'cappadocia-valleys',name:'Cappadocia Valleys',sub:'Fairy chimneys and cave churches',where:'Türkiye',countries:1,region:'east',days:5,trip:'8 days',km:72,sleep:'Cave hotels and stone houses',st:'guest',level:2,months:[4,5,9,10],img:'cappadocia',tags:['first','desert'],
- blurb:'Soft volcanic rock carved into towers, dovecotes and whole underground towns. Moderate days and comfortable nights make it a good first trek.',
- yes:'New trekkers who still want a full week on foot.',no:'Hikers after summits and wilderness. This is a lived-in landscape.'},
-{slug:'jordan-trail',name:'Jordan Trail',sub:'Through the canyons to Petra',where:'Jordan',countries:1,region:'africa',days:5,trip:'8 days',km:82,sleep:'Desert camps and hotels',st:'camp',level:3,months:[3,4,5,10,11],img:'jordan',tags:['desert'],
- blurb:'Sandstone canyons, Bedouin tea and a back-door arrival in Petra after five days of walking. Add another 10 to 13 km for the day inside the site.',
- yes:'Walkers who want desert silence and a finish that earns its reputation.',no:'Anyone who copes badly with heat or loose, rocky ground.'},
-{slug:'high-atlas',name:'High Atlas Traverse',sub:'Berber valleys and 3,000 m passes',where:'Morocco',countries:1,region:'africa',days:5,trip:'8 days',km:83,sleep:'Five nights in tents, one in a gîte',st:'camp',level:4,months:[5,6,9,10],img:'atlas',tags:['altitude'],high:'3,000+ m',
- blurb:'Terraced villages, walnut groves and mule tracks over high passes. Close to Europe and a world away from it.',
- yes:'Hikers ready for altitude who like village life along the way.',no:'Those who want a bed every night. This one is mostly under canvas.'},
-{slug:'ak-suu-traverse',name:'Ak-Suu Traverse',sub:'Yurt to yurt in the Tian Shan',where:'Kyrgyzstan',countries:1,region:'asia',days:6,trip:'10 days',km:75,sleep:'Five nights in yurts, three in guesthouses',st:'yurt',level:4,months:[6,7,8,9],img:'kyrgyzstan',tags:['altitude'],high:'3,920 m',highN:3920,
- blurb:'Glacier valleys, turquoise Ala-Kul lake and nights in nomad yurts. Six trekking days plus an acclimatisation walk before the high passes.',
- yes:'Experienced walkers who want big mountains without the crowds.',no:'Anyone who has never been above 3,000 m and has no time to acclimatise.'},
-{slug:'kilimanjaro-lemosho',name:'Kilimanjaro',sub:'The Lemosho route to Uhuru Peak',where:'Tanzania',countries:1,region:'africa',days:8,trip:'10 days',km:70,sleep:'Seven nights in tents on the mountain',st:'camp',level:5,months:[1,2,6,7,8,9,10],img:'kilimanjaro',tags:['altitude'],high:'5,895 m',highN:5895,
- blurb:'Africa\'s highest point by the longest and most gradual line. Eight days on the mountain improve your odds on the summit night.',
- yes:'Determined walkers who can be patient with a slow pace.',no:'People in a hurry. Altitude punishes speed far more than a lack of fitness.'}
+{slug:'tour-du-mont-blanc',name:'Tour du Mont Blanc',sub:'The highlights in five stages',where:'France · Italy · Switzerland',countries:3,region:'alps',days:5,trip:'7 days',km:81,up:4710,high:'2,537 m',sleep:'Campsites, with refuge and inn options',st:'camp',level:4,months:[6,7,8],img:'montblanc',tags:[],
+ blurb:`Three countries around the highest massif in the Alps. The full loop runs about 170 km. This five-stage version keeps the high passes and glacier views and leaves out the long valley sections.`,
+ yes:`Fit walkers who want classic Alpine scenery without taking two weeks off.`,no:`Anyone who dislikes long climbs. Every day has a big ascent and a big descent.`,
+ intro:[`The Tour du Mont Blanc is the best-known long walk in Europe, and for good reason. It circles the Mont Blanc massif through France, Italy and Switzerland, crossing a high pass almost every day and dropping each evening into a valley with a different language, a different cheese and a different view of the same mountain.`,
+ `The complete circuit takes ten or eleven days. The version described here walks the southern and eastern half, from Les Contamines to the Chamonix valley, in five stages. You cross four passes above 2,100 m, walk under the Miage and Pré de Bar glaciers, and finish with the full north face of Mont Blanc in front of you at the Col de Balme.`],
+ hl:[`Col de la Seigne (2,516 m): you step from France into Italy with the whole south face of Mont Blanc ahead`,`Grand Col Ferret (2,537 m): the high point, and the border with Switzerland`,`A Beaufort cheese farm at Les Mottets on the way up to the Seigne`,`Col de Balme: the first wide view of the Chamonix needles on the last day`],
+ stages:[[`Les Contamines → Les Chapieux`,17,1290,940,`6–7 h`,`Col du Bonhomme and Col de la Croix du Bonhomme (2,483 m)`],[`Les Chapieux → Courmayeur`,18,780,1050,`5–6 h`,`Col de la Seigne into Italy, Miage glacier`],[`Val Ferret → La Fouly`,16,830,1000,`5–6 h`,`Rifugio Elena, Grand Col Ferret into Switzerland`],[`La Fouly → Trient`,16.5,780,900,`5–6 h`,`Swiss pastures and chalet villages, Col de la Forclaz`],[`Trient → Chamonix valley`,13,1030,1000,`4–5 h`,`Col de Balme (2,191 m), train from Montroc to Chamonix`]],
+ hard:`The paths are good and well signed, and nothing is technical. The difficulty is the climbing: about 950 m up and 950 m down on an average day, for five days in a row. If you can walk 15 km over hills with a 10 kg pack and feel fine the next morning, you are ready. Snow can linger on the passes in June.`,
+ nights:`Every stage ends in a village or hamlet with a campsite, and most have a refuge, inn or small hotel as well. Camping is the cheapest way and the most flexible. Refuge dinners are generous and communal. Les Chapieux is the most basic stop: no showers at the campsite, a cold river instead.`,
+ getting:`The start is Les Contamines-Montjoie, reached by train to Saint-Gervais-les-Bains-Le Fayet and a short bus ride. Geneva is the nearest airport. The walk ends in the Chamonix valley, which has a direct rail link back to Saint-Gervais, so leaving a car at either end works.`,
+ when:`Mid-June to early September. July and August have the most stable weather and the most people. Nights can drop below 5 °C even in midsummer, and afternoon thunderstorms are common.`,
+ pack:`Broken-in boots, trekking poles for the descents, full waterproofs and a warm layer for the passes. If you camp, a three-season tent and a sleeping bag comfortable to about 2 °C.`,
+ diy:`You can walk this entirely on your own. The catch is beds: refuges and campsites along the Tour du Mont Blanc fill up months ahead for July and August, wild camping is restricted, and each country has its own booking systems.`,
+ book:{name:'The Mont Blanc Trail',url:'https://themontblanctrail.com/',line:`runs these five stages as a self-guided trip with campsite or refuge places reserved, rangers at every stop and optional luggage transfer`,from:'€595'},
+ gal:[['montblanc-2','Evening light on a glacier above the forest'],['montblanc-3','Sunrise over a ridge with wildflowers in the foreground'],['montblanc-4','A walker resting on a rock with the needles behind']]},
+
+{slug:'laugavegur',name:'Laugavegur',sub:`Iceland's rhyolite highlands`,where:'Iceland',countries:1,region:'nordic',days:5,trip:'8 days',km:77,up:2140,sleep:'Mountain huts or tent',st:'hut',level:3,months:[6,7,8,9],img:'iceland',tags:['hut','island'],
+ blurb:`Painted rhyolite hills, steaming vents, black sand deserts and glacier rivers you wade through. The landscape changes completely from one day to the next.`,
+ yes:`Walkers who want scenery unlike anywhere else in Europe and can handle wet feet.`,no:`People who need stable weather. Wind, rain and fog arrive in any month.`,
+ intro:[`Laugavegur means "the hot spring route", and it starts beside one. From the geothermal valley of Landmannalaugar the trail climbs through hills striped in orange, green and violet, crosses a high plateau of obsidian and snow, drops to a lake, wanders over black volcanic sand and ends in the birch woods of Þórsmörk under three glaciers.`,
+ `It is only open for about three months a year, when the highland roads are free of snow. The classic line is 55 km. With a warm-up loop at Landmannalaugar and an extra day exploring Þórsmörk, the version here comes to roughly 77 km over five walking days.`],
+ hl:[`Bathing in the natural hot pool at Landmannalaugar the evening before you start`,`Hrafntinnusker: snowfields, steam vents and black obsidian at the trail's highest hut`,`The first sight of lake Álftavatn from the edge of the plateau`,`Wading glacial rivers, boots around your neck`,`Þórsmörk, a green valley walled in by ice`],
+ stages:[[`Landmannalaugar loop`,11,400,380,`4–5 h`,`Warm-up over the Suðurnámur ridge`],[`Landmannalaugar → Álftavatn`,24,900,940,`8–9 h`,`The longest and hardest day: Hrafntinnusker, snowfields, glacier views`],[`Álftavatn → Emstrur`,15,260,260,`5–6 h`,`Lava fields, river crossings, waterfalls`],[`Emstrur → Þórsmörk (Langidalur)`,16,350,480,`6–7 h`,`Canyon, black desert, then forest`],[`Langidalur → Húsadalur`,11,230,300,`4–5 h`,`Viewpoints above Þórsmörk`]],
+ hard:`Moderate terrain, serious weather. The paths are clear and the climbs are modest after day two, but you can meet horizontal rain, fog and near-freezing wind in July. The second stage is a long 24 km. River crossings are knee-deep at most in normal conditions. Walking it without a guide calls for previous multi-day experience and confident navigation.`,
+ nights:`Huts at Landmannalaugar, Hrafntinnusker, Álftavatn, Emstrur and Þórsmörk have dormitory bunks and kitchens; you bring a sleeping bag. Each has a camping area alongside. There are no shops or restaurants between the start and Þórsmörk, so all food is carried or sent ahead.`,
+ getting:`Fly to Keflavík. Highland buses run from Reykjavík to Landmannalaugar (about four hours) and back from Þórsmörk, in summer only. Ordinary rental cars are not allowed on these roads.`,
+ when:`Late June to mid-September. Early season has more snow on the plateau; September brings autumn colour, darker nights and a chance of northern lights.`,
+ pack:`Waterproof jacket and trousers rated 15,000 mm or better, broken-in waterproof boots, sandals or old trainers for the rivers, warm layers and a sleeping bag. Campers need a tent that stands up to strong wind.`,
+ diy:`Doing it independently means booking hut bunks many months ahead (they sell out early), reserving the two highland buses, and carrying five days of food.`,
+ book:{name:'The Iceland Trail',url:'https://www.theicelandtrail.com/',line:`offers this route guided or self-guided, camping or hut to hut, with buses, pitches or bunks and optional luggage transport by 4x4 arranged`,from:'€645'},
+ gal:[['iceland-2','Rhyolite hills in orange and grey near Landmannalaugar'],['iceland-3','A lone walker on black sand below coloured mountains'],['iceland-4','Moss-covered volcanic cones under a heavy sky']]},
+
+{slug:'jotunheimen',name:'Jotunheimen Traverse',sub:`Galdhøpiggen and the Besseggen ridge`,where:'Norway',countries:1,region:'nordic',days:5,trip:'8 days',km:70,up:3350,high:'2,469 m',sleep:'Mountain lodges and DNT huts',st:'hut',level:4,months:[7,8],img:'norway',tags:['hut'],
+ blurb:`Hut to hut through the highest mountains in northern Europe: a summit day on Galdhøpiggen, three valley stages and a finish along the Besseggen ridge.`,
+ yes:`Sure-footed hikers who like rough ground and a hot meal waiting in the hut.`,no:`Those uneasy on exposed passages. Two sections need a steady head.`,
+ intro:[`Jotunheimen, "home of the giants", holds every Norwegian summit above 2,300 m. This traverse strings together its two most famous days. It opens with an ascent of Galdhøpiggen, at 2,469 m the highest point in Scandinavia, and closes with Besseggen, the narrow ridge between green Lake Gjende and dark-blue Bessvatnet that half of Norway walks once in a lifetime.`,
+ `Between them lie three quieter stages through wide glacial valleys, past tarns and waterfalls, from one staffed mountain lodge to the next. The route follows the red T-marks of the Norwegian Trekking Association throughout.`],
+ hl:[`The summit of Galdhøpiggen, with a small stone hut on top`,`Leirvassbu lodge under the pointed peak of Kyrkja`,`Bukkelægeret: a steep, chain-assisted climb with Lake Gjende far below`,`Besseggen ridge on the final day`],
+ stages:[[`Spiterstulen → Galdhøpiggen → Spiterstulen`,12.4,1380,1380,`7–8 h`,`Summit day; a valley walk replaces it in fog or fresh snow`],[`Spiterstulen → Leirvassbu`,15.3,390,90,`5 h`,`Up Visdalen along the glacial river`],[`Leirvassbu → Gjendebu`,19,170,580,`7 h`,`Longest day: lakes, Hellefossen waterfall, Storådalen`],[`Gjendebu → Memurubu`,10.5,620,600,`4 h`,`Bukkelægeret, then a high plateau above Gjende`],[`Memurubu → Gjendesheim`,13,790,810,`7 h`,`Besseggen ridge; the lake boat is the bad-weather alternative`]],
+ hard:`Demanding. The ground is rocky and often bouldery, the first day climbs 1,380 m, and both Bukkelægeret and Besseggen have short scrambles where you use your hands. No climbing skills are needed, but you should be comfortable on steep rock. Train with day walks of 15–20 km and 800 m of ascent.`,
+ nights:`Staffed lodges with shared rooms or dormitories, hot showers in most, and a three-course dinner. You only need a sleeping-bag liner. Because meals and beds are provided, you walk with a light pack.`,
+ getting:`Fly to Oslo and take the Dovre line train north (about 3.5 hours to Dombås), or the summer express bus to Gjendesheim. Lodges are linked by seasonal buses.`,
+ when:`Mid-July to late August. Before that, snow covers the higher paths; after it, lodges begin to close.`,
+ pack:`High-cut waterproof boots with a stiff, grippy sole, poles, full rain gear, hat and gloves even in August, and a liner for the huts.`,
+ diy:`The huts can be booked directly and the trails are well marked, so experienced walkers can organise this themselves. The fiddly part is transport: getting to Spiterstulen at the start and away from Gjendesheim at the end.`,
+ book:{name:'The Norway Trail',url:'https://thenorwaytrail.com/',line:`packages the route as a self-guided trip with lodge beds, dinners, both mountain shuttles and a ranger briefing included`,from:'€1,090'},
+ gal:[['norway-2','A long blue lake between steep rock walls']]},
+
+{slug:'isle-of-skye',name:'Isle of Skye',sub:'South to north through the Hebrides',where:'Scotland',countries:1,region:'nordic',days:5,trip:'8 days',km:91,up:2860,sleep:'Campsites; pods on some nights',st:'camp',level:3,months:[5],img:'scotland',tags:['island'],
+ blurb:`A largely unmarked line up the island: sea lochs, the Old Man of Storr, the Trotternish ridge and the northern tip at Rubha Hunish.`,
+ yes:`Walkers comfortable with pathless, boggy ground who enjoy wild, quiet places.`,no:`Anyone hoping for sunshine guarantees. Skye makes its own weather.`,
+ intro:[`Skye is the largest of the Inner Hebrides and the most dramatic: black gabbro peaks in the south, a 30 km escarpment of landslips and pinnacles in the north, and sea on every side. This route crosses the island from Elgol to its northernmost point in five days.`,
+ `There is no official waymarked trail. You follow sheep tracks, old paths and sometimes nothing at all, which is exactly its appeal. The big day is the Trotternish ridge from the Storr to the Quiraing, 22 km along the edge of a cliff with the Outer Hebrides on the horizon.`],
+ hl:[`Loch Scavaig and the bothy at Camasunary, with the Cuillin behind`,`The Old Man of Storr at first light`,`The Trotternish ridge, in clear weather one of the finest high walks in Britain`,`The Quiraing's towers and hidden tables`,`Rubha Hunish, where whales and dolphins pass below the cliffs`],
+ stages:[[`Elgol → Sligachan`,18.5,180,220,`4–5 h`,`Coast path, Camasunary, Glen Sligachan`],[`Sligachan → Portree`,21.5,210,140,`5–6 h`,`Sea views to Raasay; second half on quiet tarmac`],[`Portree → The Storr`,13,600,550,`4 h`,`Clifftop walk above Loch Leathan`],[`The Storr → Staffin`,22,1430,1350,`7–8 h`,`Trotternish ridge, or a lower route by the Quiraing in bad weather`],[`Flodigarry → Rubha Hunish → Staffin`,16,430,440,`3–4 h`,`Optional easy day to the northern tip`]],
+ hard:`Sporty rather than severe. Distances are long, the ground is wet and rough, and the ridge day has more than 1,400 m of ascent with no shelter and no easy way off. Navigation is the real challenge in mist: the route is not marked.`,
+ nights:`Campsites at Sligachan, Portree and Staffin have hot showers and places to eat nearby. The first night at Elgol is basic. Wild camping is legal in Scotland if you leave no trace.`,
+ getting:`Fly to Edinburgh, Glasgow or Inverness, then drive or take the bus to Skye (about five hours from Edinburgh). Elgol is at the end of a single-track road with very few buses.`,
+ when:`May is the pick: the driest month on average, long days, and before the midges hatch. June to August are milder but midge season; September is quieter and wetter.`,
+ pack:`A properly waterproof jacket (15,000 mm or more), waterproof boots, gaiters, spare socks and a tent that copes with wind. A map and compass, and the skill to use them.`,
+ diy:`Independent walkers need to sort out transport to Elgol, a lift back from the north, and a plan for the ridge if the cloud is down. UK entry now requires an Electronic Travel Authorisation for most European visitors.`,
+ book:{name:'The Scotland Trail',url:'https://thescotlandtrail.com/',line:`walks this route in May as a guided camping trip, with a shuttle from Edinburgh, guides front and back on the ridge and a support driver on the island`,from:'€615'},
+ gal:[['scotland-2','Lochs and layered hills under dramatic cloud'],['scotland-3','A walker lying on a grassy cliff, seen from above'],['scotland-4','A walker on a rocky headland above the sea']]},
+
+{slug:'kungsleden-winter',name:'Kungsleden in Winter',sub:`The King's Trail on snow`,where:'Sweden · Lapland',countries:1,region:'nordic',days:5,trip:'8 days',km:75,up:1060,high:'1,150 m',sleep:'STF mountain huts and fell stations',st:'hut',level:3,months:[2,3],img:'kings',tags:['hut','winter'],
+ blurb:`The northern stretch of Sweden's most famous trail when it lies under snow. You pull your gear on a pulka sled between wood-heated huts.`,
+ yes:`People who want a real winter journey with the safety net of a hut every evening.`,no:`Anyone who struggles with cold. Days below minus fifteen are normal.`,
+ intro:[`Kungsleden, the King's Trail, runs for more than 400 km through Swedish Lapland. Its northernmost section, from Abisko to the foot of Kebnekaise, is the classic. In summer it is a busy walking route. In February and March it becomes something else: a white valley 200 km north of the Arctic Circle, crossed on skis or snowshoes with a sled in tow.`,
+ `Huts stand a day apart. There is no electricity and no running water; you fetch water from a hole in the ice, chop wood, light the stove and, at several huts, end the day in a sauna. On clear nights the northern lights do the rest.`],
+ hl:[`Crossing frozen lake Abiskojaure to the first hut`,`The sauna at Alesjaure after the longest day`,`Tjäktja pass, the highest point of the whole Kungsleden`,`The Kebnekaise massif, Sweden's highest mountains`,`Northern lights from the hut doorstep`],
+ stages:[[`Abisko → Abiskojaure`,14,157,47,`4–5 h`,`Birch forest and a lake crossing`],[`Abiskojaure → Alesjaure`,20,347,50,`6 h`,`Onto the open fell; longest day`],[`Alesjaure → Tjäktja`,16,350,161,`4–5 h`,`Alisvággi valley; follow the red winter crosses`],[`Tjäktja → Sälka`,12.5,157,351,`4 h`,`Over Tjäktja pass (about 1,150 m), long descent`],[`Sälka → Singi`,12,53,157,`4 h`,`Then on to Kebnekaise fell station and Nikkaluokta`]],
+ hard:`The terrain is gentle, with barely 1,000 m of climbing in five days. What makes it hard is the cold, the wind and pulling a loaded sled for five or six hours. No previous ski experience is needed for the Nordic touring skis used here, and snowshoes are the alternative.`,
+ nights:`Swedish Tourist Association huts: bunk rooms, a shared kitchen with gas, a wood stove, a drying room and usually a small shop. Abisko and Kebnekaise are full fell stations with restaurants and showers.`,
+ getting:`Fly to Kiruna, or take the night train from Stockholm straight to Abisko (16–18 hours). Buses link Kiruna with both Abisko and Nikkaluokta.`,
+ when:`Mid-February to late March, when the huts are staffed, the days are lengthening and the snow is reliable.`,
+ pack:`Merino base layers, two fleeces, a down jacket, shell jacket and trousers, warm mittens, goggles, category-3 sunglasses and a thermos. Hands and feet are what get cold.`,
+ diy:`On your own you need winter navigation skills, your own skis and pulka (or a rental in Abisko), and the judgement to sit out a storm day in a hut.`,
+ book:{name:`The King's Trail`,url:'https://thekingstrail.eu/',line:`runs it as a guided expedition with huts, pulka, skis or snowshoes and the snowmobile transfer out included`,from:'€1,550'},
+ gal:[['kings-2','Green northern lights over a snowy fell'],['kings-3','A cluster of mountain huts in a white valley'],['kings-4','A walker in blowing snow among bare birches']]},
+
+{slug:'dolomites',name:'Dolomites Hut to Hut',sub:'Sorapis, Braies and the Cinque Torri',where:'Italy',countries:1,region:'alps',days:5,trip:'5 to 6 days',km:72,up:3530,sleep:'Rifugi, a hotel and one campsite night',st:'hut',level:4,months:[6,7,8,9],img:'dolomites',tags:['hut'],
+ blurb:`Pale limestone towers, turquoise lakes and rifugi serving proper Italian food at 2,000 metres. An optional sixth day adds the Tre Cime.`,
+ yes:`Hikers who want Alpine drama with good paths and better dinners.`,no:`Solitude seekers in August. The famous lakes get busy.`,
+ intro:[`The Dolomites look like no other part of the Alps: vertical walls of pale rock that turn pink at sunset, rising straight out of meadows. This route links some of the range's most photographed places, starting with a day walk to milky-blue Lago di Sorapis and then following part of the Alta Via 1 from Lago di Braies south to the Cinque Torri above Cortina.`,
+ `Paths are well built, a legacy of both shepherds and the First World War front line that ran through these mountains. You sleep in rifugi, one hotel and one campsite, and there is an optional extra day to the Tre Cime di Lavaredo.`],
+ hl:[`Lago di Sorapis, an improbable turquoise under a rock amphitheatre`,`Lago di Braies and its wooden boathouse at the start of the Alta Via 1`,`The Fanes plateau and the descent past Col de Locia`,`Sunset and sunrise at the Cinque Torri`,`Optional: lunch facing the north faces of the Tre Cime`],
+ stages:[[`Misurina → Lago di Sorapis loop`,13,710,710,`5–6 h`,`Day walk; some cable-protected ledges`],[`Lago di Braies → San Vigilio side`,10,880,130,`4–5 h`,`Steep climb straight from the lake`],[`Pederü → Sass Dlacia`,22,640,1208,`7–8 h`,`Longest day, on the Alta Via 1`],[`Sass Dlacia → Cinque Torri`,14,1300,790,`6–7 h`,`Most climbing; can be shortened by bus`],[`Cinque Torri → Cortina d'Ampezzo`,12.5,0,1360,`4 h`,`All downhill to town`]],
+ hard:`Distances are manageable; the vertical is what counts. One day climbs 1,300 m and the last descends 1,360 m. Expect scree, steep zigzags and a few short sections with fixed cables. Start early: afternoon storms build quickly in July and August.`,
+ nights:`Rifugi are mountain inns with dormitories, hot meals and often a bar. A sleeping-bag liner is compulsory. They are comfortable by hut standards and correspondingly popular.`,
+ getting:`The nearest airport is Venice, with a direct bus to Cortina d'Ampezzo (about 2.5 hours). By train, aim for Dobbiaco. In summer, car access to Lago di Braies is restricted and needs a reservation.`,
+ when:`Mid-June to mid-September. Late June can still have snow on north-facing slopes; September is quieter and clear.`,
+ pack:`Boots with ankle support, a 30–45 L pack, waterproofs, gloves and a warm hat, a liner and earplugs for the dormitories.`,
+ diy:`The trails are easy to follow. The work is in the reservations: popular rifugi on the Alta Via 1 take bookings from winter and fill for the whole summer.`,
+ book:{name:'Dolomiti Trail',url:'https://dolomititrail.com/',line:`offers it self-guided with the hotel, huts, campsite, shuttles and a ranger on call arranged`,from:'€860'},
+ gal:[['dolomites-2','A sunlit peak above cloud-filled valleys'],['dolomites-3','A small lake in a bowl of pale rock'],['dolomites-4','A walker crossing a scree slope below rock towers']]},
+
+{slug:'vosges-ridge',name:'Vosges Ridge',sub:'Three days over the Hohneck',where:'France · Alsace',countries:1,region:'alps',days:3,trip:'4 days',km:40,up:1410,high:'1,363 m',sleep:'Mountain huts',st:'hut',level:2,months:[8,9],img:'vosges',tags:['first','hut','short'],
+ blurb:`Rounded summits, glacial lakes and farm inns along the crest between Alsace and Lorraine. The first climb is the hardest part.`,
+ yes:`First-time trekkers and anyone with only a long weekend.`,no:`Walkers after high-mountain terrain. These are big hills, not peaks.`,
+ intro:[`The Vosges are the gentle mountains west of the Rhine: forested slopes, open summit pastures called chaumes, and small dark lakes left behind by glaciers. They are also three to seven hours from most of Belgium and the Netherlands, which makes them the natural place for a first hut-to-hut walk.`,
+ `This route climbs out of the Munster valley to the Hohneck, the third-highest summit of the range, follows the ridge north to Lac Blanc and comes down again through beech woods to the town that gave its name to the cheese.`],
+ hl:[`Two small mountain lakes on the climb from Metzeral`,`The Hohneck summit, with the Alps visible on a clear day`,`Lac Blanc, ringed by granite cliffs`,`Storks on the rooftops and Munster cheese at the market`],
+ stages:[[`Metzeral → Hohneck → hut above Stosswihr`,13,940,220,`5–6 h`,`The big climb, then the ridge`],[`Ridge → Lac Blanc`,16,370,590,`5–6 h`,`Optional loop around Lac Blanc and Lac Noir`],[`Lac Blanc → Munster`,11,100,690,`3–4 h`,`Forest descent to town`]],
+ hard:`Accessible. The first day gains 940 m, which is a proper effort, but the paths are good and the next two days are mostly level or downhill. A good test of whether multi-day walking is for you.`,
+ nights:`Simple mountain huts with bunk beds, hot showers and a cooked dinner and breakfast. Bring a liner.`,
+ getting:`By train to Colmar, then the local line up the valley to Metzeral (about 45 minutes). The walk ends in Munster on the same railway.`,
+ when:`May to October for independent walkers. Late summer is the most settled; the ridge is exposed in bad weather.`,
+ pack:`Ordinary hiking kit: boots, waterproofs, a fleece, a liner and lunch for three days.`,
+ diy:`Easy to do alone: the Club Vosgien marks every path. You only need to reserve the huts and check the train times.`,
+ book:{name:'The Vosges Trail',url:'https://thevosgestrail.com/',line:`bundles the two hut nights with dinner and breakfast, a ranger briefing and the return transfer`,from:'€290'},
+ gal:[['vosges-2','Two walkers on a boardwalk across the summit pastures'],['vosges-3','A mountain refuge on an open ridge, seen from above'],['vosges-4','Forested hills and a village in the valley']]},
+
+{slug:'mullerthal-trail',name:'Mullerthal Trail',sub:`Luxembourg's sandstone gorges`,where:'Luxembourg',countries:1,region:'alps',days:3,trip:'4 days',km:45,up:1100,sleep:'Furnished tipi camps',st:'camp',level:1,months:[6,7,8,9],img:'mullerthal',tags:['first','short'],
+ blurb:`Forest paths squeeze through mossy rock corridors and over wooden bridges. Short scrambles keep it interesting and shorter variants exist for each day.`,
+ yes:`Beginners, friends on a first walking weekend and anyone testing new boots.`,no:`Anyone looking for open views. Most of the route is under trees.`,
+ intro:[`Luxembourg's "Little Switzerland" is not Alpine at all. It is a plateau of soft sandstone that streams have cut into a maze of gorges, caves and leaning rock towers, all buried in beech forest. The Mullerthal Trail threads through the best of it.`,
+ `These three days make a loop from Beaufort by way of Berdorf and Echternach, the oldest town in the country. The walking is easy, the navigation is foolproof, and every hour brings a staircase through a crack in the rock or a bridge over a ravine.`],
+ hl:[`Beaufort castle at the start`,`The Labyrinth and the rock amphitheatre near Berdorf`,`Narrow clefts where you take your pack off to squeeze through`,`Wooden bridges, ponds and small waterfalls on the way back to Beaufort`],
+ stages:[[`Beaufort → Berdorf`,15,280,280,`4–5 h`,`Castle, caves, suspension bridges; 8.5 km short option`],[`Berdorf → Echternacherbrück`,18,430,620,`5–6 h`,`Labyrinth, gorges, descent to Echternach`],[`Echternacherbrück → Beaufort`,12,390,370,`4–5 h`,`Waterfalls and rock formations`]],
+ hard:`The easiest trek on this site. Daily climbs stay under 450 m, and the only obstacles are stairs, roots and a few hands-on steps between boulders. Trainers with good grip are enough in dry weather.`,
+ nights:`Campsites along the route, some with ready-pitched tents or tipis with real beds. Villages have restaurants, so you do not need to cook.`,
+ getting:`By car in three to four hours from Brussels or the southern Netherlands, or by train to Luxembourg City and bus onwards. All public transport inside Luxembourg is free.`,
+ when:`April to October. The forest is at its best in early summer and in autumn colour. After heavy rain the sandstone is slippery.`,
+ pack:`A daypack, rain jacket, water and lunch. A liner if you sleep in a camp bed.`,
+ diy:`Very simple on your own: the trail is waymarked with a red M and buses return you to the start.`,
+ book:{name:'The Mullerthal Trail',url:'https://themullerthaltrail.com/',line:`sets you up in furnished tipis with optional luggage transfer and a ranger on site`,from:'€249'},
+ gal:[['mullerthal-2','Walkers on a rock ledge in green beech forest']]},
+
+{slug:'madeira-crossing',name:'Madeira Crossing',sub:'From the laurel forest to Pico Ruivo',where:'Portugal · Madeira',countries:1,region:'islands',days:5,trip:'7 days',km:79,up:3310,high:'1,862 m',sleep:'Hotels, a cottage and a mountain hut',st:'guest',level:4,months:[3,4,5,6,9,10,11],img:'madeira',tags:['island'],
+ blurb:`West to east across the island: misty laurel forest, levada channels, the summit of Pico Ruivo and a last day along the sea cliffs.`,
+ yes:`Hikers who want big mountains outside the Alpine summer season.`,no:`People with a fear of heights. Several sections are narrow with long drops.`,
+ intro:[`Madeira rises 1,862 m straight out of the Atlantic, and almost all of it is steep. The islanders dealt with that by cutting levadas, narrow irrigation channels that contour around the mountainsides, and by building stone staircases where contouring was impossible. Together they make one of Europe's most unusual walking networks.`,
+ `This crossing starts in the ancient laurel forest of Fanal, a UNESCO site where twisted trees stand in the mist, follows the levadas east to the Encumeada pass, climbs to the island's summit and sleeps just below it, then drops 1,380 m to Santana and finishes along the cliffs to Machico.`],
+ hl:[`Fanal's centuries-old laurel trees in the fog`,`Walking through two rock tunnels by headtorch`,`Sunset and sunrise from Pico Ruivo, above a sea of cloud`,`Boca do Risco, a notch in the cliffs 350 m above the surf`],
+ stages:[[`Fanal → Rabaçal`,13,540,550,`4–5 h`,`Laurel forest and waterfalls`],[`Rabaçal → Encumeada`,22,670,870,`7 h`,`Levadas and tunnels; longest day`],[`Encumeada → Pico Ruivo`,14.3,1270,460,`6–7 h`,`The big climb to the summit hut`],[`Achada do Teixeira → Santana`,14,140,1380,`4–5 h`,`Steepest descent of the week`],[`Porto da Cruz → Machico`,16,690,680,`5–6 h`,`Coastal cliff path`]],
+ hard:`Demanding, and not a first trek. Stone steps by the thousand are harder on the legs than the numbers suggest, the third day climbs 1,270 m, and exposed stretches have a cable on one side and air on the other. Trails here close after storms or fires, so the exact line can change at short notice.`,
+ nights:`Small hotels in the villages, a cottage at Rabaçal that no car can reach, and a simple hut with shared rooms under Pico Ruivo.`,
+ getting:`Fly to Funchal; there are direct flights from Brussels and Amsterdam. The trailheads are remote, so you need a taxi or transfer at the start. Machico, at the end, is ten minutes from the airport.`,
+ when:`March to June and September to November. The island is walkable all year, but summer is hot on the coast and winter brings the heaviest rain.`,
+ pack:`Boots with ankle support, a headtorch for the tunnels, a waterproof and windproof jacket, and poles for the descent to Santana.`,
+ diy:`Possible independently, with planning: many official trails now charge a small access fee that must be paid online in advance, buses rarely serve the trailheads, and the summit hut has few beds.`,
+ book:{name:'The Madeira Trail',url:'https://madeiratrail.eu/',line:`runs it self-guided in groups of up to ten, with rooms, the hut, transfers and luggage transport on the last three days arranged`,from:'€830'},
+ gal:[['madeira-2','Green ridges and deep valleys from the air'],['madeira-3','A walker on a rock outcrop above a jagged valley'],['madeira-4','A group of walkers on a grassy clifftop above the ocean']]},
+
+{slug:'gran-canaria-traverse',name:'Gran Canaria Traverse',sub:'Coast to coast by Roque Nublo',where:'Spain · Canary Islands',countries:1,region:'islands',days:4,trip:'6 to 7 days',km:73,up:3330,sleep:'Hotels and a mountain hut',st:'guest',level:4,months:[4,5,11],img:'canary',tags:['island','short'],
+ blurb:`Four long days from the dunes of Maspalomas to the fishing harbour of Agaete, over the volcanic heart of the island.`,
+ yes:`Strong walkers who want sun and real distance in spring or late autumn.`,no:`Those who prefer short stages. Days are long with a lot of up and down.`,
+ intro:[`Most visitors to Gran Canaria never leave the beach. Inland, the island is a ruined volcano nearly 2,000 m high, cut by ravines so deep that neighbouring villages were once a day's walk apart. Old trade paths, the caminos reales, still cross it.`,
+ `This traverse climbs from the south coast through the pine forest of Pilancones to the mountain village of Tejeda, passes beneath the basalt monolith of Roque Nublo, and descends the green Agaete valley, where coffee and papaya grow on terraces, to the Atlantic.`],
+ hl:[`Roque Nublo, an 80 m rock finger that was sacred to the island's first inhabitants`,`Tejeda, listed among Spain's most beautiful villages`,`Views of Roque Bentayga and, on clear days, Mount Teide on Tenerife`,`Finishing with a swim in the natural sea pools at Agaete`],
+ stages:[[`Maspalomas side → San Bartolomé de Tirajana`,21.6,1040,230,`7 h`,`Up through the Pilancones natural park`],[`San Bartolomé → Tejeda`,16.7,1060,440,`6 h`,`Past Roque Nublo`],[`Tejeda → Juncalillo`,16.4,680,1070,`7 h`,`Ridges and herders' paths`],[`Juncalillo → Agaete`,18.6,550,1610,`7 h`,`Long descent through the Agaete valley`]],
+ hard:`Demanding because of the length of the days: around seven hours each, with more than 1,000 m of climbing on the first two and a 1,600 m descent on the last. There is little shade. Carry three litres of water.`,
+ nights:`Rural hotels and guesthouses in the villages and one mountain hut. Evenings are for local restaurants.`,
+ getting:`Fly to Gran Canaria airport, with direct flights from most of Europe. Buses run to Maspalomas and back from Agaete.`,
+ when:`October to May. Spring and late autumn give warm, clear days; the north side often sits under trade-wind cloud while the south is in sun.`,
+ pack:`Sun hat, SPF 50, three litres of water capacity, boots with good tread and a layer for cool evenings at 1,000 m.`,
+ diy:`Accommodation in the mountain villages is limited, so book ahead. The paths are signed, though junctions are frequent.`,
+ book:{name:'The Canary Trail',url:'https://canarytrail.eu/',line:`offers it self-guided with rooms, breakfast, the shuttle to the trailhead and optional luggage transport`,from:'€789'},
+ gal:[['canary-2','Last light on a line of cliffs'],['canary-3','A mountain village in a deep valley at sunset'],['canary-4','A walker stepping out of a cave onto a sunlit path']]},
+
+{slug:'peaks-of-the-balkans',name:'Peaks of the Balkans',sub:'The Accursed Mountains',where:'Albania · Montenegro · Kosovo',countries:3,region:'east',days:5,trip:'7 days',km:75,up:4250,sleep:'Camping at family guesthouses',st:'camp',level:3,months:[6,7,8,9],img:'balkan',tags:[],
+ blurb:`Limestone peaks, shepherd villages and border crossings on foot. One of Europe's least developed mountain ranges, with home cooking at the end of each pass.`,
+ yes:`Hikers who value hospitality and quiet trails over polished infrastructure.`,no:`Anyone who needs hot showers and phone signal every evening.`,
+ intro:[`The Accursed Mountains, Bjeshkët e Nemuna, sit where Albania, Montenegro and Kosovo meet. For most of the twentieth century these borders were sealed and the valleys were cut off. The Peaks of the Balkans trail, a 192 km circuit laid out in the 2010s, reconnected them, and walking it today still feels like arriving somewhere before everyone else.`,
+ `This five-day loop takes the heart of it. It starts and ends in Theth, crosses the famous Valbona pass, climbs to the summer hamlet of Dobërdol near the three-border point, drops to Lake Plav in Montenegro and returns over the Pejë pass.`],
+ hl:[`Valbona pass, with Maja e Jezercës (2,694 m) across the valley`,`Dobërdol, where shepherd families live from June to September`,`Standing in three countries at once`,`A swim in Lake Plav`,`Dinner cooked by your hosts every night`],
+ stages:[[`Theth → Valbona`,11.6,1060,680,`5–6 h`,`Over the Valbona pass`],[`Çerem → Dobërdol`,15.4,1020,360,`6 h`,`Gashi valley, blueberries, shepherd huts`],[`Dobërdol → Plav`,17.3,650,910,`6–7 h`,`Three-border point, ridge walk, forest`],[`Plav → Vusanje`,15.3,660,1110,`6 h`,`Views of Lake Plav, camp by a waterfall`],[`Vusanje → Theth`,15.6,860,890,`6–7 h`,`Ropojana valley, Pejë pass, steep descent`]],
+ hard:`Sporty. No day is long, but each has a real climb, and the total is over 4,000 m in five days. Paths are rocky shepherd tracks; the final descent into Theth is steep. Days are hot, mornings at Dobërdol are cold.`,
+ nights:`Family guesthouses in every valley offer beds or a place to pitch a tent, and feed you from their own garden. Facilities are simple. There are no shops on the route.`,
+ getting:`Fly to Tirana. Theth is five hours away by road, the last part on a mountain pass. Shkodër is the usual staging town.`,
+ when:`June to September. Snow can block the passes into early June.`,
+ pack:`Sun protection, a rain jacket, warm layers for 1,800 m, poles for the descents. If you camp, a sleeping bag good to about 5 °C.`,
+ diy:`The catch for independent walkers is paperwork: crossing these borders on foot requires permits from each country, applied for in advance. Guesthouses are booked by phone or message.`,
+ book:{name:'The Balkan Trail',url:'https://www.thebalkantrail.com/',line:`walks this loop with guides, border permits, park fees and transfers between valleys handled, and optional meals and luggage transport by horse and 4x4`,from:'€595'},
+ gal:[['balkan-2','Green ridges and limestone summits under a clear sky'],['balkan-3','A walker on a knoll with snow-streaked peaks behind'],['balkan-4','A walker resting among white limestone boulders']]},
+
+{slug:'mestia-to-ushguli',name:'Mestia to Ushguli',sub:`Svaneti's tower villages`,where:'Georgia · Caucasus',countries:1,region:'east',days:4,trip:'8 days',km:59,up:2920,high:'2,720 m',sleep:'Family guesthouses',st:'guest',level:3,months:[7,8,9],img:'georgia',tags:['short'],
+ blurb:`Four days between medieval stone towers under 5,000-metre Caucasus summits, sleeping in village homes. One river is crossed on foot or on horseback.`,
+ yes:`Walkers who want culture and mountains in equal measure.`,no:`Those short on travel time. Getting to Svaneti takes a full day.`,
+ intro:[`Svaneti is the highest inhabited region of the Caucasus, and for a thousand years its families defended themselves by building stone towers beside their houses. Hundreds still stand. The walk from Mestia to Ushguli passes through village after village of them, with the ice walls of Tetnuldi, Ushba and Shkhara, Georgia's highest peak, above.`,
+ `It is the best-known section of the Transcaucasian Trail and takes four days. Nights are spent in guesthouses, where dinner is a table covered in khachapuri, stews and home-made wine.`],
+ hl:[`Adishi, a village you can only reach on foot or by 4x4`,`Fording the Adishi river below its glacier, on a horse if the water is high`,`The Chkhunderi pass, face to face with the Adishi icefall`,`Ushguli, among the highest permanently inhabited villages in Europe, beneath Shkhara`],
+ stages:[[`Mestia → Zhabeshi`,16.5,710,485,`5–6 h`,`Villages, fields and forest`],[`Zhabeshi → Adishi`,11,920,410,`4–5 h`,`Alpine meadows, views of Tetnuldi`],[`Adishi → Iprali`,15,663,735,`6–6.5 h`,`River crossing, the high pass (about 2,720 m), glacier views`],[`Iprali → Ushguli`,16,624,569,`5.5–6 h`,`Svan towers and the Shkhara wall`]],
+ hard:`Sporty. The stages are moderate in length with 600 to 900 m of climbing each. The third day is the crux: a cold river first thing, then a steep pull to the pass. The path is clear in summer.`,
+ nights:`Guesthouses with shared rooms, a shower and enormous meals. Standards vary, warmth does not.`,
+ getting:`Low-cost flights serve Kutaisi. From there it is five to six hours by minibus to Mestia. At the end, a 4x4 takes you from Ushguli back to Mestia.`,
+ when:`July to September. The pass holds snow into June, and the river is highest in early summer afternoons.`,
+ pack:`A 40–50 L pack (you carry everything), waterproofs, a warm jacket for the pass, poles for the river.`,
+ diy:`One of the easier big treks to do alone: guesthouses rarely need more than a day's notice outside August. The slow parts are the transfers at each end.`,
+ book:{name:'The Georgia Trail',url:'https://thegeorgiatrail.com/',line:`arranges the guesthouses, the transfers from Kutaisi and a ranger who meets walkers each evening`,from:'€565'},
+ gal:[['georgia-2','Two horses on a ridge with snow peaks behind'],['georgia-3','A stone church on a hillside at sunset'],['georgia-4','A walker climbing through meadows below an ice-covered summit']]},
+
+{slug:'cappadocia-valleys',name:'Cappadocia Valleys',sub:'Fairy chimneys and cave churches',where:'Türkiye',countries:1,region:'east',days:5,trip:'8 days',km:72,up:1680,sleep:'Cave hotels and stone houses',st:'guest',level:2,months:[4,5,9,10],img:'cappadocia',tags:['first','desert'],
+ blurb:`Soft volcanic rock carved into towers, dovecotes and whole underground towns. Moderate days and comfortable nights make it a good first trek.`,
+ yes:`New trekkers who still want a full week on foot.`,no:`Hikers after summits and wilderness. This is a lived-in landscape.`,
+ intro:[`Cappadocia was made by volcanoes and finished by people. Ash hardened into soft tuff, erosion sculpted it into cones and pillars, and for two thousand years the inhabitants carved homes, churches, pigeon lofts and entire cities into it. Walking is the only way to see how much there is.`,
+ `This route runs village to village from Taşkınpaşa to Göreme through the Gomeda, Red, Rose, Pigeon and Zemi valleys. Each night ends in a cave hotel or an old stone house, and on most mornings the sky fills with hot-air balloons.`],
+ hl:[`Frescoed rock churches you find by ducking through a doorway`,`The Red and Rose valleys at the end of the afternoon`,`Uçhisar castle, the highest point in the region`,`Sleeping in a room cut into the rock`,`Balloons at sunrise over Göreme`],
+ stages:[[`Taşkınpaşa → Mustafapaşa`,17.2,420,580,`6 h`,`A former Greek village with carved stone mansions`],[`Mustafapaşa → Ortahisar`,16.3,310,280,`5 h`,`Gomeda valley, dovecotes, the rock castle`],[`Ortahisar → Çavuşin`,16.5,465,560,`6 h`,`Red and Rose valleys`],[`Çavuşin → Uçhisar`,11,370,110,`4 h`,`Pigeon valley up to the castle`],[`Uçhisar → Göreme`,11.2,110,320,`4 h`,`Zemi valley; time for the open-air museum`]],
+ hard:`Moderate. Daily climbs stay under 500 m and two of the five days are short. The ground is dusty and can be loose on short steep steps, and there is little shade, so start early.`,
+ nights:`Small cave hotels and restored stone houses with private bathrooms and a Turkish breakfast. The most comfortable nights of any trek here.`,
+ getting:`Fly to Kayseri or Nevşehir, usually by way of Istanbul. Göreme is about an hour from either.`,
+ when:`April to May and September to October. Summer is too hot for all-day walking; winter brings snow.`,
+ pack:`Shoes with good grip, a sun hat, sunscreen, plenty of water and a light jacket for cool mornings.`,
+ diy:`Many people base themselves in Göreme and day-walk. Linking the valleys end to end takes more route-finding, because paths braid and signs are sparse.`,
+ book:{name:'The Cappadocia Trail',url:'https://thecappadociatrail.com/',line:`connects the valleys into one self-guided route with hotels, breakfast, the start transfer and optional luggage transport`,from:'€795'},
+ gal:[['cappadocia-2','Bands of pink and white rock above a field of flowers'],['cappadocia-3','Hot-air balloons drifting past a rock tower at sunrise'],['cappadocia-4','A walker on the rim of a carved valley']]},
+
+{slug:'jordan-trail',name:'Jordan Trail',sub:'Through the canyons to Petra',where:'Jordan',countries:1,region:'africa',days:5,trip:'8 days',km:82,up:2500,sleep:'Desert camps and hotels',st:'camp',level:3,months:[3,4,5,10,11],img:'jordan',tags:['desert'],
+ blurb:`Sandstone canyons, Bedouin tea and a back-door arrival in Petra after five days of walking.`,
+ yes:`Walkers who want desert silence and a finish that earns its reputation.`,no:`Anyone who copes badly with heat or loose, rocky ground.`,
+ intro:[`The Jordan Trail runs the length of the country, 675 km from Um Qais to the Red Sea. The section everyone talks about is the one that ends in Petra. It leaves the highlands near Shobak, plunges through a canyon where you wade a stream, crosses the black hills of the Feynan desert and climbs through sandstone mountains on an old Nabataean caravan road.`,
+ `On the fifth afternoon you walk around a corner and the Monastery is in front of you, without a ticket gate or a tour bus in sight. Petra itself gets the whole of the next day.`],
+ hl:[`Wadi Ghuweir, a narrowing canyon with palms and running water`,`Nights under more stars than you knew existed`,`Roman and Nabataean ruins nobody has fenced off`,`Arriving at the Monastery through Petra's back entrance`,`The Treasury at seven in the morning, before the crowds`],
+ stages:[[`Shobak → Wadi Feynan`,17,null,800,`6–7 h`,`Canyon descent with scrambling and wading`],[`Wadi Feynan → Teletat Al-Sofor`,17,1000,300,`7 h`,`Black desert and steep hills`],[`Teletat Al-Sofor → Um Ratam`,16,700,500,`6–7 h`,`Roman irrigation works, Nabataean remains`],[`Um Ratam → Al Baydha`,16,400,300,`5–6 h`,`The old caravan route`],[`Al Baydha → Petra`,16,400,400,`5–6 h`,`Little Petra side, the Monastery, down into the city`]],
+ hard:`Sporty. Stages average 16 to 17 km on rough, unmarked ground, and the second and third days have long climbs in the sun. The canyon day needs shoes that can get wet. Heat is the main risk; water has to be planned.`,
+ nights:`Wild camps in the desert with no facilities, dinner cooked over a fire, then a hotel in Wadi Musa when you reach Petra.`,
+ getting:`Fly to Amman. The trailhead near Shobak is about three hours south by road. Most European passport holders get a visa on arrival, and the Jordan Pass combines the visa with Petra entry.`,
+ when:`Mid-March to mid-May and October to November. Summer is dangerously hot; winter nights are near freezing.`,
+ pack:`Boots with ankle support, a second pair of grippy shoes for the canyon, sun hat, long sleeves, a sleeping bag comfortable to 5 °C.`,
+ diy:`Not a route to improvise. There are no waymarks and almost no water sources, so you need a local guide and a vehicle to supply the camps.`,
+ book:{name:'The Jordan Trail',url:'https://thejordantrail.org/',line:`runs this section with local guides, desert camps, jeep support for water and luggage, and the transfers from Amman`,from:'€620'},
+ gal:[['jordan-2','Sandstone domes under a deep blue sky'],['jordan-3','A walker in a sun hat looking over desert mountains'],['jordan-4','The Milky Way above a lone tree']]},
+
+{slug:'high-atlas',name:'High Atlas Traverse',sub:`Berber valleys below M'goun`,where:'Morocco',countries:1,region:'africa',days:5,trip:'8 days',km:83,up:2950,high:'3,225 m',sleep:'Five nights in tents, one in a gîte',st:'camp',level:4,months:[5,6,9,10],img:'atlas',tags:['altitude'],
+ blurb:`Terraced villages, a river gorge you wade through and two passes around 3,000 m. Close to Europe and a world away from it.`,
+ yes:`Hikers ready for altitude who like village life along the way.`,no:`Those who want a bed every night. This one is mostly under canvas.`,
+ intro:[`Most trekkers in Morocco head for Toubkal. The central High Atlas, around the 4,071 m M'goun massif, is wilder and far quieter. This route starts in the Aït Bouguemez, known as the Happy Valley for its green fields and mud-brick villages, and makes a five-day arc through country that has no roads.`,
+ `You cross the Asderm pass at 3,225 m, walk down the bed of the M'goun river between rock walls, pass villages where irrigation channels are still shared out by the hour, and climb a second high pass before returning to the valley. Mules carry the camp.`],
+ hl:[`The Izoughar plateau, where nomads graze their herds around a seasonal lake`,`Asderm pass, 3,225 m`,`Wading the M'goun gorge`,`Mint tea in a Berber village house`,`The view of Ighil M'goun from the Aït Imi pass`],
+ stages:[[`Zawyat Oulmzi → Boulibi`,16.9,755,90,`6–7 h`,`Izoughar plateau; camp at 2,700 m`],[`Boulibi → Erg`,15.2,776,1194,`4–5 h`,`Over Asderm pass`],[`Erg → Imi n'Irekt`,16.3,234,688,`4–5 h`,`Through the M'goun gorge`],[`Imi n'Irekt → Talat Righane`,17.9,499,260,`5–6 h`,`Ouzirimt valley and its villages`],[`Talat Righane → Aït Imi springs`,16.7,687,1024,`6–7 h`,`Aït Imi pass, 2,905 m`]],
+ hard:`Demanding, mainly because of altitude. You sleep as high as 2,700 m on the first trail night and cross 3,225 m the next day, with little time to adjust. The paths are mule tracks and not technical. No mountain experience is required, good fitness is.`,
+ nights:`A village gîte on the first night, then tented camps beside streams or village fields, with a cook and a mess tent. No showers for five days.`,
+ getting:`Fly to Marrakech. The Aït Bouguemez valley is about five hours east by road.`,
+ when:`May to June and September to mid-October. Snow closes the passes in winter and midsummer is hot in the valleys.`,
+ pack:`Waterproof sandals or old shoes for the gorge, sun protection, warm layers for nights near freezing at altitude, a sleeping bag comfortable to 5 °C.`,
+ diy:`The usual way is to hire a licensed mountain guide, a cook and muleteers in the valley. Doing without them is not advised: there are no waymarks or shops.`,
+ book:{name:'The Atlas Trail',url:'https://travelbase.eu/trip/atlas-trail-marokko/',line:`organises the whole team, the camps, drinking water and the transfer from Marrakech, with optional meals and mule transport for your bag`,from:'€589'},
+ gal:[['atlas-2','A tent on a high plateau at sunrise'],['atlas-3','A dirt road winding through bare red mountains'],['atlas-4','Two walkers pointing across a valley in evening light']]},
+
+{slug:'ak-suu-traverse',name:'Ak-Suu Traverse',sub:'Yurt to yurt in the Tian Shan',where:'Kyrgyzstan',countries:1,region:'asia',days:6,trip:'10 days',km:71,up:4130,high:'3,920 m',highN:3920,sleep:'Five nights in yurts, three in guesthouses',st:'yurt',level:4,months:[6,7,8,9],img:'kyrgyzstan',tags:['altitude'],
+ blurb:`Glacier valleys, turquoise Ala-Kul lake and nights in nomad yurts. Six trekking days plus an acclimatisation walk before the high passes.`,
+ yes:`Experienced walkers who want big mountains without the crowds.`,no:`Anyone who has never been above 3,000 m and has no time to acclimatise.`,
+ intro:[`The Terskey Ala-Too range runs along the south shore of Lake Issyk-Kul in eastern Kyrgyzstan: a wall of 4,000 and 5,000 m peaks, cut by parallel valleys where herders spend the summer in felt yurts with their horses and sheep. The Ak-Suu Traverse crosses from one valley to the next over a pass a day.`,
+ `It builds steadily. The first passes are grassy and around 3,300 m. Then come the hot springs of Altyn-Arashan, and the finale: a 1,380 m climb to the Ala-Kul pass at 3,920 m, with the lake appearing below in a colour that does not look real.`],
+ hl:[`Sleeping in a yurt beside a glacial river`,`Horses grazing loose on a plateau under Palatka peak`,`Soaking in the hot springs at Altyn-Arashan`,`Ala-Kul lake from the pass`,`An eagle-hunting demonstration and lunch with a nomad family on the way back`],
+ stages:[[`Trailhead → Bozuchuk valley`,12,800,170,`4–5 h`,`Glacial river and a small lake`],[`Bozuchuk → Jergez`,10.3,556,560,`4 h`,`First pass, about 3,350 m`],[`Jergez → Ak-Suu`,12.6,513,830,`4–5 h`,`Granite gorge, glacier views`],[`Ak-Suu → Altyn-Arashan`,14.1,827,1100,`5–6 h`,`High plateau, then the hot springs`],[`Altyn-Arashan → Ala-Kul`,13.5,1380,380,`7–8 h`,`The hardest day: Ala-Kul pass, 3,920 m`],[`Ala-Kul → Karakol valley`,8,50,1080,`4–5 h`,`Waterfalls and spruce forest`]],
+ hard:`Demanding. More than 4,000 m of ascent in six days, all between 2,500 and 3,920 m, on unmarked paths. The day to Ala-Kul is long and steep, with loose scree near the top. Arrive two days early to acclimatise in Karakol.`,
+ nights:`Yurt camps run by local families: mattresses on the floor, thick blankets, a stove, dry toilets, no showers and no electricity. Dinner is plov, lagman or soup with fresh bread. Karakol guesthouses bookend the trek.`,
+ getting:`Fly to Bishkek, usually through Istanbul. Karakol is six to seven hours east by road along Lake Issyk-Kul. Most Europeans enter visa-free.`,
+ when:`Late June to mid-September. The high passes hold snow until late June and it returns in September.`,
+ pack:`High boots, a down jacket for the yurt nights, hat and gloves, a water filter or purification tablets, a power bank and wet wipes.`,
+ diy:`Karakol has agencies that rent horses, guides and yurt places, and experienced trekkers do go alone with a tent. Without a guide you are navigating by GPS track.`,
+ book:{name:'The Kyrgyzstan Trail',url:'https://thekyrgyzstantrail.com/',line:`runs the traverse with local guides, the yurt camps, transfers from Bishkek and optional luggage transport by horse`,from:'€929'},
+ gal:[['kyrgyzstan-2','Walkers crossing a log bridge in a green valley'],['kyrgyzstan-3','Two turquoise lakes in a high grassy basin'],['kyrgyzstan-5','Two happy walkers on a boulder below snow peaks']]},
+
+{slug:'kilimanjaro-lemosho',name:'Kilimanjaro',sub:'The Lemosho route to Uhuru Peak',where:'Tanzania',countries:1,region:'africa',days:8,trip:'10 days',km:70,up:4570,high:'5,895 m',highN:5895,sleep:'Seven nights in tents on the mountain',st:'camp',level:5,months:[1,2,6,7,8,9,10],img:'kilimanjaro',tags:['altitude'],
+ blurb:`Africa's highest point by the longest and most gradual line. Eight days on the mountain improve your odds on the summit night.`,
+ yes:`Determined walkers who can be patient with a slow pace.`,no:`People in a hurry. Altitude punishes speed far more than a lack of fitness.`,
+ intro:[`Kilimanjaro is the highest mountain you can walk up without ropes. That makes it sound easy, and it is not: Uhuru Peak stands at 5,895 m, where the air holds half the oxygen of sea level. What decides whether you get there is how well your body adapts, and that is mostly a matter of time.`,
+ `The Lemosho route gives you that time. It starts in rainforest on the quiet western side, crosses the Shira plateau, traverses beneath the southern glaciers and only then turns uphill for the summit. Eight days on the mountain, with a "climb high, sleep low" profile, is why its success rate is among the best.`],
+ hl:[`Colobus monkeys in the forest on day one`,`Lunch at Lava Tower, 4,600 m, before dropping to sleep lower`,`The Barranco Wall, a 250 m scramble that is more fun than fearsome`,`Sunrise at Stella Point on the crater rim`,`Uhuru Peak, with the ice fields beside you and Africa below`],
+ stages:[[`Londorossi Gate → Mti Mkubwa (2,895 m)`,6,535,0,`3–4 h`,`Rainforest`],[`Mti Mkubwa → Shira One (3,600 m)`,8.5,810,90,`6–7 h`,`Out of the forest onto the plateau`],[`Shira One → Shira Two (3,900 m)`,8,300,0,`5 h`,`Easy acclimatisation day`],[`Shira Two → Barranco (3,950 m)`,10.5,700,650,`6–7 h`,`Up to Lava Tower, down to camp`],[`Barranco → Karanga (4,035 m)`,5.5,380,320,`4 h`,`The Barranco Wall`],[`Karanga → Barafu (4,600 m)`,5,550,0,`3 h`,`Alpine desert; rest for the summit`],[`Barafu → Uhuru Peak → Mweka camp (3,100 m)`,17,1295,2795,`12–15 h`,`Start around 1 am; summit at sunrise`],[`Mweka camp → Mweka Gate`,9,0,1430,`3–4 h`,`Back through the forest`]],
+ hard:`Severe, though not technical. Until summit night the days are short and deliberately slow. The summit day is the test: 1,300 m up in the dark and cold, then nearly 2,800 m down, twelve to fifteen hours in all. Mild altitude symptoms are normal; guides check oxygen levels daily.`,
+ nights:`Tents carried and pitched by the crew, with meals served in a mess tent. No showers. It is well below freezing at the highest camp. A hotel in Moshi before and after.`,
+ getting:`Fly to Kilimanjaro airport, one hour from Moshi. Tanzania requires a visa, applied for online, and you should see a travel clinic about malaria and vaccinations.`,
+ when:`January to early March and June to October. April, May and November are the rainy seasons.`,
+ pack:`A down jacket and a sleeping bag rated well below zero, layers from T-shirt to shell, warm gloves, a headtorch, and insurance that covers trekking to 6,000 m.`,
+ diy:`There is no independent option: park rules require every climber to go with a licensed guide and crew. What you choose is the operator. Look for one that is a partner of the Kilimanjaro Porters Assistance Project, which checks that porters are paid and equipped fairly.`,
+ book:{name:'The Kilimanjaro Trail',url:'https://thekilimanjarotrail.com/',line:`climbs Lemosho in eight days with one guide per two climbers, a porter-welfare partnership, daily health checks and park fees included`,from:'€2,489'},
+ gal:[['kilimanjaro-2','A high camp with the shadow of the mountain on the clouds'],['kilimanjaro-3','Sunrise over the summit snow'],['kilimanjaro-4','A lone figure on a ridge at dusk']]}
 ];
 const NOTES=[
  ['How to choose your first multi-day trek','Distance, climb, sleeping and season, in that order'],
@@ -368,7 +617,7 @@ const NEXT=[
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const season=t=>'<div class="season" role="img" aria-label="In season: '+t.months.map(m=>MONTHS[m-1]).join(', ')+'">'+M.map((m,i)=>'<i class="'+(t.months.includes(i+1)?'on':'')+'">'+m+'</i>').join('')+'</div>';
-const card=(t,big)=>'<a class="card'+(big?' big':'')+'" href="#trek-'+t.slug+'"><div class="ph"><img src="img/'+t.img+'.jpg" alt="'+esc(t.name)+', '+esc(t.where)+'" loading="lazy"><span class="lvl tt-badge tt-badge--dark">'+LEVELS[t.level]+'</span></div><div class="tx"><span class="where">'+esc(t.where)+'</span><h3>'+esc(t.name)+'</h3>'+(big?'<p>'+esc(t.blurb)+'</p>':'')+season(t)+'<div class="facts num"><span class="tt-badge tt-badge--forest">'+t.days+' days</span><span class="tt-badge tt-badge--dark">'+t.km+' km</span><span class="tt-badge tt-badge--outline">'+esc(SLEEP[t.st])+'</span></div></div></a>';
+const card=(t,big)=>'<a class="card'+(big?' big':'')+'" href="#trek-'+t.slug+'"><div class="ph"><img src="img/'+t.img+'.jpg" alt="'+esc(t.name)+', '+esc(t.where)+'" loading="lazy"><span class="lvl tt-badge tt-badge--dark">'+LEVELS[t.level]+'</span></div><div class="tx"><span class="where">'+esc(t.where)+'</span><h3>'+esc(t.name)+'</h3>'+(big?'<p>'+esc(t.blurb)+'</p>':'')+season(t)+'<div class="facts num"><span class="tt-badge tt-badge--forest">'+t.days+' days</span><span class="tt-badge tt-badge--dark">'+t.km+' km</span><span class="tt-badge tt-badge--outline">+'+t.up.toLocaleString('en')+' m</span></div></div></a>';
 const bySlug=s=>T.find(t=>t.slug===s);
 
 let state={region:'',level:'',month:'',topic:'',sleep:'',sort:'name'};
@@ -437,7 +686,7 @@ function home(){
 }
 function monthRows(){
   const list=T.filter(t=>t.months.includes(pick));
-  $('#monthrows').innerHTML=list.length?'<div class="rows">'+list.map(t=>'<a class="row" href="#trek-'+t.slug+'"><img src="img/'+t.img+'.jpg" alt="" loading="lazy"><div><h3>'+esc(t.name)+'</h3><span class="num">'+esc(t.where)+' · '+t.days+' days · '+t.km+' km · '+LEVELS[t.level]+'</span></div><span class="go" aria-hidden="true">→</span></a>').join('')+'</div>':'<p class="empty">Nothing in season in '+MONTHS[pick-1]+' yet. More southern-hemisphere and desert treks are on the list.</p>';
+  $('#monthrows').innerHTML=list.length?'<div class="rows">'+list.map(t=>'<a class="row" href="#trek-'+t.slug+'"><img src="img/'+t.img+'.jpg" alt="" loading="lazy"><div><h3>'+esc(t.name)+'</h3><span class="num">'+esc(t.where)+' · '+t.days+' days · '+t.km+' km · +'+t.up.toLocaleString('en')+' m · '+LEVELS[t.level]+'</span></div><span class="go" aria-hidden="true">→</span></a>').join('')+'</div>':'<p class="empty">Nothing in season in '+MONTHS[pick-1]+' yet. More southern-hemisphere and desert treks are on the list.</p>';
   document.querySelectorAll('.months button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.month===pick)));
 }
 
@@ -480,7 +729,8 @@ function results(){
 
 function detail(t){
   const i=T.indexOf(t), p=T[(i-1+T.length)%T.length], n=T[(i+1)%T.length];
-  const blocks=['Stage by stage, with elevation profile','Sleeping height per night','How hard it really is','A night on the trail: what to expect','Weather by week','Getting there and back','Signal, cash and power','Alternatives nearby'];
+  const n0=v=>v==null?'–':v.toLocaleString('en');
+  const sec=(h,x)=>x?'<h3>'+h+'</h3><p>'+esc(x)+'</p>':'';
   return `
 <div class="dhero"><img src="img/${t.img}.jpg" alt="${esc(t.name)}, ${esc(t.where)}"><div class="inner"><div class="wrap"><div class="panel"><span class="label">${esc(t.where)}</span><h1>${esc(t.name)}</h1><p class="sub">${esc(t.sub)}</p></div></div></div></div>
 <div class="wrap">
@@ -488,25 +738,51 @@ function detail(t){
   <dl class="sheet num">
     <div><dt>Days on trail</dt><dd>${t.days}</dd></div>
     <div><dt>Allow in total</dt><dd>${esc(t.trip)}</dd></div>
-    <div><dt>Distance</dt><dd>±${t.km} km</dd></div>
-    <div><dt>Average per day</dt><dd>${Math.round(t.km/t.days)} km</dd></div>
+    <div><dt>Distance</dt><dd>${t.km} km</dd></div>
+    <div><dt>Total climb</dt><dd>+${n0(t.up)} m</dd></div>
     <div><dt>Level</dt><dd><span class="pips" aria-hidden="true">${[1,2,3,4,5].map(x=>'<i class="'+(x<=t.level?'on':'')+'"></i>').join('')}</span>${LEVELS[t.level]}</dd></div>
-    <div><dt>Highest point</dt><dd>${t.high?esc(t.high):'To be added'}</dd></div>
+    <div><dt>${t.high?'Highest point':'Average per day'}</dt><dd>${t.high?esc(t.high):Math.round(t.km/t.days)+' km'}</dd></div>
     <div><dt>Sleeping</dt><dd class="small">${esc(t.sleep)}</dd></div>
     <div><dt>Region</dt><dd class="small">${esc(REGIONS[t.region].name)}</dd></div>
   </dl>
   <div class="dbody">
     <article>
-      <h2>The short version</h2>
-      <p class="ov">${esc(t.blurb)}</p>
+      <h2>The trek</h2>
+      ${t.intro.map((x,k)=>'<p class="'+(k?'para':'ov')+'">'+esc(x)+'</p>').join('')}
       <div class="fit">
         <div><h3>Made for</h3><p>${esc(t.yes)}</p></div>
         <div><h3>Think twice</h3><p>${esc(t.no)}</p></div>
       </div>
+      <h2>Highlights</h2>
+      <ul class="hl">${t.hl.map(x=>'<li><span class="patch" aria-hidden="true"></span><span>'+esc(x)+'</span></li>').join('')}</ul>
+      <div class="gallery g${t.gal.length}">${t.gal.map(g=>'<img src="img/'+g[0]+'.jpg" alt="'+esc(g[1])+'" loading="lazy">').join('')}</div>
+      <h2>Stage by stage</h2>
+      <div class="tablewrap"><table class="stages num">
+        <thead><tr><th scope="col">Day</th><th scope="col">Stage</th><th scope="col">Km</th><th scope="col">Up</th><th scope="col">Down</th><th scope="col">Time</th></tr></thead>
+        <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+g[1]+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
+      </table></div>
+      <h2>Good to know</h2>
+      <div class="know">
+        ${sec('How hard is it?',t.hard)}${sec('Where you sleep and eat',t.nights)}${sec('Getting there',t.getting)}${sec('When to go',t.when)}${sec('What to bring',t.pack)}
+      </div>
+      <h2>How to book it</h2>
+      <div class="know"><h3>On your own</h3><p>${esc(t.diy)}</p></div>
+      <div class="bookbox">
+        <span class="label">Without the hassle</span>
+        <p>If you would rather walk than organise, <b>${esc(t.book.name)}</b> ${esc(t.book.line)}. Prices start from about ${esc(t.book.from)} per person.</p>
+        <a class="btn solid" href="${t.book.url}" target="_blank" rel="noopener">See ${esc(t.book.name)}</a>
+        <p class="disc">${DISCLOSURE}</p>
+      </div>
     </article>
     <aside>
-      <div class="box"><h3>When to go</h3>${season(t)}<p style="font-size:14px;line-height:20px;color:var(--muted);margin-top:10px">${t.months.map(m=>MONTHS[m-1]).join(', ')}</p></div>
-      <div class="box"><h3>Still to come on this page</h3><ul class="todo">${blocks.map(b=>'<li><span>'+b+'</span><span class="tag">Planned</span></li>').join('')}</ul></div>
+      <div class="box"><h3>When to go</h3>${season(t)}<p class="cap">${t.months.map(m=>MONTHS[m-1]).join(', ')}</p></div>
+      <div class="box"><h3>In short</h3><ul class="todo">
+        <li><span>Longest day</span><b>${Math.max(...t.stages.map(g=>g[1]))} km</b></li>
+        <li><span>Biggest climb</span><b>+${n0(Math.max(...t.stages.map(g=>g[2]||0)))} m</b></li>
+        <li><span>Nights</span><b>${esc(SLEEP[t.st])}</b></li>
+        <li><span>Organised from</span><b>${esc(t.book.from)}</b></li>
+      </ul></div>
+      <div class="box"><h3>Still to come</h3><ul class="todo">${['Elevation profile per stage','GPX download','Weather by week'].map(b=>'<li><span>'+b+'</span><span class="tag">Planned</span></li>').join('')}</ul></div>
     </aside>
   </div>
   <nav class="pn" aria-label="More treks"><a href="#trek-${p.slug}"><span class="label">Previous</span><b>${esc(p.name)}</b></a><a href="#trek-${n.slug}"><span class="label">Next</span><b>${esc(n.name)}</b></a></nav>
@@ -520,10 +796,12 @@ function about(){
     <p>The best way to understand a country is to cross a piece of it on foot. You notice the gradient, the weather, what people grow and what they cook. A week of walking stays with you longer than a month of driving.</p>
     <p>Trek Trails wants to be the most complete guide to the world's famous and beautiful multi-day treks. It starts with ${T.length} routes and grows from there, one carefully checked trek at a time.</p>
     <h2>How each trek is described</h2>
-    <p>Every page opens with the same fact sheet: days on trail, total time to allow, distance, sleeping, level, highest point and season. Below that comes a plain verdict on who the trek suits. Stage descriptions, elevation profiles and practical details follow as each page matures.</p>
+    <p>Every page opens with the same fact sheet: days on trail, total time to allow, distance, sleeping, level, highest point and season. Below that comes a plain verdict on who the trek suits. Then come the stages day by day, what the nights are like, how to get there, and how to book it, alone or organised.</p>
     <h2>The level scale</h2>
     <ul class="scale">${[1,2,3,4,5].map(i=>'<li><span class="pips" aria-hidden="true">'+[1,2,3,4,5].map(x=>'<i class="'+(x<=i?'on':'')+'"></i>').join('')+'</span><b>'+LEVELS[i]+'</b> · '+['good paths, short days, little climbing','a full week on foot, moderate climbs','mountain passes or rough ground most days','long days with big ascents, some exposure','extreme altitude or cold on top of long days'][i-1]+'</li>').join('')}</ul>
     <p style="color:var(--muted);font-size:14px;line-height:20px">Levels are an editorial estimate, not an official grading. Distances are rounded.</p>
+    <h2>Who is behind it</h2>
+    <p>Trek Trails is a personal project. Its author also runs Travelbase, a company that organises several of the treks described here. Where a page points to an organised version of a trek, it says so next to the link. Every trek is also described for people who want to arrange it themselves.</p>
     <h2>What comes next</h2>
     <p>More treks outside Europe, planning guides and translations. If a famous route is missing, it is probably already on the list.</p>
     <p><a class="btn solid" href="#trails">Browse the treks</a></p>
