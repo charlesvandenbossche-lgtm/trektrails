@@ -780,7 +780,7 @@ function detail(t){
       <h2>How to book it</h2>
       <div class="know"><h3>On your own</h3><p>${esc(t.diy)}</p></div>
       <div class="bookbox">
-        <div class="bookhead"><span class="label">Without the hassle</span><span class="tt-badge tt-badge--ondeep">Affiliated partner</span></div>
+        <span class="label">Without the hassle</span>
         <p>If you would rather walk than organise, <b>${esc(t.book.name)}</b> ${esc(t.book.line)}. Prices start from about ${esc(t.book.from)} per person.</p>
         <a class="btn solid" href="${t.book.url}" target="_blank" rel="noopener">See ${esc(t.book.name)}</a>
       </div>
@@ -812,7 +812,7 @@ function about(){
     <ul class="scale">${[1,2,3,4,5].map(i=>'<li><span class="pips" aria-hidden="true">'+[1,2,3,4,5].map(x=>'<i class="'+(x<=i?'on':'')+'"></i>').join('')+'</span><b>'+LEVELS[i]+'</b> · '+['good paths, short days, little climbing','a full week on foot, moderate climbs','mountain passes or rough ground most days','long days with big ascents, some exposure','extreme altitude or cold on top of long days'][i-1]+'</li>').join('')}</ul>
     <p style="color:var(--muted);font-size:14px;line-height:20px">Levels are an editorial estimate, not an official grading. Distances are rounded.</p>
     <h2>Who is behind it</h2>
-    <p>Trek Trails is a personal project. Links marked "Affiliated partner" lead to trips organised by Travelbase, where the author works. Every trek is also described for people who want to arrange it themselves.</p>
+    <p>Trek Trails is a personal project. Every trek is described for people who want to arrange it themselves, with a pointer to an organised version for those who would rather not.</p>
     <h2>What comes next</h2>
     <p>More treks outside Europe, planning guides and translations. If a famous route is missing, it is probably already on the list.</p>
     <p><a class="btn solid" href="#trails">Browse the treks</a></p>
