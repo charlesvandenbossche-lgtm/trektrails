@@ -3,6 +3,8 @@
   "compatibility_date": "2026-11-16",
   // Astro builds the site into ./dist before every deploy
   "build": { "command": "npm run build" },
+  // Needed for preview deployments of non-production branches
+  "previews": {},
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
