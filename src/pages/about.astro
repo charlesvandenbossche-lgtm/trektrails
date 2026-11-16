@@ -1,0 +1,7 @@
+---
+import Base from '../layouts/Base.astro';
+import { about } from '../lib/render.mjs';
+---
+<Base title="About Trek Trails and how we rate treks" description="Why Trek Trails exists, how every trek is described and what the five difficulty levels mean." nav="about">
+  <Fragment set:html={about()} />
+</Base>

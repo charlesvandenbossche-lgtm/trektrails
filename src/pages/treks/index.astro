@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import { trails } from '../../lib/render.mjs';
+import { T } from '../../data/treks.mjs';
+const jsonld = [{ '@context': 'https://schema.org', '@type': 'ItemList', name: 'Multi-day treks', itemListElement: T.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: `https://trektrails.org/treks/${t.slug}/` })) }];
+---
+<Base title={`All ${T.length} treks, compared by distance, level and season | Trek Trails`} description="Every trek on Trek Trails with the same fact sheet. Filter by region, month, level and sleeping style, or use the season calendar." nav="treks" jsonld={jsonld}>
+  <Fragment set:html={trails()} />
+</Base>
