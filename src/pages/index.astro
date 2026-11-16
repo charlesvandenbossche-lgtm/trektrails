@@ -3,6 +3,6 @@ import Base from '../layouts/Base.astro';
 import { home } from '../lib/render.mjs';
 const jsonld = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Trek Trails', url: 'https://trektrails.org/', description: "A field guide to the world's great multi-day treks." }];
 ---
-<Base title="Trek Trails: a field guide to the world's great multi-day treks" description="Honest guides to the most famous and beautiful multi-day treks on earth: distance, climb, stages, when to go and who each trek suits." nav="home" jsonld={jsonld}>
+<Base title="Trek Trails: a field guide to the world's great multi-day treks" description="Honest guides to the most famous and beautiful multi-day treks on earth: distance, climb, stages, when to go and who each trek suits." nav="home" hero jsonld={jsonld}>
   <Fragment set:html={home()} />
 </Base>

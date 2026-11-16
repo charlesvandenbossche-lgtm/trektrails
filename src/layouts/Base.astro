@@ -1,6 +1,6 @@
 ---
 import '../styles.css';
-const { title, description, image = '/img/kyrgyzstan.jpg', path = Astro.url.pathname, jsonld = [], nav = '' } = Astro.props;
+const { title, description, image = '/img/kyrgyzstan.jpg', path = Astro.url.pathname, jsonld = [], nav = '', hero = false } = Astro.props;
 const canonical = new URL(path, Astro.site).href;
 const img = new URL(image, Astro.site).href;
 ---
@@ -27,7 +27,7 @@ const img = new URL(image, Astro.site).href;
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
 {jsonld.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} />)}
 </head>
-<body>
+<body class={hero ? "has-hero" : undefined}>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Trek Trails, home"><img src="/img/logo.png" alt="Trek Trails" width="56" height="56"></a>

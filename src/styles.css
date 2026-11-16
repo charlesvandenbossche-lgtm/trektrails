@@ -292,3 +292,38 @@ a.region{text-decoration:none}
 [hidden]{display:none!important}
 .crumbs{font-family:var(--cond);text-transform:uppercase;letter-spacing:.08em;font-weight:600;font-size:13px;color:var(--muted);margin:24px 0 0;display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0}
 .crumbs a{color:var(--accent);text-decoration:none}
+
+/* ---- Header over the photo, and the front-page hero (owner's design) ---- */
+header.site{background:color-mix(in srgb,var(--surface) 62%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--border) 55%,transparent)}
+header.site .wrap{height:64px}
+.brand img{width:46px;height:46px}
+nav.main{gap:12px}
+nav.main a{font-size:14px;letter-spacing:.1em;padding:6px 10px;border-bottom-width:2px}
+nav.main a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--accent)}
+.has-hero .hero,.has-hero .dhero{margin-top:-65px}
+.has-hero .dhero img{height:clamp(380px,50vw,620px)}
+
+.hero img{height:clamp(560px,78vh,760px);object-position:50% 45%}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,28,22,.72) 0%,rgba(20,28,22,.45) 38%,rgba(20,28,22,0) 68%)}
+.hero .inner{top:64px;bottom:0;padding-bottom:0;display:flex;align-items:center}
+.hero .inner .wrap{width:100%}
+.hero .panel{background:none;padding:0;max-width:600px}
+.hero h1{font-size:clamp(44px,6.2vw,80px);line-height:.98;letter-spacing:.01em;color:var(--parchment);text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.hero p{font-size:clamp(17px,1.5vw,21px);line-height:1.5;font-weight:500;max-width:36ch;color:var(--parchment);margin-top:20px}
+.hero .cta{margin-top:28px}
+.hero .btn{padding:14px 22px}
+
+@media (max-width:560px){
+  header.site .wrap{height:56px;padding-top:0;padding-bottom:0;flex-wrap:nowrap;gap:12px}
+  .brand img{width:40px;height:40px}
+  nav.main{margin-left:auto;gap:2px;flex-wrap:nowrap}
+  nav.main a{font-size:13px;padding:6px 6px;letter-spacing:.06em}
+  .has-hero .hero,.has-hero .dhero{margin-top:-57px}
+  .hero img{height:clamp(540px,86vh,700px);object-position:42% 50%}
+  .hero::before{background:linear-gradient(180deg,rgba(20,28,22,.15) 0%,rgba(20,28,22,.25) 35%,rgba(20,28,22,.82) 100%)}
+  .hero .inner{top:56px;align-items:flex-end;padding-bottom:28px}
+  .hero h1{font-size:clamp(40px,12.5vw,56px)}
+  .hero p{max-width:none}
+  .hero .cta{flex-direction:column;align-items:stretch}
+  .hero .btn{justify-content:center}
+}
