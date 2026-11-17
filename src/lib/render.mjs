@@ -1,3 +1,4 @@
+import {maps} from './map.mjs';
 import {M,MONTHS,LEVELS,REGIONS,TOPICS,SLEEP,T,NOTES,NEXT} from '../data/treks.mjs';
 const state={region:'',level:'',month:'',topic:'',sleep:'',sort:'name'};
 const HZ='<svg class="horizon" viewBox="0 0 600 96" preserveAspectRatio="none" aria-hidden="true"><rect class="b1" width="600" height="96"/><path class="b2" d="M0 18 C150 10 300 24 450 16 S600 14 600 14 V96 H0Z"/><path class="b3" d="M0 36 C140 30 320 42 460 34 S600 32 600 32 V96 H0Z"/><path class="b4" d="M0 52 C160 46 300 58 440 50 S600 50 600 50 V96 H0Z"/><path class="b5" d="M0 66 C150 60 310 72 450 64 S600 64 600 64 V96 H0Z"/><path class="b6" d="M0 82 C140 76 300 88 460 80 S600 80 600 80 V96 H0Z"/></svg>';
@@ -9,6 +10,7 @@ const row=t=>'<a class="row" href="/treks/'+t.slug+'/" data-m="'+t.months.join('
 const opt=(v,l,cur)=>'<option value="'+v+'"'+(String(cur)===String(v)?' selected':'')+'>'+esc(l)+'</option>';
 function home(){
   const km=T.reduce((a,t)=>a+t.km,0), countries=22;
+  const mp=maps();
   const f=[bySlug('ak-suu-traverse'),bySlug('tour-du-mont-blanc'),bySlug('laugavegur')];
   return `
 <div class="hero">
@@ -45,6 +47,14 @@ function home(){
   <div class="sechead"><div><span class="label">Season finder</span><h2>Where to walk, month by month</h2></div><p>Pick a month to see which treks are in season. The green cells on every trek show the same thing.</p></div>
   <div class="months" role="group" aria-label="Choose a month">${MONTHS.map((m,i)=>'<button type="button" data-month="'+(i+1)+'" aria-pressed="false">'+m.slice(0,3)+'</button>').join('')}</div>
   <div id="monthrows"><div class="rows">${T.map(row).join('')}</div><p class="empty" hidden>Nothing in season this month yet. More southern-hemisphere and desert treks are on the list.</p></div>
+</div></section>
+
+<section class="mapsec"><div class="wrap">
+  <div class="sechead"><div><span class="label">The map</span><h2>Every trek, where it is</h2></div><p>Each dot is a trek. Select one to open its guide.</p></div>
+  <div class="maps">
+    <figure class="mapcard"><div class="mapscroll">${mp.world}</div><figcaption>The world · ${mp.far} treks outside Europe, plus the ${mp.near} in the box</figcaption></figure>
+    <figure class="mapcard"><div class="mapscroll">${mp.europe}</div><figcaption>Europe and the Mediterranean · ${mp.near} treks</figcaption></figure>
+  </div>
 </div></section>
 
 <section><div class="wrap">
