@@ -1,4 +1,5 @@
 import {maps} from './map.mjs';
+import MAPS from '../data/maps.json';
 import {M,MONTHS,LEVELS,REGIONS,TOPICS,SLEEP,T,NOTES,NEXT} from '../data/treks.mjs';
 const state={region:'',level:'',month:'',topic:'',sleep:'',sort:'name'};
 const HZ='<svg class="horizon" viewBox="0 0 600 96" preserveAspectRatio="none" aria-hidden="true"><rect class="b1" width="600" height="96"/><path class="b2" d="M0 18 C150 10 300 24 450 16 S600 14 600 14 V96 H0Z"/><path class="b3" d="M0 36 C140 30 320 42 460 34 S600 32 600 32 V96 H0Z"/><path class="b4" d="M0 52 C160 46 300 58 440 50 S600 50 600 50 V96 H0Z"/><path class="b5" d="M0 66 C150 60 310 72 450 64 S600 64 600 64 V96 H0Z"/><path class="b6" d="M0 82 C140 76 300 88 460 80 S600 80 600 80 V96 H0Z"/></svg>';
@@ -124,6 +125,7 @@ function detail(t){
     <article>
       <h2>The trek</h2>
       ${t.intro.map((x,k)=>'<p class="'+(k?'para':'ov')+'">'+esc(x)+'</p>').join('')}
+      ${MAPS[t.slug]?`<figure class="routemap${MAPS[t.slug].h>MAPS[t.slug].w?' tall':''}"><a href="/img/maps/${t.slug}.webp"><img src="/img/maps/${t.slug}.webp" width="${MAPS[t.slug].w}" height="${MAPS[t.slug].h}" alt="Route map of the ${esc(t.name)} with the stages, overnight stops and distances" loading="lazy"></a><figcaption>The ${esc(t.name)} on the map: stages, overnight stops and distances. ${esc(MAPS[t.slug].note)} Tap the map to enlarge.</figcaption></figure>`:''}
       <div class="fit">
         <div><h3>Made for</h3><p>${esc(t.yes)}</p></div>
         <div><h3>Think twice</h3><p>${esc(t.no)}</p></div>

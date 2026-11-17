@@ -358,3 +358,12 @@ nav.main a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--ac
 .map .dot:focus-visible .pin{stroke:var(--ochre);stroke-width:3}
 @media (max-width:900px){.maps{grid-template-columns:1fr}}
 @media (max-width:560px){.mapcard:first-child .mapscroll .map{min-width:640px}}
+
+/* route maps on trek pages */
+.routemap{margin:26px 0 30px}
+.routemap a{display:block}
+.routemap img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid rgba(41,48,41,.14)}
+.routemap.tall{max-width:600px}
+.routemap figcaption{margin-top:8px;font-size:.86rem;opacity:.75}
+.dbody>article{min-width:0}
+.routemap{max-width:100%}

@@ -1,0 +1,112 @@
+{
+ "tour-du-mont-blanc": {
+  "w": 1200,
+  "h": 1600,
+  "note": ""
+ },
+ "jotunheimen": {
+  "w": 1600,
+  "h": 1200,
+  "note": "The Besseggen stage is drawn approximately."
+ },
+ "isle-of-skye": {
+  "w": 1200,
+  "h": 1600,
+  "note": "The Storr to Staffin stage is drawn approximately."
+ },
+ "kungsleden-winter": {
+  "w": 1200,
+  "h": 1600,
+  "note": ""
+ },
+ "dolomites": {
+  "w": 1600,
+  "h": 1200,
+  "note": "Two stages are drawn approximately, as marked."
+ },
+ "vosges-ridge": {
+  "w": 1200,
+  "h": 1600,
+  "note": ""
+ },
+ "mullerthal-trail": {
+  "w": 1600,
+  "h": 1200,
+  "note": ""
+ },
+ "gran-canaria-traverse": {
+  "w": 1600,
+  "h": 1200,
+  "note": ""
+ },
+ "mestia-to-ushguli": {
+  "w": 1600,
+  "h": 1200,
+  "note": ""
+ },
+ "cappadocia-valleys": {
+  "w": 1200,
+  "h": 1600,
+  "note": "The route between the villages is drawn schematically."
+ },
+ "jordan-trail": {
+  "w": 1200,
+  "h": 1600,
+  "note": "The first stage is drawn approximately."
+ },
+ "ak-suu-traverse": {
+  "w": 1600,
+  "h": 1200,
+  "note": "The line and the camp positions east of Altyn-Arashan are approximate."
+ },
+ "kilimanjaro-lemosho": {
+  "w": 1600,
+  "h": 1200,
+  "note": ""
+ },
+ "camino-de-santiago": {
+  "w": 1600,
+  "h": 1200,
+  "note": ""
+ },
+ "west-highland-way": {
+  "w": 1200,
+  "h": 1600,
+  "note": ""
+ },
+ "inca-trail": {
+  "w": 1600,
+  "h": 1200,
+  "note": ""
+ },
+ "annapurna-circuit": {
+  "w": 1600,
+  "h": 1200,
+  "note": ""
+ },
+ "pacific-crest-trail": {
+  "w": 1200,
+  "h": 1600,
+  "note": "The trail is drawn schematically at this scale."
+ },
+ "peaks-of-the-balkans": {
+  "w": 1600,
+  "h": 1200,
+  "note": "The Dobërdol to Plav stage is drawn approximately."
+ },
+ "alta-via-1": {
+  "w": 1200,
+  "h": 1600,
+  "note": ""
+ },
+ "madeira-crossing": {
+  "w": 1600,
+  "h": 1200,
+  "note": "Two stages are drawn approximately, as marked."
+ },
+ "laugavegur": {
+  "w": 1024,
+  "h": 765,
+  "note": ""
+ }
+}
