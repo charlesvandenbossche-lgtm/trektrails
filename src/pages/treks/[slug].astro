@@ -8,10 +8,10 @@ const url = `https://trektrails.org/treks/${t.slug}/`;
 const title = `${t.name}: stages, distance and best time to go | Trek Trails`;
 const description = `${t.name}, ${t.where}: ${t.km} km in ${t.days} days${t.up ? `, +${t.up.toLocaleString('en')} m` : ''}. ${t.blurb}`.slice(0, 300);
 const jsonld = [
-  { '@context': 'https://schema.org', '@type': 'Article', headline: `${t.name}: ${t.sub}`, description: t.blurb, image: `https://trektrails.org/img/${t.img}.jpg`, mainEntityOfPage: url, author: { '@type': 'Organization', name: 'Trek Trails', url: 'https://trektrails.org/' }, publisher: { '@type': 'Organization', name: 'Trek Trails', logo: { '@type': 'ImageObject', url: 'https://trektrails.org/img/logo.png' } }, about: { '@type': 'TouristAttraction', name: t.name, description: `${t.km} km, ${t.days} days on trail, level: ${LEVELS[t.level]}.` } },
+  { '@context': 'https://schema.org', '@type': 'Article', headline: `${t.name}: ${t.sub}`, description: t.blurb, image: `https://trektrails.org/img/${t.img || 'logo'}.${t.img ? 'jpg' : 'png'}`, mainEntityOfPage: url, author: { '@type': 'Organization', name: 'Trek Trails', url: 'https://trektrails.org/' }, publisher: { '@type': 'Organization', name: 'Trek Trails', logo: { '@type': 'ImageObject', url: 'https://trektrails.org/img/logo.png' } }, about: { '@type': 'TouristAttraction', name: t.name, description: `${t.km} km, ${t.days} days on trail, level: ${LEVELS[t.level]}.` } },
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://trektrails.org/' }, { '@type': 'ListItem', position: 2, name: 'All treks', item: 'https://trektrails.org/treks/' }, { '@type': 'ListItem', position: 3, name: t.name, item: url } ] },
 ];
 ---
-<Base title={title} description={description} image={`/img/${t.img}.jpg`} nav="treks" hero jsonld={jsonld}>
+<Base title={title} description={description} image={t.img ? `/img/${t.img}.jpg` : undefined} nav="treks" hero jsonld={jsonld}>
   <Fragment set:html={detail(t)} />
 </Base>

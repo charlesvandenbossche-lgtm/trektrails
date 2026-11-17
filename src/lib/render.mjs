@@ -1,13 +1,14 @@
 import {M,MONTHS,LEVELS,REGIONS,TOPICS,SLEEP,T,NOTES,NEXT} from '../data/treks.mjs';
 const state={region:'',level:'',month:'',topic:'',sleep:'',sort:'name'};
+const HZ='<svg class="horizon" viewBox="0 0 600 96" preserveAspectRatio="none" aria-hidden="true"><rect class="b1" width="600" height="96"/><path class="b2" d="M0 18 C150 10 300 24 450 16 S600 14 600 14 V96 H0Z"/><path class="b3" d="M0 36 C140 30 320 42 460 34 S600 32 600 32 V96 H0Z"/><path class="b4" d="M0 52 C160 46 300 58 440 50 S600 50 600 50 V96 H0Z"/><path class="b5" d="M0 66 C150 60 310 72 450 64 S600 64 600 64 V96 H0Z"/><path class="b6" d="M0 82 C140 76 300 88 460 80 S600 80 600 80 V96 H0Z"/></svg>';
 const bySlug=s=>T.find(t=>t.slug===s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const season=t=>'<div class="season" role="img" aria-label="In season: '+t.months.map(m=>MONTHS[m-1]).join(', ')+'">'+M.map((m,i)=>'<i class="'+(t.months.includes(i+1)?'on':'')+'">'+m+'</i>').join('')+'</div>';
-const card=(t,big)=>'<a class="card'+(big?' big':'')+'" href="/treks/'+t.slug+'/" data-region="'+t.region+'" data-level="'+t.level+'" data-months="'+t.months.join(',')+'" data-tags="'+t.tags.join(',')+'" data-st="'+t.st+'" data-km="'+t.km+'" data-days="'+t.days+'" data-name="'+esc(t.name)+'"><div class="ph"><img src="/img/'+t.img+'.jpg" alt="'+esc(t.name)+', '+esc(t.where)+'" loading="lazy"><span class="lvl tt-badge tt-badge--dark">'+LEVELS[t.level]+'</span></div><div class="tx"><span class="where">'+esc(t.where)+'</span><h3>'+esc(t.name)+'</h3>'+(big?'<p>'+esc(t.blurb)+'</p>':'')+season(t)+'<div class="facts num"><span class="tt-badge tt-badge--forest">'+t.days+' days</span><span class="tt-badge tt-badge--dark">'+t.km+' km</span>'+(t.up?'<span class="tt-badge tt-badge--outline">+'+t.up.toLocaleString('en')+' m</span>':'<span class="tt-badge tt-badge--outline">'+esc(SLEEP[t.st])+'</span>')+'</div></div></a>';
-const row=t=>'<a class="row" href="/treks/'+t.slug+'/" data-m="'+t.months.join(',')+'"><img src="/img/'+t.img+'.jpg" alt="" loading="lazy"><div><h3>'+esc(t.name)+'</h3><span class="num">'+esc(t.where)+' · '+t.days+' days · '+t.km+' km'+(t.up?' · +'+t.up.toLocaleString('en')+' m':'')+' · '+LEVELS[t.level]+'</span></div><span class="go" aria-hidden="true">→</span></a>';
+const card=(t,big)=>'<a class="card'+(big?' big':'')+'" href="/treks/'+t.slug+'/" data-region="'+t.region+'" data-level="'+t.level+'" data-months="'+t.months.join(',')+'" data-tags="'+t.tags.join(',')+'" data-st="'+t.st+'" data-km="'+t.km+'" data-days="'+t.days+'" data-name="'+esc(t.name)+'"><div class="ph'+(t.img?'':' noimg')+'">'+(t.img?'<img src="/img/'+t.img+'.jpg" alt="'+esc(t.name)+', '+esc(t.where)+'" loading="lazy">':HZ)+'<span class="lvl tt-badge tt-badge--dark">'+LEVELS[t.level]+'</span></div><div class="tx"><span class="where">'+esc(t.where)+'</span><h3>'+esc(t.name)+'</h3>'+(big?'<p>'+esc(t.blurb)+'</p>':'')+season(t)+'<div class="facts num"><span class="tt-badge tt-badge--forest">'+t.days+' days</span><span class="tt-badge tt-badge--dark">'+t.km.toLocaleString('en')+' km</span>'+(t.up?'<span class="tt-badge tt-badge--outline">+'+t.up.toLocaleString('en')+' m</span>':'<span class="tt-badge tt-badge--outline">'+esc(SLEEP[t.st])+'</span>')+'</div></div></a>';
+const row=t=>'<a class="row" href="/treks/'+t.slug+'/" data-m="'+t.months.join(',')+'">'+(t.img?'<img src="/img/'+t.img+'.jpg" alt="" loading="lazy">':'<span class="thumb" aria-hidden="true"></span>')+'<div><h3>'+esc(t.name)+'</h3><span class="num">'+esc(t.where)+' · '+t.days+' days · '+t.km.toLocaleString('en')+' km'+(t.up?' · +'+t.up.toLocaleString('en')+' m':'')+' · '+LEVELS[t.level]+'</span></div><span class="go" aria-hidden="true">→</span></a>';
 const opt=(v,l,cur)=>'<option value="'+v+'"'+(String(cur)===String(v)?' selected':'')+'>'+esc(l)+'</option>';
 function home(){
-  const km=T.reduce((a,t)=>a+t.km,0), countries=21;
+  const km=T.reduce((a,t)=>a+t.km,0), countries=22;
   const f=[bySlug('ak-suu-traverse'),bySlug('tour-du-mont-blanc'),bySlug('laugavegur')];
   return `
 <div class="hero">
@@ -96,13 +97,13 @@ function detail(t){
   const n0=v=>v==null?'–':v.toLocaleString('en');
   const sec=(h,x)=>x?'<h3>'+h+'</h3><p>'+esc(x)+'</p>':'';
   return `
-<div class="dhero"><img src="/img/${t.img}.jpg" alt="${esc(t.name)}, ${esc(t.where)}"><div class="inner"><div class="wrap"><div class="panel"><span class="label">${esc(t.where)}</span><h1>${esc(t.name)}</h1><p class="sub">${esc(t.sub)}</p></div></div></div></div>
+<div class="dhero${t.img?'':' noimg'}">${t.img?`<img src="/img/${t.img}.jpg" alt="${esc(t.name)}, ${esc(t.where)}">`:HZ}<div class="inner"><div class="wrap"><div class="panel"><span class="label">${esc(t.where)}</span><h1>${esc(t.name)}</h1><p class="sub">${esc(t.sub)}</p></div></div></div></div>
 <div class="wrap">
   <ol class="crumbs"><li><a href="/">Home</a></li><li aria-hidden="true">/</li><li><a href="/treks/">All treks</a></li><li aria-hidden="true">/</li><li>${esc(t.name)}</li></ol>
   <dl class="sheet num">
     <div><dt>Days on trail</dt><dd>${t.days}</dd></div>
     <div><dt>Allow in total</dt><dd>${esc(t.trip)}</dd></div>
-    <div><dt>Distance</dt><dd>${t.km} km</dd></div>
+    <div><dt>Distance</dt><dd>${t.km.toLocaleString('en')} km</dd></div>
     <div><dt>${t.up?'Total climb':'Longest day'}</dt><dd>${t.up?'+'+n0(t.up)+' m':Math.max(...t.stages.map(g=>g[1]||0))+' km'}</dd></div>
     <div><dt>Level</dt><dd><span class="pips" aria-hidden="true">${[1,2,3,4,5].map(x=>'<i class="'+(x<=t.level?'on':'')+'"></i>').join('')}</span>${LEVELS[t.level]}</dd></div>
     <div><dt>${t.high?'Highest point':'Average per day'}</dt><dd>${t.high?esc(t.high):Math.round(t.km/t.days)+' km'}</dd></div>
@@ -120,10 +121,10 @@ function detail(t){
       <h2>Highlights</h2>
       <ul class="hl">${t.hl.map(x=>'<li><img class="mark" src="/img/mark.png" alt="" aria-hidden="true"><span>'+esc(x)+'</span></li>').join('')}</ul>
       ${t.gal.length?`<div class="gallery g${t.gal.length}">${t.gal.map(g=>'<img src="/img/'+g[0]+'.jpg" alt="'+esc(g[1])+'" loading="lazy">').join('')}</div>`:''}
-      <h2>Stage by stage</h2>
+      <h2>${t.long?'Section by section':'Stage by stage'}</h2>
       <div class="tablewrap"><table class="stages num">
-        <thead><tr><th scope="col">Day</th><th scope="col">Stage</th><th scope="col">Km</th><th scope="col">Up</th><th scope="col">Down</th><th scope="col">Time</th></tr></thead>
-        <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+(g[1]==null?'–':g[1])+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
+        <thead><tr><th scope="col">${t.long?'Part':'Day'}</th><th scope="col">${t.long?'Section':'Stage'}</th><th scope="col">Km</th><th scope="col">Up</th><th scope="col">Down</th><th scope="col">Time</th></tr></thead>
+        <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+(g[1]==null?'–':g[1].toLocaleString('en'))+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
       </table></div>
       <h2>Good to know</h2>
       <div class="know">
@@ -135,16 +136,16 @@ function detail(t){
         <span class="label">Without the hassle</span>
         <p>If you would rather walk than organise, <b>${esc(t.book.name)}</b> ${esc(t.book.line)}. Prices start from about ${esc(t.book.from)} per person.</p>
         <a class="btn solid" href="${t.book.url}" target="_blank" rel="noopener">See ${esc(t.book.name)}</a>
-      </div>`:`<div class="know"><h3>With an organiser</h3><p>${esc(t.org)}</p></div>`}
+      </div>`:`<div class="know"><h3>${t.long?'Walking a section instead':'With an organiser'}</h3><p>${esc(t.org)}</p></div>`}
     </article>
     <aside>
       <div class="box"><h3>When to go</h3>${season(t)}<p class="cap">${t.months.map(m=>MONTHS[m-1]).join(', ')}</p></div>
-      <div class="box"><h3>In short</h3><ul class="todo">
+      ${t.short?'<div class="box"><h3>In short</h3><ul class="todo">'+t.short.map(x=>'<li><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b></li>').join('')+'</ul></div>':`<div class="box"><h3>In short</h3><ul class="todo">
         <li><span>Longest day</span><b>${Math.max(...t.stages.map(g=>g[1]||0))} km</b></li>
         <li><span>Biggest climb</span><b>+${n0(Math.max(...t.stages.map(g=>g[2]||0)))} m</b></li>
         <li><span>Nights</span><b>${esc(SLEEP[t.st])}</b></li>
         ${t.book?'<li><span>Organised from</span><b>'+esc(t.book.from)+'</b></li>':''}
-      </ul></div>
+      </ul></div>`}
       <div class="box"><h3>Still to come</h3><ul class="todo">${['Elevation profile per stage','GPX download','Weather by week'].map(b=>'<li><span>'+b+'</span><span class="tag">Planned</span></li>').join('')}</ul></div>
     </aside>
   </div>
