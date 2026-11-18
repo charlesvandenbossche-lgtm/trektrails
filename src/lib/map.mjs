@@ -14,7 +14,7 @@ const LL = {
   'cappadocia-valleys': [38.65, 34.85], 'jordan-trail': [30.4, 35.5], 'high-atlas': [31.6, -6.5],
   'ak-suu-traverse': [42.4, 78.6], 'kilimanjaro-lemosho': [-3.07, 37.35], 'camino-de-santiago': [42.85, -8.0],
   'west-highland-way': [56.4, -4.7], 'inca-trail': [-13.2, -72.5], 'annapurna-circuit': [28.6, 84.1],
-  'alta-via-1': [46.25, 12.3], 'pacific-crest-trail': [40.5, -121.5],
+  'alta-via-1': [46.25, 12.3], 'pacific-crest-trail': [40.5, -121.5], 'arizona-trail': [34.2, -111.4],
 };
 const EUROPE = { w: -26, e: 47, s: 26, n: 71.5 };
 const inEurope = ([lat, lon]) => lon >= EUROPE.w && lon <= EUROPE.e && lat >= EUROPE.s && lat <= EUROPE.n;

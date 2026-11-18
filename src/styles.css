@@ -367,3 +367,5 @@ nav.main a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--ac
 .routemap figcaption{margin-top:8px;font-size:.86rem;opacity:.75}
 .dbody>article{min-width:0}
 .routemap{max-width:100%}
+
+.ainote{margin-top:10px;font-size:.86rem;opacity:.75}
