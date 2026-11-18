@@ -138,6 +138,9 @@ function detail(t){
         <thead><tr><th scope="col">${t.long?'Part':'Day'}</th><th scope="col">${t.long?'Section':'Stage'}</th><th scope="col">Km</th><th scope="col">Up</th><th scope="col">Down</th><th scope="col">Time</th></tr></thead>
         <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+(g[1]==null?'–':g[1].toLocaleString('en'))+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
       </table></div>
+      ${t.dayNotes?'<div class="days">'+t.stages.map((g,k)=>t.dayNotes[k]?'<h3><span class="label">Day '+(k+1)+'</span>'+esc(g[0])+'</h3><p>'+esc(t.dayNotes[k])+'</p>':'').join('')+'</div>':''}
+      ${t.truths?'<h2>What nobody tells you</h2><ul class="truths">'+t.truths.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':''}
+      ${t.byMonth?'<h2>Month by month</h2><dl class="bymonth">'+t.byMonth.map(x=>'<div><dt>'+esc(x[0])+'</dt><dd>'+esc(x[1])+'</dd></div>').join('')+'</dl>':''}
       <h2>Good to know</h2>
       <div class="know">
         ${sec('How hard is it?',t.hard)}${sec('Where you sleep and eat',t.nights)}${sec('Getting there',t.getting)}${sec('When to go',t.when)}${sec('What to bring',t.pack)}
@@ -149,6 +152,10 @@ function detail(t){
         <p>If you would rather walk than organise, <b>${esc(t.book.name)}</b> ${esc(t.book.line)}. Prices start from about ${esc(t.book.from)} per person.</p>
         <a class="btn solid" href="${t.book.url}" target="_blank" rel="noopener">See ${esc(t.book.name)}</a>
       </div>`:`<div class="know"><h3>${t.long?'Walking a section instead':'With an organiser'}</h3><p>${esc(t.org)}</p></div>`}
+      ${t.costs?'<h2>What it costs</h2><div class="tablewrap"><table class="costs num"><tbody>'+t.costs.rows.map(x=>'<tr><td>'+esc(x[0])+'</td><td>'+esc(x[1])+'</td></tr>').join('')+'</tbody></table></div><p class="fine">'+esc(t.costs.note)+'</p>':''}
+      ${t.faq?'<h2>Questions people ask</h2><div class="faq">'+t.faq.map(x=>'<details><summary>'+esc(x[0])+'</summary><p>'+esc(x[1])+'</p></details>').join('')+'</div>':''}
+      ${t.compare?'<h2>If this appeals, also look at</h2><ul class="alike">'+t.compare.map(x=>{const o=T.find(q=>q.slug===x[0]);return o?'<li><a href="/treks/'+o.slug+'/"><b>'+esc(o.name)+'</b></a><span>'+esc(x[1])+'</span></li>':''}).join('')+'</ul>':''}
+      ${t.checked?'<p class="fine checked">Facts on this page last checked: '+esc(t.checked)+'. Prices, permits and opening dates change; confirm them before you book.</p>':''}
     </article>
     <aside>
       <div class="box"><h3>When to go</h3>${season(t)}<p class="cap">${t.months.map(m=>MONTHS[m-1]).join(', ')}</p></div>

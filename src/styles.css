@@ -369,3 +369,30 @@ nav.main a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--ac
 .routemap{max-width:100%}
 
 .ainote{margin-top:10px;font-size:.86rem;opacity:.75}
+
+/* richer trek articles */
+.days{max-width:66ch;margin-top:28px}
+.days h3{font-size:22px;margin:26px 0 6px}
+.days h3 .label{display:block;margin-bottom:2px}
+.truths{max-width:66ch;margin:0;padding:0;list-style:none;counter-reset:t}
+.truths li{counter-increment:t;position:relative;padding:14px 0 14px 46px;border-top:1px solid var(--border)}
+.truths li::before{content:counter(t);position:absolute;left:0;top:12px;width:30px;height:30px;border-radius:50%;background:#cf6c33;color:#f1efe0;font:600 15px/30px 'Barlow Condensed',sans-serif;text-align:center}
+.bymonth{max-width:66ch;margin:0}
+.bymonth div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--border)}
+.bymonth dt{font-weight:600}.bymonth dd{margin:0}
+table.costs{width:100%;border-collapse:collapse;max-width:66ch}
+table.costs td{padding:11px 14px;border-top:1px solid var(--border);vertical-align:top}
+table.costs td:last-child{text-align:right;font-weight:600}
+table.costs tr:nth-last-child(-n+2) td{border-top-width:2px}
+.fine{max-width:66ch;font-size:.86rem;opacity:.75;margin-top:10px}
+.fine.checked{margin-top:34px}
+.faq{max-width:66ch}
+.faq details{border-top:1px solid var(--border);padding:4px 0}
+.faq summary{cursor:pointer;font-weight:600;padding:12px 28px 12px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:4px;top:9px;font-size:22px;color:#cf6c33}
+.faq details[open] summary::after{content:'\2212'}
+.faq details p{margin:0 0 14px}
+.alike{max-width:66ch;list-style:none;margin:0;padding:0}
+.alike li{padding:12px 0;border-top:1px solid var(--border);display:grid;gap:2px}
+@media(max-width:560px){.bymonth div{grid-template-columns:1fr;gap:2px}table.costs td:last-child{white-space:normal}}
