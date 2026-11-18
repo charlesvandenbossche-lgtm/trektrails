@@ -396,3 +396,8 @@ table.costs tr:nth-last-child(-n+2) td{border-top-width:2px}
 .alike{max-width:66ch;list-style:none;margin:0;padding:0}
 .alike li{padding:12px 0;border-top:1px solid var(--border);display:grid;gap:2px}
 @media(max-width:560px){.bymonth div{grid-template-columns:1fr;gap:2px}table.costs td:last-child{white-space:normal}}
+
+.shot{max-width:66ch;margin:16px 0 8px}
+.shot img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:8px}
+.shot figcaption{margin-top:6px;font-size:.86rem;opacity:.75}
+.truths+.shot,.bymonth+.shot,.fine+.shot{margin-top:24px}
