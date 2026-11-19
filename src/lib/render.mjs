@@ -104,6 +104,7 @@ function trails(){
 </div>`;
 }
 const shot=p=>p?'<figure class="shot"><img src="/img/'+p[0]+'.jpg" alt="'+esc(p[1])+'" loading="lazy"><figcaption>'+esc(p[2])+'</figcaption></figure>':'';
+const the=n=>/^the /i.test(n)?n.replace(/^The /,'the '):'the '+n, cap=x=>x[0].toUpperCase()+x.slice(1);
 function detail(t){
   const i=T.indexOf(t), p=T[(i-1+T.length)%T.length], n=T[(i+1)%T.length];
   const n0=v=>v==null?'–':v.toLocaleString('en');
@@ -126,7 +127,7 @@ function detail(t){
     <article>
       <h2>The trek</h2>
       ${t.intro.map((x,k)=>'<p class="'+(k?'para':'ov')+'">'+esc(x)+'</p>').join('')}
-      ${MAPS[t.slug]?`<figure class="routemap${MAPS[t.slug].h>MAPS[t.slug].w?' tall':''}"><a href="/img/maps/${t.slug}.webp"><img src="/img/maps/${t.slug}.webp" width="${MAPS[t.slug].w}" height="${MAPS[t.slug].h}" alt="Route map of the ${esc(t.name)} with the stages, overnight stops and distances" loading="lazy"></a><figcaption>The ${esc(t.name)} on the map: stages, overnight stops and distances. ${esc(MAPS[t.slug].note)} Tap the map to enlarge.</figcaption></figure>`:''}
+      ${MAPS[t.slug]?`<figure class="routemap${MAPS[t.slug].h>MAPS[t.slug].w?' tall':''}"><a href="/img/maps/${t.slug}.webp"><img src="/img/maps/${t.slug}.webp" width="${MAPS[t.slug].w}" height="${MAPS[t.slug].h}" alt="Route map of ${esc(the(t.name))} with the stages, overnight stops and distances" loading="lazy"></a><figcaption>${esc(cap(the(t.name)))} on the map: stages, overnight stops and distances. ${esc(MAPS[t.slug].note)} Tap the map to enlarge.</figcaption></figure>`:''}
       <div class="fit">
         <div><h3>Made for</h3><p>${esc(t.yes)}</p></div>
         <div><h3>Think twice</h3><p>${esc(t.no)}</p></div>
@@ -139,6 +140,7 @@ function detail(t){
         <thead><tr><th scope="col">${t.long?'Part':'Day'}</th><th scope="col">${t.long?'Section':'Stage'}</th><th scope="col">Km</th><th scope="col">Up</th><th scope="col">Down</th><th scope="col">Time</th></tr></thead>
         <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+(g[1]==null?'–':g[1].toLocaleString('en'))+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
       </table></div>
+      ${t.profile?'<figure class="routemap"><a href="/img/maps/'+t.slug+'-profile.webp"><img src="/img/maps/'+t.slug+'-profile.webp" width="1600" height="620" alt="Elevation profile of '+esc(the(t.name))+'" loading="lazy"></a><figcaption>Elevation profile of the whole route, measured from the mapped trail.</figcaption></figure>':''}
       ${t.dayNotes?'<div class="days">'+t.stages.map((g,k)=>t.dayNotes[k]?'<h3><span class="label">Day '+(k+1)+'</span>'+esc(g[0])+'</h3><p>'+esc(t.dayNotes[k])+'</p>'+shot(t.dayImg&&t.dayImg[k]):'').join('')+'</div>':''}
       ${t.truths?'<h2>What nobody tells you</h2><ul class="truths">'+t.truths.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+shot(t.pics&&t.pics.truths):''}
       ${t.byMonth?'<h2>Month by month</h2><dl class="bymonth">'+t.byMonth.map(x=>'<div><dt>'+esc(x[0])+'</dt><dd>'+esc(x[1])+'</dd></div>').join('')+'</dl>'+shot(t.pics&&t.pics.byMonth):''}
@@ -166,7 +168,7 @@ function detail(t){
         <li><span>Nights</span><b>${esc(SLEEP[t.st])}</b></li>
         ${t.book?'<li><span>Organised from</span><b>'+esc(t.book.from)+'</b></li>':''}
       </ul></div>`}
-      <div class="box"><h3>Still to come</h3><ul class="todo">${['Elevation profile per stage','GPX download','Weather by week'].map(b=>'<li><span>'+b+'</span><span class="tag">Planned</span></li>').join('')}</ul></div>
+      <div class="box"><h3>Still to come</h3><ul class="todo">${[...(t.profile?[]:['Elevation profile per stage']),'GPX download','Weather by week'].map(b=>'<li><span>'+b+'</span><span class="tag">Planned</span></li>').join('')}</ul></div>
     </aside>
   </div>
   <nav class="pn" aria-label="More treks"><a href="/treks/${p.slug}/"><span class="label">Previous</span><b>${esc(p.name)}</b></a><a href="/treks/${n.slug}/"><span class="label">Next</span><b>${esc(n.name)}</b></a></nav>

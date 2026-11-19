@@ -113,5 +113,10 @@
   "w": 1200,
   "h": 1600,
   "note": "The trail is drawn schematically at this scale."
+ },
+ "reunion-trail": {
+  "w": 1200,
+  "h": 1600,
+  "note": ""
  }
 }
