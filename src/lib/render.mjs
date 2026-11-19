@@ -17,7 +17,7 @@ function home(){
 <div class="hero">
   <img src="/img/kyrgyzstan.jpg" alt="Two hikers climbing a grass slope below a glacier in the Tian Shan, Kyrgyzstan">
   <div class="inner"><div class="wrap"><div class="panel">
-    <h1>See the world on foot</h1>
+    <h1>Discover the world hiking</h1>
     <p>A growing field guide to the most famous and most beautiful multi-day treks on earth. Honest figures, real seasons and enough detail to decide which one is yours.</p>
     <div class="cta"><a class="btn solid" href="/treks/">Browse all ${T.length} treks</a><a class="btn" href="/about/">What this site is for</a></div>
   </div></div></div>
