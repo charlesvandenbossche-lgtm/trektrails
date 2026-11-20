@@ -76,8 +76,8 @@ cand = {x for x in cand if relinfo.get(x, ('', 0))[1] <= spec.get('maxmembers', 
 cand -= set(map(str, spec.get('skip', [])))
 print('relations:', [(x, relinfo.get(x, ('?',))[0]) for x in sorted(cand, key=lambda x: -count.get(x, 0))][:14])
 nodes = {}; G = {}; allways = []; ways_by_rel = {}; loaded = set()
-def add(a, b):
-    d = dist(nodes[a], nodes[b]); G.setdefault(a, []).append((b, d)); G.setdefault(b, []).append((a, d))
+def add(a, b, f=1.0):
+    d = dist(nodes[a], nodes[b]) * f; G.setdefault(a, []).append((b, d)); G.setdefault(b, []).append((a, d))
 def load(rid):
     if rid in loaded: return
     loaded.add(rid); f = f'osm/rel{rid}.xml'
@@ -119,6 +119,33 @@ def bridge():
             if best: add(e, best[1]); joined += 1
         if not joined: break
 for rid in cand: load(rid)
+# "network": true -> also route over every mapped path and track in the area (for treks without a route relation)
+if spec.get('network'):
+    W = {'path': 1.0, 'footway': 1.0, 'steps': 1.0, 'bridleway': 1.0, 'track': 1.25, 'unclassified': 1.6, 'residential': 1.4, 'service': 1.6, 'living_street': 1.4, 'tertiary': 2.5, 'secondary': 3.5, 'primary': 5}
+    W.update(spec.get('weights', {}))
+    lats = [s['lat'] for s in stops if s.get('lat') is not None]; lons = [s['lon'] for s in stops if s.get('lon') is not None]
+    m = spec.get('netmargin', 0.02); cell = 0.05
+    la0, la1, lo0, lo1 = min(lats) - m, max(lats) + m, min(lons) - m, max(lons) + m
+    la = la0; nw = 0
+    while la < la1:
+        lo = lo0
+        while lo < lo1:
+            bbox = f"{lo:.4f},{la:.4f},{min(lo+cell, lo1):.4f},{min(la+cell, la1):.4f}"; f = 'osm/n_' + bbox.replace(',', '_') + '.xml'
+            if not os.path.exists(f) or os.path.getsize(f) < 150:
+                subprocess.run(['curl', '-sS', '-m', '200', '-o', f, f'https://api.openstreetmap.org/api/0.6/map?bbox={bbox}']); time.sleep(1)
+            try: r = ET.parse(f).getroot()
+            except Exception: print('!! area', bbox, 'unreadable'); lo += cell; continue
+            for n in r.findall('node'): nodes[n.get('id')] = (float(n.get('lon')), float(n.get('lat')))
+            for w in r.findall('way'):
+                t = {x.get('k'): x.get('v') for x in w.findall('tag')}
+                fw = W.get(t.get('highway'))
+                if fw is None: continue
+                refs = [x.get('ref') for x in w.findall('nd') if x.get('ref') in nodes]
+                for a2, b2 in zip(refs, refs[1:]): add(a2, b2, fw)
+                allways.append(refs); nw += 1
+            lo += cell
+        la += cell
+    print('network ways', nw)
 if G: bridge()
 def nearest(p): return min(G, key=lambda n: dist(nodes[n], p))
 def path(a, b):
@@ -167,6 +194,7 @@ def run_stages():
         a, b = st[0], st[1]; site = st[2] if len(st) > 2 else None
         p = d = None
         if a in snap and b in snap and snap[a] != snap[b]: p, d = path(snap[a], snap[b])
+        if p: d = sum(dist(nodes[x], nodes[y]) for x, y in zip(p, p[1:]))  # true length, not the weighted cost
         lo, hi = spec.get('ratio', [0.5, 1.9])
         ok = p is not None and (site is None or lo*site <= d <= hi*site)
         res[a+'|'+b] = dict(km=d and round(d, 1), real=ok, site=site)

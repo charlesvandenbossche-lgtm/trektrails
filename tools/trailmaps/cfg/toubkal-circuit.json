@@ -1,0 +1,145 @@
+{
+ "slug": "toubkal-circuit",
+ "title": "Toubkal Circuit",
+ "titleLines": [
+  "Toubkal",
+  "Circuit"
+ ],
+ "geo": "geo/toubkal-circuit.json",
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 7,
+ "borders": false,
+ "legendLabel": "Toubkal Circuit",
+ "stops": [
+  {
+   "name": "Imlil",
+   "lat": 31.137,
+   "lon": -7.919,
+   "type": "start",
+   "label": "Imlil · start and finish"
+  },
+  {
+   "name": "Tacheddirt",
+   "lat": 31.165,
+   "lon": -7.828
+  },
+  {
+   "name": "Azib Likemt",
+   "lat": 31.118,
+   "lon": -7.783
+  },
+  {
+   "name": "Amsouzart",
+   "lat": 31.0156,
+   "lon": -7.8325
+  },
+  {
+   "name": "Lac d'Ifni",
+   "lat": 31.0308,
+   "lon": -7.88
+  },
+  {
+   "name": "Toubkal refuges",
+   "lat": 31.07,
+   "lon": -7.9302
+  },
+  {
+   "name": "Jbel Toubkal",
+   "lat": 31.0598,
+   "lon": -7.9149,
+   "label": "Toubkal 4,167 m"
+  },
+  {
+   "name": "Imlil end",
+   "lat": 31.137,
+   "lon": -7.919,
+   "hidden": true
+  }
+ ],
+ "legs": [
+  {
+   "from": "Imlil",
+   "to": "Tacheddirt",
+   "km": 13.3
+  },
+  {
+   "from": "Tacheddirt",
+   "to": "Azib Likemt",
+   "km": 12.8
+  },
+  {
+   "from": "Azib Likemt",
+   "to": "Amsouzart",
+   "km": 14.9
+  },
+  {
+   "from": "Amsouzart",
+   "to": "Lac d'Ifni",
+   "km": 7.8
+  },
+  {
+   "from": "Lac d'Ifni",
+   "to": "Toubkal refuges",
+   "km": 11.5
+  },
+  {
+   "from": "Toubkal refuges",
+   "to": "Jbel Toubkal",
+   "chip": false
+  },
+  {
+   "from": "Jbel Toubkal",
+   "to": "Imlil end",
+   "label": "Summit day 15.6 km"
+  }
+ ],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Tizi n'Tamatert",
+   "ele": "2,279 m",
+   "lat": 31.1497,
+   "lon": -7.8869
+  },
+  {
+   "kind": "peak",
+   "name": "Tizi Likemt",
+   "ele": "3,555 m",
+   "lat": 31.1309,
+   "lon": -7.827
+  },
+  {
+   "kind": "peak",
+   "name": "Tizi n'Ououraine",
+   "ele": "3,120 m",
+   "lat": 31.06,
+   "lon": -7.8122
+  },
+  {
+   "kind": "peak",
+   "name": "Tizi n'Ouanoums",
+   "ele": "3,664 m",
+   "lat": 31.0455,
+   "lon": -7.9205
+  },
+  {
+   "kind": "minor",
+   "name": "Sidi Chamharouch",
+   "lat": 31.0979,
+   "lon": -7.9124
+  },
+  {
+   "kind": "minor",
+   "name": "Aroumd",
+   "lat": 31.1238,
+   "lon": -7.9174
+  }
+ ],
+ "profileLabels": {
+  "Imlil end": "Imlil",
+  "Jbel Toubkal": "Toubkal summit",
+  "Toubkal refuges": "Refuges",
+  "Imlil": "Imlil"
+ }
+}

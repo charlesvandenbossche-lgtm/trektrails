@@ -41,6 +41,8 @@ Run everything from `tools/trailmaps`.
     "stops":[{"name":"Start village","lat":46.1,"lon":7.2,"q":"Name as in OSM"}, ...],
     "stages":[["Start village","Hut A"],["Hut A","Hut B"], ...]}
    ```
+   For treks without a hiking-route relation in OpenStreetMap, add `"network": true` to route over every mapped path
+   and track around the stops (see `specs/toubkal-circuit.json`).
    Optional: `"relations":[id,...]` to force a route, `"only":true` to use only those, `"snap"` (km, default 2),
    `"ratio":[lo,hi]` (accepted mapped/stated distance range), `"skip":[ids]`. A stage can carry the stated
    distance as a third value; a stage whose mapped length is far off is then left schematic.
