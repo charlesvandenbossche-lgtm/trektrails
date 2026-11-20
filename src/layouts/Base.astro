@@ -28,7 +28,7 @@ const img = new URL(image, Astro.site).href;
 <script is:inline>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
-window.ttLoadGTM=function(){if(window.ttGTM)return;window.ttGTM=1;gtag('consent','update',{analytics_storage:'granted'});dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-KHBQZ27F';document.head.appendChild(s);};
+window.ttLoadGTM=function(){if(window.ttGTM)return;window.ttGTM=1;gtag('consent','update',{analytics_storage:'granted'});dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-KHBQZ27F';document.head.appendChild(s);var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-VW9JZN4YZL';document.head.appendChild(g);gtag('js',new Date());gtag('config','G-VW9JZN4YZL');};
 try{if(localStorage.getItem('tt-consent')==='yes')ttLoadGTM();}catch(e){}
 </script>
 {jsonld.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} />)}
