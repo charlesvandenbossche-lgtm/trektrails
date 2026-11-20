@@ -1,0 +1,71 @@
+{
+ "slug": "high-atlas",
+ "title": "High Atlas Traverse",
+ "titleLines": [
+  "High Atlas",
+  "Traverse"
+ ],
+ "geo": "geo/high-atlas.json",
+ "stops": [
+  {
+   "name": "Zawyat Oulmzi",
+   "lat": 31.625,
+   "lon": -6.31,
+   "type": "start"
+  },
+  {
+   "name": "Boulibi",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Erg",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Imi n'Irekt",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Talat Righane",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Aït Imi",
+   "lat": 31.668,
+   "lon": -6.5,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Zawyat Oulmzi",
+   "to": "Boulibi",
+   "km": 16.9
+  },
+  {
+   "from": "Boulibi",
+   "to": "Erg",
+   "km": 15.2
+  },
+  {
+   "from": "Erg",
+   "to": "Imi n'Irekt",
+   "km": 16.3
+  },
+  {
+   "from": "Imi n'Irekt",
+   "to": "Talat Righane",
+   "km": 17.9
+  },
+  {
+   "from": "Talat Righane",
+   "to": "Aït Imi",
+   "km": 16.7
+  }
+ ],
+ "places": []
+}

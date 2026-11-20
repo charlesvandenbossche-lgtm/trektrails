@@ -1,0 +1,81 @@
+{
+ "slug": "ak-suu-traverse",
+ "stops": [
+  {
+   "name": "Jyrgalan",
+   "lat": 42.607,
+   "lon": 78.985
+  },
+  {
+   "name": "Bozuchuk valley",
+   "lat": 42.4715,
+   "lon": 78.8457
+  },
+  {
+   "name": "Jergez",
+   "lat": 42.455,
+   "lon": 78.755
+  },
+  {
+   "name": "Ak-Suu",
+   "lat": 42.4302,
+   "lon": 78.6641
+  },
+  {
+   "name": "Altyn-Arashan",
+   "lat": 42.376,
+   "lon": 78.612,
+   "q": "Altyn Arashan"
+  },
+  {
+   "name": "Ala-Kul",
+   "lat": 42.3189,
+   "lon": 78.5276,
+   "q": "Ala-Kol II"
+  },
+  {
+   "name": "Karakol valley",
+   "lat": 42.3178,
+   "lon": 78.4701,
+   "q": "Second bridge"
+  }
+ ],
+ "stages": [
+  [
+   "Jyrgalan",
+   "Bozuchuk valley",
+   12
+  ],
+  [
+   "Bozuchuk valley",
+   "Jergez",
+   10.3
+  ],
+  [
+   "Jergez",
+   "Ak-Suu",
+   12.6
+  ],
+  [
+   "Ak-Suu",
+   "Altyn-Arashan",
+   14.1
+  ],
+  [
+   "Altyn-Arashan",
+   "Ala-Kul",
+   13.5
+  ],
+  [
+   "Ala-Kul",
+   "Karakol valley",
+   8
+  ]
+ ],
+ "box": 0.06,
+ "alt": false,
+ "relations": [
+  9426379,
+  12350207
+ ]
+}

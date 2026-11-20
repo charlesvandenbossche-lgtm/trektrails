@@ -1,0 +1,46 @@
+{
+ "slug": "mullerthal-trail",
+ "title": "Mullerthal Trail",
+ "titleLines": [
+  "Mullerthal",
+  "Trail"
+ ],
+ "geo": "geo/mullerthal-trail.json",
+ "stops": [
+  {
+   "name": "Beaufort",
+   "lat": 49.836,
+   "lon": 6.291,
+   "type": "start"
+  },
+  {
+   "name": "Berdorf",
+   "lat": 49.821,
+   "lon": 6.349
+  },
+  {
+   "name": "Echternacherbrück",
+   "lat": 49.811,
+   "lon": 6.427,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Beaufort",
+   "to": "Berdorf",
+   "km": 15
+  },
+  {
+   "from": "Berdorf",
+   "to": "Echternacherbrück",
+   "km": 18
+  },
+  {
+   "from": "Echternacherbrück",
+   "to": "Beaufort",
+   "km": 12
+  }
+ ],
+ "places": []
+}

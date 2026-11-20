@@ -1,0 +1,50 @@
+{
+ "slug": "vosges-ridge",
+ "title": "Vosges Ridge",
+ "titleLines": [
+  "Vosges Ridge"
+ ],
+ "geo": "geo/vosges-ridge.json",
+ "stops": [
+  {
+   "name": "Metzeral",
+   "lat": 48.012,
+   "lon": 7.07,
+   "type": "start"
+  },
+  {
+   "name": "Hohneck",
+   "lat": 48.0375,
+   "lon": 7.0167
+  },
+  {
+   "name": "Lac Blanc",
+   "lat": 48.126,
+   "lon": 7.094
+  },
+  {
+   "name": "Munster",
+   "lat": 48.04,
+   "lon": 7.137,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Metzeral",
+   "to": "Hohneck",
+   "km": 13
+  },
+  {
+   "from": "Hohneck",
+   "to": "Lac Blanc",
+   "km": 16
+  },
+  {
+   "from": "Lac Blanc",
+   "to": "Munster",
+   "km": 11
+  }
+ ],
+ "places": []
+}

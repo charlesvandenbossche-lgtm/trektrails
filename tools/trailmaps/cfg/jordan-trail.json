@@ -1,0 +1,71 @@
+{
+ "slug": "jordan-trail",
+ "title": "Jordan Trail",
+ "titleLines": [
+  "Jordan Trail"
+ ],
+ "geo": "geo/jordan-trail.json",
+ "stops": [
+  {
+   "name": "Shobak",
+   "lat": 30.5314,
+   "lon": 35.5606,
+   "type": "start"
+  },
+  {
+   "name": "Wadi Feynan",
+   "lat": 30.627,
+   "lon": 35.493
+  },
+  {
+   "name": "Teletat Al-Sofor",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Um Ratam",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Al Baydha",
+   "lat": 30.375,
+   "lon": 35.451
+  },
+  {
+   "name": "Petra",
+   "lat": 30.3285,
+   "lon": 35.4444,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Shobak",
+   "to": "Wadi Feynan",
+   "km": 17
+  },
+  {
+   "from": "Wadi Feynan",
+   "to": "Teletat Al-Sofor",
+   "km": 17
+  },
+  {
+   "from": "Teletat Al-Sofor",
+   "to": "Um Ratam",
+   "km": 16
+  },
+  {
+   "from": "Um Ratam",
+   "to": "Al Baydha",
+   "km": 16
+  },
+  {
+   "from": "Al Baydha",
+   "to": "Petra",
+   "km": 16
+  }
+ ],
+ "places": [],
+ "sea": false
+}

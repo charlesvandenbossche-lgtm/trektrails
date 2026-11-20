@@ -1,0 +1,71 @@
+{
+ "slug": "cappadocia-valleys",
+ "title": "Cappadocia Valleys",
+ "titleLines": [
+  "Cappadocia",
+  "Valleys"
+ ],
+ "geo": "geo/cappadocia-valleys.json",
+ "stops": [
+  {
+   "name": "Taşkınpaşa",
+   "lat": 38.49,
+   "lon": 34.96,
+   "type": "start"
+  },
+  {
+   "name": "Mustafapaşa",
+   "lat": 38.577,
+   "lon": 34.897
+  },
+  {
+   "name": "Ortahisar",
+   "lat": 38.623,
+   "lon": 34.863
+  },
+  {
+   "name": "Çavuşin",
+   "lat": 38.673,
+   "lon": 34.84
+  },
+  {
+   "name": "Uçhisar",
+   "lat": 38.63,
+   "lon": 34.806
+  },
+  {
+   "name": "Göreme",
+   "lat": 38.643,
+   "lon": 34.829,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Taşkınpaşa",
+   "to": "Mustafapaşa",
+   "km": 17.2
+  },
+  {
+   "from": "Mustafapaşa",
+   "to": "Ortahisar",
+   "km": 16.3
+  },
+  {
+   "from": "Ortahisar",
+   "to": "Çavuşin",
+   "km": 16.5
+  },
+  {
+   "from": "Çavuşin",
+   "to": "Uçhisar",
+   "km": 11
+  },
+  {
+   "from": "Uçhisar",
+   "to": "Göreme",
+   "km": 11.2
+  }
+ ],
+ "places": []
+}

@@ -1,0 +1,111 @@
+{
+ "slug": "kilimanjaro-lemosho",
+ "title": "Kilimanjaro",
+ "titleLines": [
+  "Kilimanjaro"
+ ],
+ "geo": "geo/kilimanjaro-lemosho.json",
+ "stops": [
+  {
+   "name": "Lemosho Gate",
+   "lat": -3.019,
+   "lon": 37.142,
+   "type": "start"
+  },
+  {
+   "name": "Mti Mkubwa",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Shira One",
+   "lat": -3.04,
+   "lon": 37.24
+  },
+  {
+   "name": "Shira Two",
+   "lat": -3.055,
+   "lon": 37.285
+  },
+  {
+   "name": "Barranco",
+   "lat": -3.094,
+   "lon": 37.33
+  },
+  {
+   "name": "Karanga",
+   "lat": -3.106,
+   "lon": 37.355
+  },
+  {
+   "name": "Barafu",
+   "lat": -3.1,
+   "lon": 37.39
+  },
+  {
+   "name": "Uhuru Peak",
+   "lat": -3.0764,
+   "lon": 37.3533
+  },
+  {
+   "name": "Mweka camp",
+   "lat": -3.163,
+   "lon": 37.365
+  },
+  {
+   "name": "Mweka Gate",
+   "lat": -3.224,
+   "lon": 37.342,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Lemosho Gate",
+   "to": "Mti Mkubwa",
+   "km": 6
+  },
+  {
+   "from": "Mti Mkubwa",
+   "to": "Shira One",
+   "km": 8.5
+  },
+  {
+   "from": "Shira One",
+   "to": "Shira Two",
+   "km": 8
+  },
+  {
+   "from": "Shira Two",
+   "to": "Barranco",
+   "km": 10.5
+  },
+  {
+   "from": "Barranco",
+   "to": "Karanga",
+   "km": 5.5
+  },
+  {
+   "from": "Karanga",
+   "to": "Barafu",
+   "km": 5
+  },
+  {
+   "from": "Barafu",
+   "to": "Uhuru Peak",
+   "chip": false
+  },
+  {
+   "from": "Uhuru Peak",
+   "to": "Mweka camp",
+   "km": 17
+  },
+  {
+   "from": "Mweka camp",
+   "to": "Mweka Gate",
+   "km": 9
+  }
+ ],
+ "places": [],
+ "legendLabel": "Lemosho route"
+}

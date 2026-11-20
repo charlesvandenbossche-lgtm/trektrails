@@ -1,0 +1,49 @@
+{
+ "slug": "mullerthal-trail",
+ "stops": [
+  {
+   "name": "Beaufort",
+   "lat": 49.836,
+   "lon": 6.291
+  },
+  {
+   "name": "Berdorf",
+   "lat": 49.821,
+   "lon": 6.349
+  },
+  {
+   "name": "Echternacherbrück",
+   "lat": 49.811,
+   "lon": 6.427
+  }
+ ],
+ "stages": [
+  [
+   "Beaufort",
+   "Berdorf",
+   15
+  ],
+  [
+   "Berdorf",
+   "Echternacherbrück",
+   18
+  ],
+  [
+   "Echternacherbrück",
+   "Beaufort",
+   12
+  ]
+ ],
+ "box": 0.03,
+ "alt": false,
+ "relations": [
+  2343781,
+  6354078,
+  6335336
+ ],
+ "only": true,
+ "ratio": [
+  0.4,
+  1.9
+ ]
+}

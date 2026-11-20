@@ -1,0 +1,92 @@
+{
+ "slug": "tour-du-mont-blanc",
+ "title": "Tour du Mont Blanc",
+ "titleLines": [
+  "Tour du",
+  "Mont Blanc"
+ ],
+ "geo": "geo/tour-du-mont-blanc.json",
+ "stops": [
+  {
+   "name": "Les Contamines",
+   "lat": 45.821,
+   "lon": 6.727,
+   "type": "start"
+  },
+  {
+   "name": "Les Chapieux",
+   "lat": 45.697,
+   "lon": 6.733
+  },
+  {
+   "name": "Courmayeur",
+   "lat": 45.796,
+   "lon": 6.969
+  },
+  {
+   "name": "Val Ferret",
+   "lat": 45.848,
+   "lon": 7.07
+  },
+  {
+   "name": "La Fouly",
+   "lat": 45.933,
+   "lon": 7.098
+  },
+  {
+   "name": "Trient",
+   "lat": 46.056,
+   "lon": 6.994
+  },
+  {
+   "name": "Chamonix valley",
+   "lat": 46.0,
+   "lon": 6.926,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Les Contamines",
+   "to": "Les Chapieux",
+   "km": 17
+  },
+  {
+   "from": "Les Chapieux",
+   "to": "Courmayeur",
+   "km": 18
+  },
+  {
+   "from": "Courmayeur",
+   "to": "Val Ferret",
+   "mode": "transfer"
+  },
+  {
+   "from": "Val Ferret",
+   "to": "La Fouly",
+   "km": 16
+  },
+  {
+   "from": "La Fouly",
+   "to": "Trient",
+   "km": 16.5
+  },
+  {
+   "from": "Trient",
+   "to": "Chamonix valley",
+   "km": 13
+  }
+ ],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Mont Blanc",
+   "ele": "4,806 m",
+   "lat": 45.8326,
+   "lon": 6.8652
+  }
+ ],
+ "legendLabel": "Stages described on Trek Trails",
+ "altLabel": "Full Tour du Mont Blanc loop",
+ "autoPeaks": 3
+}

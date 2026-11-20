@@ -1,0 +1,260 @@
+{
+ "slug": "alta-via-1",
+ "title": "Alta Via 1",
+ "titleLines": [
+  "Alta Via 1"
+ ],
+ "titleSize": 110,
+ "titleCorner": "NW",
+ "geo": "geo/alta-via-1.json",
+ "glyphs": 10,
+ "stopSize": 30,
+ "credit": "Trail and places: © OpenStreetMap contributors · Terrain: Tilezen / AWS Terrain Tiles · Borders: Natural Earth",
+ "pad": {
+  "l": 0.1,
+  "r": 0.1,
+  "t": 0.13,
+  "b": 0.13
+ },
+ "extent": [
+  {
+   "lat": 46.7,
+   "lon": 12.0
+  },
+  {
+   "lat": 46.2,
+   "lon": 12.17
+  }
+ ],
+ "stops": [
+  {
+   "name": "Lago di Braies",
+   "lat": 46.694,
+   "lon": 12.085,
+   "type": "start",
+   "labelPos": "E"
+  },
+  {
+   "name": "Rifugio Biella",
+   "label": "Rif. Biella",
+   "lat": 46.6657,
+   "lon": 12.0845,
+   "labelPos": "E"
+  },
+  {
+   "name": "Rifugio Fanes",
+   "label": "Rif. Fanes",
+   "lat": 46.6123,
+   "lon": 12.014,
+   "labelPos": "W"
+  },
+  {
+   "name": "Rifugio Lagazuoi",
+   "label": "Rif. Lagazuoi",
+   "lat": 46.5278,
+   "lon": 12.008,
+   "labelPos": "W"
+  },
+  {
+   "name": "Rifugio Nuvolau",
+   "label": "Rif. Nuvolau",
+   "lat": 46.4953,
+   "lon": 12.0456,
+   "labelPos": "W"
+  },
+  {
+   "name": "Rifugio Città di Fiume",
+   "label": "Rif. Città di Fiume",
+   "lat": 46.437,
+   "lon": 12.1225,
+   "labelPos": "E"
+  },
+  {
+   "name": "Rifugio Coldai",
+   "label": "Rif. Coldai",
+   "lat": 46.3993,
+   "lon": 12.0689,
+   "labelPos": "W"
+  },
+  {
+   "name": "Rifugio Vazzoler",
+   "label": "Rif. Vazzoler",
+   "lat": 46.3542,
+   "lon": 12.031,
+   "labelPos": "W"
+  },
+  {
+   "name": "Rifugio Carestiato",
+   "label": "Rif. Carestiato",
+   "lat": 46.3214,
+   "lon": 12.0704,
+   "labelPos": "SW"
+  },
+  {
+   "name": "Rifugio Pramperet",
+   "label": "Rif. Pramperet",
+   "lat": 46.2891,
+   "lon": 12.1635,
+   "labelPos": "E"
+  },
+  {
+   "name": "La Pissa",
+   "lat": 46.215,
+   "lon": 12.115,
+   "type": "end",
+   "labelPos": "W"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Lago di Braies",
+   "to": "Rifugio Biella",
+   "side": 1,
+   "off": 50
+  },
+  {
+   "from": "Rifugio Biella",
+   "to": "Rifugio Fanes",
+   "side": -1
+  },
+  {
+   "from": "Rifugio Fanes",
+   "to": "Rifugio Lagazuoi",
+   "side": -1
+  },
+  {
+   "from": "Rifugio Lagazuoi",
+   "to": "Rifugio Nuvolau",
+   "side": -1
+  },
+  {
+   "from": "Rifugio Nuvolau",
+   "to": "Rifugio Città di Fiume",
+   "side": 1
+  },
+  {
+   "from": "Rifugio Città di Fiume",
+   "to": "Rifugio Coldai",
+   "side": -1,
+   "off": 72
+  },
+  {
+   "from": "Rifugio Coldai",
+   "to": "Rifugio Vazzoler",
+   "side": -1
+  },
+  {
+   "from": "Rifugio Vazzoler",
+   "to": "Rifugio Carestiato",
+   "side": -1,
+   "km": 9.2
+  },
+  {
+   "from": "Rifugio Carestiato",
+   "to": "Rifugio Pramperet",
+   "side": -1,
+   "off": 85
+  },
+  {
+   "from": "Rifugio Pramperet",
+   "to": "La Pissa",
+   "side": -1
+  }
+ ],
+ "places": [
+  {
+   "kind": "country",
+   "name": "SOUTH TYROL",
+   "lat": 46.6,
+   "lon": 11.92
+  },
+  {
+   "kind": "country",
+   "name": "VENETO",
+   "lat": 46.4,
+   "lon": 12.3
+  },
+  {
+   "kind": "town",
+   "name": "Cortina d'Ampezzo",
+   "lat": 46.5405,
+   "lon": 12.1357,
+   "labelPos": "E"
+  },
+  {
+   "kind": "town",
+   "name": "Agordo",
+   "lat": 46.282,
+   "lon": 12.035,
+   "labelPos": "W"
+  },
+  {
+   "kind": "peak",
+   "name": "Tofana di Rozes",
+   "ele": "3,225 m",
+   "lat": 46.537,
+   "lon": 12.0511,
+   "labelPos": "N"
+  },
+  {
+   "kind": "peak",
+   "name": "Monte Pelmo",
+   "ele": "3,172 m",
+   "lat": 46.42,
+   "lon": 12.1347,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Monte Civetta",
+   "ele": "3,220 m",
+   "lat": 46.3801,
+   "lon": 12.0533,
+   "labelPos": "W"
+  },
+  {
+   "kind": "peak",
+   "name": "Passo Giau",
+   "ele": "2,236 m",
+   "lat": 46.4825,
+   "lon": 12.0537,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Passo Staulanza",
+   "ele": "1,766 m",
+   "lat": 46.4207,
+   "lon": 12.1045,
+   "labelPos": "W"
+  },
+  {
+   "kind": "peak",
+   "name": "Passo Duran",
+   "ele": "1,605 m",
+   "lat": 46.3249,
+   "lon": 12.0961,
+   "labelPos": "N"
+  },
+  {
+   "kind": "lake",
+   "name": "",
+   "lat": 46.6945,
+   "lon": 12.0855,
+   "w_km": 1.2,
+   "h_km": 0.4,
+   "angle": 80
+  }
+ ],
+ "legend": [
+  {
+   "label": "Alta Via 1",
+   "color": "#C8632F"
+  }
+ ],
+ "size": [
+  1200,
+  1600
+ ],
+ "renderer": "v1"
+}

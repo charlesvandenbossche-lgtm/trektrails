@@ -1,0 +1,87 @@
+{
+ "slug": "dolomites",
+ "title": "Dolomites Hut to Hut",
+ "titleLines": [
+  "Dolomites",
+  "Hut to Hut"
+ ],
+ "geo": "geo/dolomites.json",
+ "stops": [
+  {
+   "name": "Misurina",
+   "lat": 46.582,
+   "lon": 12.254,
+   "type": "start"
+  },
+  {
+   "name": "Lago di Sorapis",
+   "lat": 46.519,
+   "lon": 12.223
+  },
+  {
+   "name": "Lago di Braies",
+   "lat": 46.694,
+   "lon": 12.085
+  },
+  {
+   "name": "Pederü",
+   "lat": 46.638,
+   "lon": 11.972
+  },
+  {
+   "name": "Sass Dlacia",
+   "lat": 46.553,
+   "lon": 11.957
+  },
+  {
+   "name": "Cinque Torri",
+   "lat": 46.5081,
+   "lon": 12.0547
+  },
+  {
+   "name": "Cortina d'Ampezzo",
+   "lat": 46.5405,
+   "lon": 12.1357,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Misurina",
+   "to": "Lago di Sorapis",
+   "km": 13
+  },
+  {
+   "from": "Lago di Sorapis",
+   "to": "Lago di Braies",
+   "mode": "transfer"
+  },
+  {
+   "from": "Lago di Braies",
+   "to": "Pederü",
+   "km": 10
+  },
+  {
+   "from": "Pederü",
+   "to": "Sass Dlacia",
+   "km": 22
+  },
+  {
+   "from": "Sass Dlacia",
+   "to": "Cinque Torri",
+   "km": 14
+  },
+  {
+   "from": "Cinque Torri",
+   "to": "Cortina d'Ampezzo",
+   "km": 12.5
+  }
+ ],
+ "places": [],
+ "margin": {
+  "l": 150,
+  "r": 150,
+  "t": 130,
+  "b": 300
+ }
+}

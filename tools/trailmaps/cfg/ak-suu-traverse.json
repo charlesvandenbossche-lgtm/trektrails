@@ -1,0 +1,105 @@
+{
+ "slug": "ak-suu-traverse",
+ "title": "Ak-Suu Traverse",
+ "titleLines": [
+  "Ak-Suu",
+  "Traverse"
+ ],
+ "geo": "geo/ak-suu-traverse.json",
+ "stops": [
+  {
+   "name": "Jyrgalan",
+   "lat": 42.607,
+   "lon": 78.985,
+   "type": "start"
+  },
+  {
+   "name": "Bozuchuk valley",
+   "lat": 42.4715,
+   "lon": 78.8457
+  },
+  {
+   "name": "Jergez",
+   "lat": 42.455,
+   "lon": 78.755
+  },
+  {
+   "name": "Ak-Suu",
+   "lat": 42.4302,
+   "lon": 78.6641
+  },
+  {
+   "name": "Altyn-Arashan",
+   "lat": 42.376,
+   "lon": 78.612
+  },
+  {
+   "name": "Ala-Kul",
+   "lat": 42.3189,
+   "lon": 78.5276
+  },
+  {
+   "name": "Karakol valley",
+   "lat": 42.3178,
+   "lon": 78.4701,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Jyrgalan",
+   "to": "Bozuchuk valley",
+   "km": 12,
+   "via": [
+    [
+     42.4921,
+     78.9693
+    ]
+   ]
+  },
+  {
+   "from": "Bozuchuk valley",
+   "to": "Jergez",
+   "km": 10.3
+  },
+  {
+   "from": "Jergez",
+   "to": "Ak-Suu",
+   "km": 12.6
+  },
+  {
+   "from": "Ak-Suu",
+   "to": "Altyn-Arashan",
+   "km": 14.1
+  },
+  {
+   "from": "Altyn-Arashan",
+   "to": "Ala-Kul",
+   "km": 13.5
+  },
+  {
+   "from": "Ala-Kul",
+   "to": "Karakol valley",
+   "km": 8
+  }
+ ],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Terim Tor Bulak pass",
+   "lat": 42.4921,
+   "lon": 78.9693
+  }
+ ],
+ "legend": [
+  {
+   "label": "Ak-Suu Traverse",
+   "color": "#C8632F"
+  },
+  {
+   "label": "Line and camps approximate",
+   "color": "#C8632F",
+   "dash": "2 13"
+  }
+ ]
+}

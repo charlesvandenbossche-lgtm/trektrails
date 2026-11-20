@@ -1,0 +1,71 @@
+{
+ "slug": "kungsleden-winter",
+ "title": "Kungsleden in Winter",
+ "titleLines": [
+  "Kungsleden",
+  "in Winter"
+ ],
+ "geo": "geo/kungsleden-winter.json",
+ "stops": [
+  {
+   "name": "Abisko",
+   "lat": 68.358,
+   "lon": 18.783,
+   "type": "start"
+  },
+  {
+   "name": "Abiskojaure",
+   "lat": 68.288,
+   "lon": 18.588
+  },
+  {
+   "name": "Alesjaure",
+   "lat": 68.137,
+   "lon": 18.412
+  },
+  {
+   "name": "Tjäktja",
+   "lat": 68.047,
+   "lon": 18.26
+  },
+  {
+   "name": "Sälka",
+   "lat": 67.943,
+   "lon": 18.283
+  },
+  {
+   "name": "Singi",
+   "lat": 67.85,
+   "lon": 18.317,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Abisko",
+   "to": "Abiskojaure",
+   "km": 14
+  },
+  {
+   "from": "Abiskojaure",
+   "to": "Alesjaure",
+   "km": 20
+  },
+  {
+   "from": "Alesjaure",
+   "to": "Tjäktja",
+   "km": 16
+  },
+  {
+   "from": "Tjäktja",
+   "to": "Sälka",
+   "km": 12.5
+  },
+  {
+   "from": "Sälka",
+   "to": "Singi",
+   "km": 12
+  }
+ ],
+ "places": []
+}

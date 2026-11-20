@@ -1,0 +1,213 @@
+{
+ "slug": "madeira-crossing",
+ "title": "Madeira Crossing",
+ "titleLines": [
+  "Madeira",
+  "Crossing"
+ ],
+ "titleCorner": "SW",
+ "geo": "geo/madeira-crossing.json",
+ "glyphs": 5,
+ "borders": false,
+ "stopSize": 30,
+ "credit": "Trails and places: © OpenStreetMap contributors · Terrain: Tilezen / AWS Terrain Tiles",
+ "pad": {
+  "l": 0.04,
+  "r": 0.04,
+  "t": 0.1,
+  "b": 0.42
+ },
+ "extent": [
+  {
+   "lat": 32.875,
+   "lon": -17.27
+  },
+  {
+   "lat": 32.63,
+   "lon": -16.65
+  }
+ ],
+ "stops": [
+  {
+   "name": "Fanal",
+   "lat": 32.8094,
+   "lon": -17.1425,
+   "type": "start",
+   "labelPos": "N"
+  },
+  {
+   "name": "Rabaçal",
+   "lat": 32.7617,
+   "lon": -17.1339,
+   "labelPos": "W"
+  },
+  {
+   "name": "Encumeada",
+   "lat": 32.7547,
+   "lon": -17.0203,
+   "labelPos": "SW"
+  },
+  {
+   "name": "Pico Ruivo",
+   "lat": 32.7589,
+   "lon": -16.9431,
+   "labelPos": "N"
+  },
+  {
+   "name": "Achada do Teixeira",
+   "lat": 32.765,
+   "lon": -16.9203,
+   "hidden": true
+  },
+  {
+   "name": "Santana",
+   "lat": 32.805,
+   "lon": -16.8833,
+   "labelPos": "N"
+  },
+  {
+   "name": "Porto da Cruz",
+   "lat": 32.77,
+   "lon": -16.8283,
+   "labelPos": "NE"
+  },
+  {
+   "name": "Machico",
+   "lat": 32.7167,
+   "lon": -16.7667,
+   "type": "end",
+   "labelPos": "S"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Fanal",
+   "to": "Rabaçal",
+   "km": 13,
+   "side": 1,
+   "off": 62
+  },
+  {
+   "from": "Rabaçal",
+   "to": "Encumeada",
+   "km": 22,
+   "via": [
+    [
+     32.752,
+     -17.09
+    ],
+    [
+     32.748,
+     -17.05
+    ]
+   ],
+   "side": -1,
+   "off": 58
+  },
+  {
+   "from": "Encumeada",
+   "to": "Pico Ruivo",
+   "km": 14.3,
+   "side": 1,
+   "off": 55
+  },
+  {
+   "from": "Pico Ruivo",
+   "to": "Achada do Teixeira",
+   "chip": false
+  },
+  {
+   "from": "Achada do Teixeira",
+   "to": "Santana",
+   "km": 14,
+   "via": [
+    [
+     32.785,
+     -16.905
+    ]
+   ],
+   "side": 1,
+   "off": 60
+  },
+  {
+   "from": "Santana",
+   "to": "Porto da Cruz",
+   "mode": "transfer"
+  },
+  {
+   "from": "Porto da Cruz",
+   "to": "Machico",
+   "km": 16,
+   "side": 1,
+   "off": 75
+  }
+ ],
+ "places": [
+  {
+   "kind": "ocean",
+   "name": "ATLANTIC OCEAN",
+   "lat": 32.905,
+   "lon": -16.93
+  },
+  {
+   "kind": "town",
+   "name": "Funchal",
+   "lat": 32.65,
+   "lon": -16.908,
+   "labelPos": "S"
+  },
+  {
+   "kind": "town",
+   "name": "Porto Moniz",
+   "lat": 32.8667,
+   "lon": -17.1667,
+   "labelPos": "N"
+  },
+  {
+   "kind": "town",
+   "name": "São Vicente",
+   "lat": 32.8017,
+   "lon": -17.0453,
+   "labelPos": "N"
+  },
+  {
+   "kind": "peak",
+   "name": "Pico do Arieiro",
+   "ele": "1,818 m",
+   "lat": 32.7356,
+   "lon": -16.9289,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Boca do Risco",
+   "ele": "",
+   "lat": 32.7469,
+   "lon": -16.788,
+   "labelPos": "E"
+  },
+  {
+   "kind": "place",
+   "name": "Paul da Serra",
+   "lat": 32.722,
+   "lon": -17.085
+  }
+ ],
+ "legend": [
+  {
+   "label": "Madeira Crossing, on foot",
+   "color": "#C8632F"
+  },
+  {
+   "label": "Stage drawn approximately",
+   "color": "#C8632F",
+   "dash": "2 13"
+  },
+  {
+   "label": "Transfer by road",
+   "color": "#6E6A5C",
+   "dash": "3 12"
+  }
+ ],
+ "renderer": "v1"
+}

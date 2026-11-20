@@ -1,0 +1,61 @@
+{
+ "slug": "mestia-to-ushguli",
+ "title": "Mestia to Ushguli",
+ "titleLines": [
+  "Mestia to",
+  "Ushguli"
+ ],
+ "geo": "geo/mestia-to-ushguli.json",
+ "stops": [
+  {
+   "name": "Mestia",
+   "lat": 43.045,
+   "lon": 42.727,
+   "type": "start"
+  },
+  {
+   "name": "Zhabeshi",
+   "lat": 43.052,
+   "lon": 42.895
+  },
+  {
+   "name": "Adishi",
+   "lat": 42.996,
+   "lon": 42.906
+  },
+  {
+   "name": "Iprali",
+   "lat": 42.953,
+   "lon": 42.965
+  },
+  {
+   "name": "Ushguli",
+   "lat": 42.917,
+   "lon": 43.016,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Mestia",
+   "to": "Zhabeshi",
+   "km": 16.5
+  },
+  {
+   "from": "Zhabeshi",
+   "to": "Adishi",
+   "km": 11
+  },
+  {
+   "from": "Adishi",
+   "to": "Iprali",
+   "km": 15
+  },
+  {
+   "from": "Iprali",
+   "to": "Ushguli",
+   "km": 16
+  }
+ ],
+ "places": []
+}

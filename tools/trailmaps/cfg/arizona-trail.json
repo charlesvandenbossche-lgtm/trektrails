@@ -1,0 +1,13 @@
+{"slug":"arizona-trail","title":"Arizona Trail","titleLines":["Arizona","Trail"],"schematic":true,"size":[1200,1600],"autoPeaks":0,"glyphs":10,
+ "extent":[{"lat":37.2,"lon":-114.9},{"lat":31.2,"lon":-108.9}],"margin":{"l":120,"r":120,"t":110,"b":120},
+ "stops":[{"name":"Mexican border","lat":31.334,"lon":-110.283,"type":"start"},{"name":"Oracle","lat":32.61,"lon":-110.77},{"name":"Roosevelt Lake","lat":33.67,"lon":-111.16},{"name":"Pine","lat":34.385,"lon":-111.455},{"name":"Flagstaff","lat":35.198,"lon":-111.651},{"name":"Grand Canyon","lat":36.057,"lon":-112.14},{"name":"Utah border","lat":37.001,"lon":-112.035,"type":"end"}],
+ "legs":[{"from":"Mexican border","to":"Oracle","km":320,"via":[[31.54,-110.75],[31.85,-110.72],[32.18,-110.55],[32.44,-110.79]]},
+  {"from":"Oracle","to":"Roosevelt Lake","km":235,"via":[[33.1,-110.98],[33.27,-111.17]]},
+  {"from":"Roosevelt Lake","to":"Pine","km":185,"via":[[34.0,-111.45]]},
+  {"from":"Pine","to":"Flagstaff","km":195,"via":[[34.9,-111.45]]},
+  {"from":"Flagstaff","to":"Grand Canyon","km":175,"via":[[35.5,-111.75]]},
+  {"from":"Grand Canyon","to":"Utah border","km":180,"via":[[36.21,-112.06],[36.71,-112.21]]}],
+ "places":[{"kind":"country","name":"ARIZONA","lat":34.3,"lon":-113.4},{"kind":"country","name":"UTAH","lat":37.25,"lon":-113.2},{"kind":"country","name":"MEXICO","lat":31.25,"lon":-112.2},
+  {"kind":"town","name":"Tucson","lat":32.22,"lon":-110.97},{"kind":"town","name":"Phoenix","lat":33.45,"lon":-112.07},
+  {"kind":"peak","name":"Humphreys Peak","ele":"3,851 m","lat":35.346,"lon":-111.678}],
+ "legend":[{"label":"Arizona Trail, drawn schematically","color":"#C8632F"}]}

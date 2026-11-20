@@ -1,0 +1,128 @@
+{
+ "slug": "annapurna-circuit",
+ "title": "Annapurna Circuit",
+ "titleLines": [
+  "Annapurna",
+  "Circuit"
+ ],
+ "geo": "geo/annapurna-circuit.json",
+ "stops": [
+  {
+   "name": "Chame",
+   "lat": 28.552,
+   "lon": 84.241,
+   "type": "start"
+  },
+  {
+   "name": "Upper Pisang",
+   "lat": 28.63,
+   "lon": 84.15
+  },
+  {
+   "name": "Manang",
+   "lat": 28.666,
+   "lon": 84.022
+  },
+  {
+   "name": "Yak Kharka",
+   "lat": 28.728,
+   "lon": 83.982
+  },
+  {
+   "name": "Thorong Phedi",
+   "lat": 28.773,
+   "lon": 83.953
+  },
+  {
+   "name": "Muktinath",
+   "lat": 28.817,
+   "lon": 83.871
+  },
+  {
+   "name": "Kagbeni",
+   "lat": 28.836,
+   "lon": 83.783
+  },
+  {
+   "name": "Jomsom",
+   "lat": 28.781,
+   "lon": 83.723,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Chame",
+   "to": "Upper Pisang",
+   "km": 14
+  },
+  {
+   "from": "Upper Pisang",
+   "to": "Manang",
+   "km": 20
+  },
+  {
+   "from": "Manang",
+   "to": "Yak Kharka",
+   "km": 10
+  },
+  {
+   "from": "Yak Kharka",
+   "to": "Thorong Phedi",
+   "km": 7
+  },
+  {
+   "from": "Thorong Phedi",
+   "to": "Muktinath",
+   "km": 15
+  },
+  {
+   "from": "Muktinath",
+   "to": "Kagbeni",
+   "km": 10
+  },
+  {
+   "from": "Kagbeni",
+   "to": "Jomsom",
+   "km": 10
+  }
+ ],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Thorong La",
+   "ele": "5,416 m",
+   "lat": 28.7936,
+   "lon": 83.9372
+  },
+  {
+   "kind": "peak",
+   "name": "Annapurna III",
+   "ele": "7,555 m",
+   "lat": 28.585,
+   "lon": 83.99
+  },
+  {
+   "kind": "peak",
+   "name": "Gangapurna",
+   "ele": "7,455 m",
+   "lat": 28.6047,
+   "lon": 83.9636
+  },
+  {
+   "kind": "peak",
+   "name": "Tilicho Peak",
+   "ele": "7,134 m",
+   "lat": 28.6833,
+   "lon": 83.8056
+  },
+  {
+   "kind": "peak",
+   "name": "Pisang Peak",
+   "ele": "6,091 m",
+   "lat": 28.6447,
+   "lon": 84.1881
+  }
+ ],
+ "autoPeaks": 0
+}

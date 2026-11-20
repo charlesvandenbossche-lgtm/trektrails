@@ -1,0 +1,71 @@
+{
+ "slug": "jordan-trail",
+ "stops": [
+  {
+   "name": "Shobak",
+   "lat": 30.5314,
+   "lon": 35.5606,
+   "q": "Shobak Castle"
+  },
+  {
+   "name": "Wadi Feynan",
+   "lat": 30.627,
+   "lon": 35.493,
+   "q": "Feynan"
+  },
+  {
+   "name": "Teletat Al-Sofor",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Um Ratam",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Al Baydha",
+   "lat": 30.375,
+   "lon": 35.451,
+   "q": "Little Petra"
+  },
+  {
+   "name": "Petra",
+   "lat": 30.3285,
+   "lon": 35.4444
+  }
+ ],
+ "stages": [
+  [
+   "Shobak",
+   "Wadi Feynan",
+   17
+  ],
+  [
+   "Wadi Feynan",
+   "Teletat Al-Sofor",
+   17
+  ],
+  [
+   "Teletat Al-Sofor",
+   "Um Ratam",
+   16
+  ],
+  [
+   "Um Ratam",
+   "Al Baydha",
+   16
+  ],
+  [
+   "Al Baydha",
+   "Petra",
+   16
+  ]
+ ],
+ "box": 0.05,
+ "alt": false,
+ "ratio": [
+  0.4,
+  1.9
+ ]
+}

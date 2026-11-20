@@ -1,0 +1,85 @@
+{
+ "slug": "jotunheimen",
+ "title": "Jotunheimen Traverse",
+ "titleLines": [
+  "Jotunheimen",
+  "Traverse"
+ ],
+ "geo": "geo/jotunheimen.json",
+ "stops": [
+  {
+   "name": "Spiterstulen",
+   "lat": 61.622,
+   "lon": 8.403,
+   "type": "start"
+  },
+  {
+   "name": "Leirvassbu",
+   "lat": 61.547,
+   "lon": 8.248
+  },
+  {
+   "name": "Gjendebu",
+   "lat": 61.453,
+   "lon": 8.488
+  },
+  {
+   "name": "Memurubu",
+   "lat": 61.487,
+   "lon": 8.635
+  },
+  {
+   "name": "Gjendesheim",
+   "lat": 61.495,
+   "lon": 8.812,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Spiterstulen",
+   "to": "Leirvassbu",
+   "km": 15.3
+  },
+  {
+   "from": "Leirvassbu",
+   "to": "Gjendebu",
+   "km": 19
+  },
+  {
+   "from": "Gjendebu",
+   "to": "Memurubu",
+   "km": 10.5
+  },
+  {
+   "from": "Memurubu",
+   "to": "Gjendesheim",
+   "km": 13,
+   "via": [
+    [
+     61.507,
+     8.7
+    ],
+    [
+     61.503,
+     8.76
+    ]
+   ]
+  }
+ ],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Galdhøpiggen",
+   "ele": "2,469 m",
+   "lat": 61.6365,
+   "lon": 8.3125
+  },
+  {
+   "kind": "place",
+   "name": "Besseggen ridge",
+   "lat": 61.516,
+   "lon": 8.72
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "slug": "inca-trail",
+ "title": "Inca Trail",
+ "titleLines": [
+  "Inca Trail"
+ ],
+ "geo": "geo/inca-trail.json",
+ "stops": [
+  {
+   "name": "Km 82",
+   "lat": -13.2247,
+   "lon": -72.4258,
+   "type": "start"
+  },
+  {
+   "name": "Wayllabamba",
+   "lat": -13.262,
+   "lon": -72.467
+  },
+  {
+   "name": "Pacaymayo",
+   "lat": -13.236,
+   "lon": -72.492
+  },
+  {
+   "name": "Wiñay Wayna",
+   "lat": -13.192,
+   "lon": -72.537
+  },
+  {
+   "name": "Machu Picchu",
+   "lat": -13.163,
+   "lon": -72.545,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Km 82",
+   "to": "Wayllabamba",
+   "km": 12
+  },
+  {
+   "from": "Wayllabamba",
+   "to": "Pacaymayo",
+   "km": 11
+  },
+  {
+   "from": "Pacaymayo",
+   "to": "Wiñay Wayna",
+   "km": 16
+  },
+  {
+   "from": "Wiñay Wayna",
+   "to": "Machu Picchu",
+   "km": 5
+  }
+ ],
+ "places": []
+}

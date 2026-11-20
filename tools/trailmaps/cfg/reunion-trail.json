@@ -1,0 +1,197 @@
+{
+ "slug": "reunion-trail",
+ "title": "Réunion Trail",
+ "titleLines": [
+  "Réunion",
+  "Trail"
+ ],
+ "geo": "geo/reunion-trail.json",
+ "borders": false,
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 4,
+ "stopSize": 29,
+ "margin": {
+  "l": 200,
+  "r": 200,
+  "t": 120,
+  "b": 150
+ },
+ "legendLabel": "GR R2, the Réunion traverse",
+ "stops": [
+  {
+   "name": "Saint-Denis",
+   "lat": -20.8968,
+   "lon": 55.4556,
+   "type": "start"
+  },
+  {
+   "name": "Roche Écrite",
+   "label": "Gîte de la Roche Écrite",
+   "lat": -20.9881,
+   "lon": 55.4442
+  },
+  {
+   "name": "Dos d'Âne",
+   "lat": -20.986,
+   "lon": 55.385
+  },
+  {
+   "name": "Aurère",
+   "lat": -21.02,
+   "lon": 55.423
+  },
+  {
+   "name": "Grand Place",
+   "lat": -21.041,
+   "lon": 55.413
+  },
+  {
+   "name": "Roche Plate",
+   "lat": -21.073,
+   "lon": 55.398
+  },
+  {
+   "name": "Marla",
+   "lat": -21.103,
+   "lon": 55.433
+  },
+  {
+   "name": "Cilaos",
+   "lat": -21.1338,
+   "lon": 55.4732
+  },
+  {
+   "name": "Caverne Dufour",
+   "lat": -21.1055,
+   "lon": 55.4935
+  },
+  {
+   "name": "Bourg-Murat",
+   "lat": -21.205,
+   "lon": 55.573
+  },
+  {
+   "name": "Gîte du Volcan",
+   "lat": -21.2178,
+   "lon": 55.6872
+  },
+  {
+   "name": "Gîte de Basse Vallée",
+   "lat": -21.324,
+   "lon": 55.706
+  },
+  {
+   "name": "Basse Vallée",
+   "lat": -21.368,
+   "lon": 55.712,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Saint-Denis",
+   "to": "Roche Écrite",
+   "arrow": false
+  },
+  {
+   "from": "Roche Écrite",
+   "to": "Dos d'Âne",
+   "arrow": false
+  },
+  {
+   "from": "Dos d'Âne",
+   "to": "Aurère",
+   "arrow": false
+  },
+  {
+   "from": "Aurère",
+   "to": "Grand Place",
+   "arrow": false
+  },
+  {
+   "from": "Grand Place",
+   "to": "Roche Plate",
+   "arrow": false
+  },
+  {
+   "from": "Roche Plate",
+   "to": "Marla",
+   "arrow": false
+  },
+  {
+   "from": "Marla",
+   "to": "Cilaos",
+   "arrow": false
+  },
+  {
+   "from": "Cilaos",
+   "to": "Caverne Dufour",
+   "arrow": false
+  },
+  {
+   "from": "Caverne Dufour",
+   "to": "Bourg-Murat",
+   "arrow": false
+  },
+  {
+   "from": "Bourg-Murat",
+   "to": "Gîte du Volcan",
+   "arrow": false
+  },
+  {
+   "from": "Gîte du Volcan",
+   "to": "Gîte de Basse Vallée",
+   "arrow": false
+  },
+  {
+   "from": "Gîte de Basse Vallée",
+   "to": "Basse Vallée",
+   "arrow": false
+  }
+ ],
+ "places": [
+  {
+   "kind": "ocean",
+   "name": "INDIAN OCEAN",
+   "lat": -21.33,
+   "lon": 55.46
+  },
+  {
+   "kind": "peak",
+   "name": "Piton des Neiges",
+   "ele": "3,070 m",
+   "lat": -21.0986,
+   "lon": 55.4803
+  },
+  {
+   "kind": "peak",
+   "name": "Piton de la Fournaise",
+   "ele": "2,632 m",
+   "lat": -21.2445,
+   "lon": 55.7089
+  },
+  {
+   "kind": "place",
+   "name": "Cirque de Mafate",
+   "lat": -21.05,
+   "lon": 55.345
+  },
+  {
+   "kind": "place",
+   "name": "Cirque de Salazie",
+   "lat": -21.04,
+   "lon": 55.52
+  },
+  {
+   "kind": "place",
+   "name": "Cirque de Cilaos",
+   "lat": -21.17,
+   "lon": 55.455
+  }
+ ],
+ "profileLabels": {
+  "Roche Écrite": "Roche Écrite",
+  "Gîte de Basse Vallée": "Gîte Basse Vallée"
+ }
+}

@@ -1,0 +1,304 @@
+{
+ "slug": "peaks-of-the-balkans",
+ "title": "Peaks of the Balkans",
+ "titleLines": [
+  "Peaks of",
+  "the Balkans"
+ ],
+ "titleCorner": "NW",
+ "geo": "geo/peaks-of-the-balkans.json",
+ "glyphs": 9,
+ "credit": "Trail, places and rivers: © OpenStreetMap contributors · Terrain: Tilezen / AWS Terrain Tiles · Borders: Natural Earth",
+ "pad": {
+  "l": 0.2,
+  "r": 0.14,
+  "t": 0.04,
+  "b": 0.22
+ },
+ "extent": [
+  {
+   "lat": 42.765,
+   "lon": 20.17
+  },
+  {
+   "lat": 42.385,
+   "lon": 19.75
+  }
+ ],
+ "stops": [
+  {
+   "name": "Theth",
+   "lat": 42.3947,
+   "lon": 19.7751,
+   "type": "start",
+   "labelPos": "W"
+  },
+  {
+   "name": "Valbona",
+   "lat": 42.4531,
+   "lon": 19.8932,
+   "labelPos": "SE"
+  },
+  {
+   "name": "Çerem",
+   "lat": 42.4954,
+   "lon": 19.9617,
+   "labelPos": "S"
+  },
+  {
+   "name": "Dobërdol",
+   "lat": 42.5465,
+   "lon": 20.0669,
+   "labelPos": "S"
+  },
+  {
+   "name": "Plav",
+   "lat": 42.5969,
+   "lon": 19.9442,
+   "labelPos": "N"
+  },
+  {
+   "name": "Vusanje",
+   "lat": 42.5266,
+   "lon": 19.846,
+   "labelPos": "W"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Theth",
+   "to": "Valbona",
+   "km": 11.6,
+   "draw": false,
+   "side": 1,
+   "off": 100
+  },
+  {
+   "from": "Çerem",
+   "to": "Dobërdol",
+   "km": 15.4,
+   "draw": false,
+   "side": 1,
+   "off": 80
+  },
+  {
+   "from": "Dobërdol",
+   "to": "Plav",
+   "km": 17.3,
+   "via": [
+    [
+     42.572,
+     20.05
+    ],
+    [
+     42.595,
+     20.005
+    ]
+   ],
+   "side": -1,
+   "off": 75,
+   "dash": "2 13"
+  },
+  {
+   "from": "Plav",
+   "to": "Vusanje",
+   "km": 15.3,
+   "draw": false,
+   "side": 1,
+   "off": 48
+  },
+  {
+   "from": "Vusanje",
+   "to": "Theth",
+   "km": 15.6,
+   "draw": false,
+   "side": 1,
+   "off": 80
+  }
+ ],
+ "places": [
+  {
+   "kind": "country",
+   "name": "MONTENEGRO",
+   "lat": 42.66,
+   "lon": 19.86
+  },
+  {
+   "kind": "country",
+   "name": "ALBANIA",
+   "lat": 42.452,
+   "lon": 20.04
+  },
+  {
+   "kind": "country",
+   "name": "KOSOVO",
+   "lat": 42.585,
+   "lon": 20.2
+  },
+  {
+   "kind": "town",
+   "name": "Gusinje",
+   "lat": 42.5638,
+   "lon": 19.8333,
+   "labelPos": "W"
+  },
+  {
+   "kind": "town",
+   "name": "Pejë",
+   "lat": 42.659,
+   "lon": 20.288,
+   "labelPos": "S"
+  },
+  {
+   "kind": "minor",
+   "name": "Milishevc",
+   "lat": 42.6402,
+   "lon": 20.1499,
+   "labelPos": "E"
+  },
+  {
+   "kind": "minor",
+   "name": "Rekë e Allagës",
+   "lat": 42.7274,
+   "lon": 20.1598,
+   "labelPos": "E"
+  },
+  {
+   "kind": "minor",
+   "name": "Pepaj",
+   "lat": 42.7254,
+   "lon": 20.1265,
+   "labelPos": "N"
+  },
+  {
+   "kind": "minor",
+   "name": "Dugaivë",
+   "lat": 42.715,
+   "lon": 20.0798,
+   "labelPos": "W"
+  },
+  {
+   "kind": "minor",
+   "name": "Kuqishtë",
+   "lat": 42.6945,
+   "lon": 20.0767,
+   "labelPos": "W"
+  },
+  {
+   "kind": "peak",
+   "name": "Maja Jezercë",
+   "ele": "2,694 m",
+   "lat": 42.4421,
+   "lon": 19.8128,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Zla Kolata",
+   "ele": "2,535 m",
+   "lat": 42.4849,
+   "lon": 19.896,
+   "labelPos": "S"
+  },
+  {
+   "kind": "peak",
+   "name": "Maja e Harapit",
+   "ele": "2,218 m",
+   "lat": 42.4453,
+   "lon": 19.7552,
+   "labelPos": "W"
+  },
+  {
+   "kind": "peak",
+   "name": "Gjeravica",
+   "ele": "2,656 m",
+   "lat": 42.5329,
+   "lon": 20.1406,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Marijash",
+   "ele": "2,533 m",
+   "lat": 42.6126,
+   "lon": 20.1001,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Hajla",
+   "ele": "2,403 m",
+   "lat": 42.7575,
+   "lon": 20.1387,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Three-border point",
+   "ele": "2,366 m",
+   "lat": 42.5555,
+   "lon": 20.0792,
+   "labelPos": "E"
+  },
+  {
+   "kind": "peak",
+   "name": "Visitor",
+   "ele": "2,211 m",
+   "lat": 42.6102,
+   "lon": 19.8863,
+   "labelPos": "N"
+  },
+  {
+   "kind": "peak",
+   "name": "Valbona Pass",
+   "ele": "1,795 m",
+   "lat": 42.4057,
+   "lon": 19.8152,
+   "labelPos": "N"
+  },
+  {
+   "kind": "river",
+   "name": "Lake Plav",
+   "lat": 42.58,
+   "lon": 19.905,
+   "angle": 0
+  },
+  {
+   "kind": "river",
+   "name": "Valbona",
+   "lat": 42.432,
+   "lon": 19.985,
+   "angle": 28
+  },
+  {
+   "kind": "river",
+   "name": "Lim",
+   "lat": 42.64,
+   "lon": 19.955,
+   "angle": -70
+  },
+  {
+   "kind": "river",
+   "name": "Lumbardhi i Pejës",
+   "lat": 42.672,
+   "lon": 20.235,
+   "angle": 0
+  }
+ ],
+ "legend": [
+  {
+   "label": "Stages described on Trek Trails",
+   "color": "#C8632F"
+  },
+  {
+   "label": "Dobërdol to Plav, approximate line",
+   "color": "#C8632F",
+   "dash": "2 13"
+  },
+  {
+   "label": "Full Peaks of the Balkans loop",
+   "color": "#2C3A6B"
+  }
+ ],
+ "renderer": "v1"
+}

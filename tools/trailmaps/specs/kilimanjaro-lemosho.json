@@ -1,0 +1,109 @@
+{
+ "slug": "kilimanjaro-lemosho",
+ "stops": [
+  {
+   "name": "Lemosho Gate",
+   "lat": -3.019,
+   "lon": 37.142,
+   "q": "Lemosho"
+  },
+  {
+   "name": "Mti Mkubwa",
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Shira One",
+   "lat": -3.04,
+   "lon": 37.24,
+   "q": "Shira 1"
+  },
+  {
+   "name": "Shira Two",
+   "lat": -3.055,
+   "lon": 37.285,
+   "q": "Shira 2"
+  },
+  {
+   "name": "Barranco",
+   "lat": -3.094,
+   "lon": 37.33
+  },
+  {
+   "name": "Karanga",
+   "lat": -3.106,
+   "lon": 37.355
+  },
+  {
+   "name": "Barafu",
+   "lat": -3.1,
+   "lon": 37.39
+  },
+  {
+   "name": "Uhuru Peak",
+   "lat": -3.0764,
+   "lon": 37.3533
+  },
+  {
+   "name": "Mweka camp",
+   "lat": -3.163,
+   "lon": 37.365,
+   "q": "Mweka Camp"
+  },
+  {
+   "name": "Mweka Gate",
+   "lat": -3.224,
+   "lon": 37.342
+  }
+ ],
+ "stages": [
+  [
+   "Lemosho Gate",
+   "Mti Mkubwa",
+   6
+  ],
+  [
+   "Mti Mkubwa",
+   "Shira One",
+   8.5
+  ],
+  [
+   "Shira One",
+   "Shira Two",
+   8
+  ],
+  [
+   "Shira Two",
+   "Barranco",
+   10.5
+  ],
+  [
+   "Barranco",
+   "Karanga",
+   5.5
+  ],
+  [
+   "Karanga",
+   "Barafu",
+   5
+  ],
+  [
+   "Barafu",
+   "Uhuru Peak",
+   null
+  ],
+  [
+   "Uhuru Peak",
+   "Mweka camp",
+   17
+  ],
+  [
+   "Mweka camp",
+   "Mweka Gate",
+   9
+  ]
+ ],
+ "box": 0.03,
+ "alt": false,
+ "snap": 4.0
+}

@@ -1,0 +1,58 @@
+{
+ "slug": "jotunheimen",
+ "stops": [
+  {
+   "name": "Spiterstulen",
+   "lat": 61.622,
+   "lon": 8.403
+  },
+  {
+   "name": "Leirvassbu",
+   "lat": 61.547,
+   "lon": 8.248
+  },
+  {
+   "name": "Gjendebu",
+   "lat": 61.453,
+   "lon": 8.488
+  },
+  {
+   "name": "Memurubu",
+   "lat": 61.487,
+   "lon": 8.635
+  },
+  {
+   "name": "Gjendesheim",
+   "lat": 61.495,
+   "lon": 8.812
+  }
+ ],
+ "stages": [
+  [
+   "Spiterstulen",
+   "Leirvassbu",
+   15.3
+  ],
+  [
+   "Leirvassbu",
+   "Gjendebu",
+   19
+  ],
+  [
+   "Gjendebu",
+   "Memurubu",
+   10.5
+  ],
+  [
+   "Memurubu",
+   "Gjendesheim",
+   13
+  ]
+ ],
+ "box": 0.03,
+ "alt": false,
+ "ratio": [
+  0.85,
+  1.3
+ ]
+}

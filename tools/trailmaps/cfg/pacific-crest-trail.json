@@ -1,0 +1,316 @@
+{
+ "slug": "pacific-crest-trail",
+ "title": "Pacific Crest Trail",
+ "titleLines": [
+  "Pacific",
+  "Crest Trail"
+ ],
+ "schematic": true,
+ "size": [
+  1200,
+  1600
+ ],
+ "autoPeaks": 0,
+ "glyphs": 12,
+ "titleCorner": "SW",
+ "margin": {
+  "l": 330,
+  "r": 170,
+  "t": 110,
+  "b": 120
+ },
+ "stops": [
+  {
+   "name": "Campo",
+   "lat": 32.59,
+   "lon": -116.47,
+   "type": "start",
+   "label": "Campo, Mexican border"
+  },
+  {
+   "name": "Kennedy Meadows",
+   "lat": 36.02,
+   "lon": -118.13
+  },
+  {
+   "name": "Lake Tahoe",
+   "lat": 38.83,
+   "lon": -120.04
+  },
+  {
+   "name": "Oregon border",
+   "lat": 42.0,
+   "lon": -122.9
+  },
+  {
+   "name": "Cascade Locks",
+   "lat": 45.67,
+   "lon": -121.89
+  },
+  {
+   "name": "Canadian border",
+   "lat": 49.0,
+   "lon": -120.8,
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Campo",
+   "to": "Kennedy Meadows",
+   "km": 1130,
+   "via": [
+    [
+     33.3,
+     -116.6
+    ],
+    [
+     34.25,
+     -116.9
+    ],
+    [
+     34.37,
+     -117.7
+    ],
+    [
+     34.8,
+     -118.6
+    ],
+    [
+     35.1,
+     -118.3
+    ]
+   ],
+   "arrow": false
+  },
+  {
+   "from": "Kennedy Meadows",
+   "to": "Lake Tahoe",
+   "km": 630,
+   "via": [
+    [
+     36.58,
+     -118.29
+    ],
+    [
+     37.2,
+     -118.75
+    ],
+    [
+     37.87,
+     -119.35
+    ],
+    [
+     38.33,
+     -119.64
+    ]
+   ],
+   "arrow": false
+  },
+  {
+   "from": "Lake Tahoe",
+   "to": "Oregon border",
+   "km": 965,
+   "via": [
+    [
+     39.32,
+     -120.33
+    ],
+    [
+     39.57,
+     -120.63
+    ],
+    [
+     40.0,
+     -121.25
+    ],
+    [
+     40.49,
+     -121.5
+    ],
+    [
+     41.0,
+     -121.65
+    ],
+    [
+     41.16,
+     -122.3
+    ],
+    [
+     41.45,
+     -122.9
+    ],
+    [
+     41.85,
+     -123.2
+    ]
+   ],
+   "arrow": false
+  },
+  {
+   "from": "Oregon border",
+   "to": "Cascade Locks",
+   "km": 730,
+   "via": [
+    [
+     42.1,
+     -122.6
+    ],
+    [
+     42.9,
+     -122.15
+    ],
+    [
+     43.6,
+     -122.05
+    ],
+    [
+     44.2,
+     -121.8
+    ],
+    [
+     44.67,
+     -121.8
+    ],
+    [
+     45.33,
+     -121.71
+    ]
+   ],
+   "arrow": false
+  },
+  {
+   "from": "Cascade Locks",
+   "to": "Canadian border",
+   "km": 810,
+   "via": [
+    [
+     46.2,
+     -121.5
+    ],
+    [
+     46.65,
+     -121.4
+    ],
+    [
+     47.42,
+     -121.41
+    ],
+    [
+     47.75,
+     -121.09
+    ],
+    [
+     48.4,
+     -120.75
+    ],
+    [
+     48.52,
+     -120.73
+    ]
+   ],
+   "arrow": false
+  }
+ ],
+ "places": [
+  {
+   "kind": "ocean",
+   "name": "PACIFIC OCEAN",
+   "lat": 40.2,
+   "lon": -127.2
+  },
+  {
+   "kind": "country",
+   "name": "CALIFORNIA",
+   "lat": 39.7,
+   "lon": -122.9
+  },
+  {
+   "kind": "country",
+   "name": "OREGON",
+   "lat": 43.9,
+   "lon": -119.6
+  },
+  {
+   "kind": "country",
+   "name": "WASHINGTON",
+   "lat": 47.1,
+   "lon": -118.9
+  },
+  {
+   "kind": "country",
+   "name": "NEVADA",
+   "lat": 40.4,
+   "lon": -116.6
+  },
+  {
+   "kind": "town",
+   "name": "San Diego",
+   "lat": 32.72,
+   "lon": -117.16,
+   "labelPos": "W"
+  },
+  {
+   "kind": "town",
+   "name": "Los Angeles",
+   "lat": 34.05,
+   "lon": -118.24,
+   "labelPos": "W"
+  },
+  {
+   "kind": "town",
+   "name": "San Francisco",
+   "lat": 37.77,
+   "lon": -122.42,
+   "labelPos": "W"
+  },
+  {
+   "kind": "town",
+   "name": "Portland",
+   "lat": 45.52,
+   "lon": -122.68,
+   "labelPos": "W"
+  },
+  {
+   "kind": "town",
+   "name": "Seattle",
+   "lat": 47.61,
+   "lon": -122.33,
+   "labelPos": "W"
+  },
+  {
+   "kind": "peak",
+   "name": "Mount Whitney",
+   "ele": "4,421 m",
+   "lat": 36.578,
+   "lon": -118.292
+  },
+  {
+   "kind": "peak",
+   "name": "Mount Shasta",
+   "ele": "4,322 m",
+   "lat": 41.409,
+   "lon": -122.195
+  },
+  {
+   "kind": "peak",
+   "name": "Mount Hood",
+   "ele": "3,429 m",
+   "lat": 45.374,
+   "lon": -121.696
+  },
+  {
+   "kind": "peak",
+   "name": "Mount Rainier",
+   "ele": "4,392 m",
+   "lat": 46.853,
+   "lon": -121.76
+  }
+ ],
+ "legend": [
+  {
+   "label": "Pacific Crest Trail, drawn schematically",
+   "color": "#C8632F"
+  }
+ ]
+}
