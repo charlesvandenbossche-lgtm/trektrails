@@ -98,7 +98,9 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
   Name them `U01 - <photographer> - <short description>.jpg`, add `_credits.txt` (photographer + photo link) and a
   `00 - overzicht.jpg` contact sheet, check them against the sheet, then delete the copies from Downloads
   (deletion there needs his approval once per session). Do not touch other files in Downloads.
-  Done so far (not yet used on the site): `Pacific Crest Trail/Unsplash` and `The Salkantay Trail` (20 each).
+  Done so far: `Pacific Crest Trail/Unsplash` (not yet used on the site) and `The Salkantay Trail` (used on
+  `salkantay-trek`, full template, real photos; credits via the optional `credits` field, captions end "Photo: name / Unsplash").
+  The profile script hides a stop when its `profileLabels` entry is "" and shows repeated labels once.
   Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 
 ## Other channels

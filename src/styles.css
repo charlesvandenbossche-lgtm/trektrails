@@ -411,3 +411,5 @@ table.costs tr:nth-last-child(-n+2) td{border-top-width:2px}
 .consent button{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:15px;padding:9px 18px;border-radius:4px;border:2px solid var(--on-deep);background:transparent;color:var(--on-deep);cursor:pointer}
 .consent button.yes{background:#cf6c33;border-color:#cf6c33;color:#f1efe0}
 footer nav{flex-wrap:wrap;row-gap:12px}
+
+.credits{font-size:.8rem;opacity:.7;margin-top:8px}

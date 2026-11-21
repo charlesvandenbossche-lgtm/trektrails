@@ -1,0 +1,14 @@
+{"slug": "salkantay-trek", "box": 0.03, "snap": 1.5, "network": true, "local": false, "ratio": [0.5, 2.2],
+ "stops": [
+  {"name": "Soraypampa", "lat": -13.3877, "lon": -72.5741, "q": "zzz-no-match"},
+  {"name": "Humantay Lake", "lat": -13.3760, "lon": -72.5830, "q": "zzz-no-match"},
+  {"name": "Salkantay Pass", "lat": -13.3486, "lon": -72.5634, "q": "zzz-no-match"},
+  {"name": "Wayramachay", "lat": -13.3280, "lon": -72.6035, "q": "zzz-no-match"},
+  {"name": "Chaullay", "lat": -13.3249, "lon": -72.6650, "q": "zzz-no-match"},
+  {"name": "Collpapampa", "lat": -13.3185, "lon": -72.6692, "q": "zzz-no-match"},
+  {"name": "La Playa", "lat": -13.2329, "lon": -72.6317, "q": "zzz-no-match"},
+  {"name": "Lucmabamba", "lat": -13.2113, "lon": -72.6155, "q": "zzz-no-match"},
+  {"name": "Llactapata", "lat": -13.1860, "lon": -72.5896, "q": "zzz-no-match"},
+  {"name": "Hidroelectrica", "lat": -13.1747, "lon": -72.5596, "q": "zzz-no-match"},
+  {"name": "Aguas Calientes", "lat": -13.1546, "lon": -72.5254, "q": "zzz-no-match"}],
+ "stages": [["Soraypampa","Humantay Lake"],["Humantay Lake","Soraypampa"],["Soraypampa","Salkantay Pass"],["Salkantay Pass","Wayramachay"],["Wayramachay","Chaullay"],["Chaullay","Collpapampa"],["Collpapampa","La Playa"],["La Playa","Lucmabamba"],["Lucmabamba","Llactapata"],["Llactapata","Hidroelectrica"],["Hidroelectrica","Aguas Calientes"]]}

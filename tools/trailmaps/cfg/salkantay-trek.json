@@ -1,0 +1,180 @@
+{
+ "slug": "salkantay-trek",
+ "title": "Salkantay Trek",
+ "titleLines": [
+  "Salkantay",
+  "Trek"
+ ],
+ "geo": "geo/salkantay-trek.json",
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 7,
+ "borders": false,
+ "legendLabel": "Salkantay Trek",
+ "stops": [
+  {
+   "name": "Soraypampa",
+   "lat": -13.3877,
+   "lon": -72.5741,
+   "type": "start",
+   "label": "Soraypampa · start"
+  },
+  {
+   "name": "Humantay Lake",
+   "lat": -13.376,
+   "lon": -72.583
+  },
+  {
+   "name": "Salkantay Pass",
+   "lat": -13.3486,
+   "lon": -72.5634,
+   "label": "Salkantay Pass 4,620 m"
+  },
+  {
+   "name": "Wayramachay",
+   "lat": -13.328,
+   "lon": -72.6035,
+   "hidden": true
+  },
+  {
+   "name": "Chaullay",
+   "lat": -13.3249,
+   "lon": -72.665
+  },
+  {
+   "name": "Collpapampa",
+   "lat": -13.3185,
+   "lon": -72.6692,
+   "hidden": true
+  },
+  {
+   "name": "La Playa",
+   "lat": -13.2329,
+   "lon": -72.6317
+  },
+  {
+   "name": "Lucmabamba",
+   "lat": -13.2113,
+   "lon": -72.6155
+  },
+  {
+   "name": "Llactapata",
+   "lat": -13.186,
+   "lon": -72.5896
+  },
+  {
+   "name": "Hidroelectrica",
+   "lat": -13.1747,
+   "lon": -72.5596,
+   "label": "Hidroeléctrica"
+  },
+  {
+   "name": "Aguas Calientes",
+   "lat": -13.1546,
+   "lon": -72.5254,
+   "type": "end",
+   "label": "Aguas Calientes · finish"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Soraypampa",
+   "to": "Humantay Lake",
+   "label": "Side trip 4.2 km"
+  },
+  {
+   "from": "Humantay Lake",
+   "to": "Soraypampa",
+   "chip": false
+  },
+  {
+   "from": "Soraypampa",
+   "to": "Salkantay Pass",
+   "chip": false
+  },
+  {
+   "from": "Salkantay Pass",
+   "to": "Wayramachay",
+   "label": "Pass day 18.6 km"
+  },
+  {
+   "from": "Wayramachay",
+   "to": "Chaullay",
+   "chip": false
+  },
+  {
+   "from": "Chaullay",
+   "to": "Collpapampa",
+   "chip": false
+  },
+  {
+   "from": "Collpapampa",
+   "to": "La Playa",
+   "label": "18.3 km"
+  },
+  {
+   "from": "La Playa",
+   "to": "Lucmabamba",
+   "chip": false
+  },
+  {
+   "from": "Lucmabamba",
+   "to": "Llactapata",
+   "label": "21.6 km"
+  },
+  {
+   "from": "Llactapata",
+   "to": "Hidroelectrica",
+   "chip": false
+  },
+  {
+   "from": "Hidroelectrica",
+   "to": "Aguas Calientes",
+   "chip": false
+  }
+ ],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Nevado Salkantay",
+   "ele": "6,271 m",
+   "lat": -13.3334,
+   "lon": -72.5436
+  },
+  {
+   "kind": "peak",
+   "name": "Nevado Humantay",
+   "ele": "5,473 m",
+   "lat": -13.3613,
+   "lon": -72.5796
+  },
+  {
+   "kind": "minor",
+   "name": "Wayramachay",
+   "lat": -13.328,
+   "lon": -72.6035
+  },
+  {
+   "kind": "minor",
+   "name": "Collpapampa",
+   "lat": -13.3185,
+   "lon": -72.6692
+  },
+  {
+   "kind": "minor",
+   "name": "Machu Picchu",
+   "lat": -13.1631,
+   "lon": -72.545
+  }
+ ],
+ "profileLabels": {
+  "Soraypampa": "Soraypampa",
+  "Salkantay Pass": "Salkantay Pass",
+  "Chaullay": "Chaullay",
+  "La Playa": "La Playa",
+  "Llactapata": "Llactapata",
+  "Hidroelectrica": "Hidroeléctrica",
+  "Aguas Calientes": "Aguas Calientes",
+  "Humantay Lake": ""
+ }
+}

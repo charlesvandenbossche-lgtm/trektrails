@@ -135,6 +135,7 @@ function detail(t){
       <h2>Highlights</h2>
       <ul class="hl">${t.hl.map(x=>'<li><img class="mark" src="/img/mark.png" alt="" aria-hidden="true"><span>'+esc(x)+'</span></li>').join('')}</ul>
       ${t.gal.length?`<div class="gallery g${t.gal.length}">${t.gal.map(g=>'<img src="/img/'+g[0]+'.jpg" alt="'+esc(g[1])+'" loading="lazy">').join('')}</div>`:''}
+      ${t.credits?'<p class="credits">Photos: '+esc(t.credits)+'</p>':''}
       <h2>${t.long?'Section by section':'Stage by stage'}</h2>
       <div class="tablewrap"><table class="stages num">
         <thead><tr><th scope="col">${t.long?'Part':'Day'}</th><th scope="col">${t.long?'Section':'Stage'}</th><th scope="col">Km</th><th scope="col">Up</th><th scope="col">Down</th><th scope="col">Time</th></tr></thead>

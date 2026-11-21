@@ -14,6 +14,7 @@ for i, st in enumerate(spec['stages']):
     if not marks: marks.append((off, s['prof'][0][1], lab.get(st[0], st[0])))
     for d, z in s['prof']: pts.append((off + d, z))
     off += s['km']; pts.append((off, s['prof'][-1][1])); marks.append((off, s['prof'][-1][1], lab.get(st[1], st[1])))
+_seen=set(); marks=[m for m in marks if m[2] and not (m[2] in _seen or _seen.add(m[2]))]  # blank label hides a stop; repeats show once
 tot = off; import math
 zmax = max(1000, math.ceil((max(z for _, z in pts) + 250) / 500) * 500)
 up = sum(v['up'] for v in e.values()); dn = sum(v['down'] for v in e.values())
