@@ -11,7 +11,7 @@ const LL = {
   'isle-of-skye': [57.4, -6.2], 'kungsleden-winter': [68.1, 18.6], 'dolomites': [46.75, 11.9],
   'vosges-ridge': [48.04, 7.0], 'mullerthal-trail': [49.8, 6.3], 'madeira-crossing': [32.75, -17.0],
   'gran-canaria-traverse': [27.95, -15.6], 'peaks-of-the-balkans': [42.45, 19.8], 'mestia-to-ushguli': [43.0, 42.9],
-  'cappadocia-valleys': [38.65, 34.85], 'jordan-trail': [30.4, 35.5], 'high-atlas': [31.6, -6.5], 'toubkal-circuit': [31.06, -7.92],
+  'cappadocia-valleys': [38.65, 34.85], 'jordan-trail': [30.4, 35.5], 'high-atlas': [31.6, -6.5], 'toubkal-circuit': [31.06, -7.92], 'mgoun-traverse': [31.45, -6.25],
   'ak-suu-traverse': [42.4, 78.6], 'kilimanjaro-lemosho': [-3.07, 37.35], 'camino-de-santiago': [42.85, -8.0],
   'west-highland-way': [56.4, -4.7], 'inca-trail': [-13.2, -72.5], 'annapurna-circuit': [28.6, 84.1],
   'alta-via-1': [46.25, 12.3], 'pacific-crest-trail': [40.5, -121.5], 'arizona-trail': [34.2, -111.4], 'reunion-trail': [-21.13, 55.53],

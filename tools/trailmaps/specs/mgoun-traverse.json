@@ -1,0 +1,12 @@
+{"slug": "mgoun-traverse", "box": 0.03, "snap": 1.5, "network": true, "local": false, "ratio": [0.5, 2.0],
+ "stops": [
+  {"name": "Ait Said", "lat": 31.6175, "lon": -6.4917, "q": "Ait Said"},
+  {"name": "Azib Ikkis", "lat": 31.5751, "lon": -6.4765, "q": "zzz-no-match"},
+  {"name": "Tarkeddit refuge", "lat": 31.5315, "lon": -6.5158, "q": "Refuge de Tarkeddite"},
+  {"name": "Ighil M'Goun", "lat": 31.5091, "lon": -6.4442, "q": "zzz-no-match"},
+  {"name": "Oulilimt", "lat": 31.545, "lon": -6.425, "q": "zzz-no-match"},
+  {"name": "Aflafal", "lat": 31.594, "lon": -6.3223, "q": "zzz-no-match"},
+  {"name": "Imi n'Irekt", "lat": 31.6111, "lon": -6.1996, "q": "zzz-no-match"},
+  {"name": "Tiranimine", "lat": 31.5324, "lon": -6.1319, "q": "zzz-no-match"},
+  {"name": "Aguerzaka", "lat": 31.4963, "lon": -6.119, "q": "zzz-no-match"}],
+ "stages": [["Ait Said", "Azib Ikkis"], ["Azib Ikkis", "Tarkeddit refuge"], ["Tarkeddit refuge", "Ighil M'Goun"], ["Ighil M'Goun", "Oulilimt"], ["Oulilimt", "Aflafal"], ["Aflafal", "Imi n'Irekt"], ["Imi n'Irekt", "Tiranimine"], ["Tiranimine", "Aguerzaka"]]}

@@ -102,10 +102,11 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
 
 ## Open items
 
-- Full-article template rolled out to Peaks of the Balkans, The Réunion Trail and the Toubkal Circuit (its photos are
+- Full-article template rolled out to Peaks of the Balkans, The Réunion Trail, the Toubkal Circuit and the M'Goun Traverse (its photos are
   AI-generated, from Charles's folder `OneDrive/Bureaublad/trektrailpics/Toubkal Circuit`). Next candidates have big
   photo libraries: Laugavegur, Tour du Mont Blanc, Jordan Trail, Madeira Crossing.
-- Photos for the High Atlas Traverse (M'Goun) wait in `OneDrive/Bureaublad/trektrailpics/M'Goun Traverse`.
+- M'Goun Traverse (`mgoun-traverse`, full template, AI photos from `OneDrive/Bureaublad/trektrailpics/M'Goun Traverse`,
+  route fully traced in OSM with network routing). It is separate from the High Atlas Traverse (`high-atlas`, Atlas Trail route).
 - Pictures waiting in Charles's `Downloads/Trail pictures`: Appalachian Trail, Continental Divide Trail, Te Araroa,
   Bibbulmun Track, Great Himalaya Trail, Greater Patagonian Trail, Israel National Trail (new articles), and
   Pacific Crest Trail and Jordan Trail (existing articles).

@@ -1,0 +1,40 @@
+{
+ "slug": "mgoun-traverse",
+ "title": "M'Goun Traverse",
+ "titleLines": ["M'Goun", "Traverse"],
+ "geo": "geo/mgoun-traverse.json",
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 7,
+ "borders": false,
+ "legendLabel": "M'Goun Traverse",
+ "stops": [
+  {"name": "Ait Said", "lat": 31.6175, "lon": -6.4917, "type": "start", "label": "Aït Saïd · start"},
+  {"name": "Azib Ikkis", "lat": 31.5751, "lon": -6.4765},
+  {"name": "Tarkeddit refuge", "lat": 31.5315, "lon": -6.5158, "label": "Tarkeddit"},
+  {"name": "Ighil M'Goun", "lat": 31.5091, "lon": -6.4442, "label": "M'Goun 4,071 m"},
+  {"name": "Oulilimt", "lat": 31.545, "lon": -6.425},
+  {"name": "Aflafal", "lat": 31.594, "lon": -6.3223},
+  {"name": "Imi n'Irekt", "lat": 31.6111, "lon": -6.1996},
+  {"name": "Tiranimine", "lat": 31.5324, "lon": -6.1319, "hidden": true},
+  {"name": "Aguerzaka", "lat": 31.4963, "lon": -6.119, "type": "end", "label": "Aguerzaka · finish"}
+ ],
+ "legs": [
+  {"from": "Ait Said", "to": "Azib Ikkis", "km": 5.4},
+  {"from": "Azib Ikkis", "to": "Tarkeddit refuge", "km": 9.0},
+  {"from": "Tarkeddit refuge", "to": "Ighil M'Goun", "chip": false},
+  {"from": "Ighil M'Goun", "to": "Oulilimt", "label": "Summit day 18.8 km"},
+  {"from": "Oulilimt", "to": "Aflafal", "km": 15.0},
+  {"from": "Aflafal", "to": "Imi n'Irekt", "km": 15.7},
+  {"from": "Imi n'Irekt", "to": "Tiranimine", "label": "Gorge day 19.1 km"},
+  {"from": "Tiranimine", "to": "Aguerzaka", "chip": false}
+ ],
+ "places": [
+  {"kind": "peak", "name": "Tizi n'Tarkeddit", "ele": "c. 3,400 m", "lat": 31.5505, "lon": -6.5016},
+  {"kind": "minor", "name": "Taghreft", "lat": 31.6082, "lon": -6.2692},
+  {"kind": "minor", "name": "M'Goun gorge", "lat": 31.5756, "lon": -6.1763},
+  {"kind": "minor", "name": "Tiranimine", "lat": 31.5324, "lon": -6.1319},
+  {"kind": "minor", "name": "Tabant", "lat": 31.6587, "lon": -6.4201}
+ ],
+ "profileLabels": {"Ait Said": "Aït Saïd", "Azib Ikkis": "Azib Ikkis", "Tarkeddit refuge": "Tarkeddit", "Ighil M'Goun": "M'Goun summit", "Imi n'Irekt": "Imi n'Irekt", "Aguerzaka": "Aguerzaka"}
+}
