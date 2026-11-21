@@ -91,13 +91,15 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
 
 - **Unsplash** photos are allowed (Unsplash License, free; skip Unsplash+ premium). Credit "Photo: name / Unsplash".
   **Standing instruction from Charles (21 Nov 2026):** when he asks for 20 pictures of a trek, just do it, no need to
-  ask first. Search the trek name on Unsplash in the built-in browser (unsplash.com is on the allowed-sites list),
+  ask first. Search the trek name on Unsplash and download in **Claude in Chrome** (his Chrome downloads without
+  prompts; the built-in browser asks him to approve every download, so don't use it for downloads),
   pick the 20 best free photos, click "Download free" for each (they land in his Downloads folder), and copy them into
   `trektrailpics/<Trail name>/` (create it; if that folder already holds other photos, use `<Trail name>/Unsplash/`).
   Name them `U01 - <photographer> - <short description>.jpg`, add `_credits.txt` (photographer + photo link) and a
   `00 - overzicht.jpg` contact sheet, check them against the sheet, then delete the copies from Downloads
   (deletion there needs his approval once per session). Do not touch other files in Downloads.
-  20 real PCT photos are in `trektrailpics/Pacific Crest Trail/Unsplash` (not yet used on the site).
+  Done so far (not yet used on the site): `Pacific Crest Trail/Unsplash` and `The Salkantay Trail` (20 each).
+  Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 
 ## Other channels
 
