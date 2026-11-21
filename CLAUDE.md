@@ -102,7 +102,8 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
 
 ## Open items
 
-- Full-article template rolled out to Peaks of the Balkans, The Réunion Trail, the Toubkal Circuit and the M'Goun Traverse (its photos are
+- Full-article template rolled out to Peaks of the Balkans, The Réunion Trail, the Toubkal Circuit, the M'Goun Traverse and the Pacific Crest Trail (20 AI photos from
+  `trektrailpics/Pacific Crest Trail`; long trails label their sections "Part" instead of "Day") (its photos are
   AI-generated, from Charles's folder `OneDrive/Bureaublad/trektrailpics/Toubkal Circuit`). Next candidates have big
   photo libraries: Laugavegur, Tour du Mont Blanc, Jordan Trail, Madeira Crossing.
 - M'Goun Traverse (`mgoun-traverse`, full template, AI photos from `OneDrive/Bureaublad/trektrailpics/M'Goun Traverse`,

@@ -141,7 +141,7 @@ function detail(t){
         <tbody>${t.stages.map((g,k)=>'<tr><td>'+(k+1)+'</td><td><b>'+esc(g[0])+'</b><small>'+esc(g[5])+'</small></td><td>'+(g[1]==null?'–':g[1].toLocaleString('en'))+'</td><td>'+(g[2]==null?'–':'+'+n0(g[2])+' m')+'</td><td>'+(g[3]==null?'–':'−'+n0(g[3])+' m')+'</td><td>'+esc(g[4])+'</td></tr>').join('')}</tbody>
       </table></div>
       ${t.profile?'<figure class="routemap"><a href="/img/maps/'+t.slug+'-profile.webp"><img src="/img/maps/'+t.slug+'-profile.webp" width="1600" height="620" alt="Elevation profile of '+esc(the(t.name))+'" loading="lazy"></a><figcaption>Elevation profile of the whole route, measured from the mapped trail.</figcaption></figure>':''}
-      ${t.dayNotes?'<div class="days">'+t.stages.map((g,k)=>t.dayNotes[k]?'<h3><span class="label">Day '+(k+1)+'</span>'+esc(g[0])+'</h3><p>'+esc(t.dayNotes[k])+'</p>'+shot(t.dayImg&&t.dayImg[k]):'').join('')+'</div>':''}
+      ${t.dayNotes?'<div class="days">'+t.stages.map((g,k)=>t.dayNotes[k]?'<h3><span class="label">'+(t.long?'Part ':'Day ')+(k+1)+'</span>'+esc(g[0])+'</h3><p>'+esc(t.dayNotes[k])+'</p>'+shot(t.dayImg&&t.dayImg[k]):'').join('')+'</div>':''}
       ${t.truths?'<h2>What nobody tells you</h2><ul class="truths">'+t.truths.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+shot(t.pics&&t.pics.truths):''}
       ${t.byMonth?'<h2>Month by month</h2><dl class="bymonth">'+t.byMonth.map(x=>'<div><dt>'+esc(x[0])+'</dt><dd>'+esc(x[1])+'</dd></div>').join('')+'</dl>'+shot(t.pics&&t.pics.byMonth):''}
       <h2>Good to know</h2>
