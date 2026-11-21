@@ -90,8 +90,13 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
 - Commit messages end with the attribution lines the session provides.
 
 - **Unsplash** photos are allowed (Unsplash License, free; skip Unsplash+ premium). Credit "Photo: name / Unsplash".
-  Workflow: search in the built-in browser, click "Download free" (lands in Charles's Downloads), copy to
-  `trektrailpics/<Trail>/Unsplash/` with a `_credits.txt`, then remove the copies from Downloads.
+  **Standing instruction from Charles (21 Nov 2026):** when he asks for 20 pictures of a trek, just do it, no need to
+  ask first. Search the trek name on Unsplash in the built-in browser (unsplash.com is on the allowed-sites list),
+  pick the 20 best free photos, click "Download free" for each (they land in his Downloads folder), and copy them into
+  `trektrailpics/<Trail name>/` (create it; if that folder already holds other photos, use `<Trail name>/Unsplash/`).
+  Name them `U01 - <photographer> - <short description>.jpg`, add `_credits.txt` (photographer + photo link) and a
+  `00 - overzicht.jpg` contact sheet, check them against the sheet, then delete the copies from Downloads
+  (deletion there needs his approval once per session). Do not touch other files in Downloads.
   20 real PCT photos are in `trektrailpics/Pacific Crest Trail/Unsplash` (not yet used on the site).
 
 ## Other channels
