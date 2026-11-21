@@ -113,7 +113,7 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
 - No route map for the High Atlas Traverse (camps not in OpenStreetMap). Schematic maps: Cappadocia, Pacific Crest
   Trail, Arizona Trail; partly approximate: Ak-Suu, Jotunheimen, Isle of Skye, Dolomites, Jordan Trail.
 - Thin data on Camino de Santiago, West Highland Way, Inca Trail, Annapurna Circuit and Alta Via 1 (no booking box,
-  few photos). Pacific Crest Trail has no photo yet. The Réunion Trail has no booking box (no Travelbase site found).
+  few photos). The Réunion Trail has no booking box (no Travelbase site found).
 - Laugavegur's route map is Charles's own design (1024 px), not one of the generated series.
 - SEO: Search Console (domain property, sitemap `sitemap-index.xml`) was being set up on 20 Nov 2026; Bing via
   "Import from Google Search Console"; check Cloudflare does not block AI crawlers; consider `www` redirect;
