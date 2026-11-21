@@ -89,6 +89,11 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
 - Charles's work email is private: never send it to outside services.
 - Commit messages end with the attribution lines the session provides.
 
+- **Unsplash** photos are allowed (Unsplash License, free; skip Unsplash+ premium). Credit "Photo: name / Unsplash".
+  Workflow: search in the built-in browser, click "Download free" (lands in Charles's Downloads), copy to
+  `trektrailpics/<Trail>/Unsplash/` with a `_credits.txt`, then remove the copies from Downloads.
+  20 real PCT photos are in `trektrailpics/Pacific Crest Trail/Unsplash` (not yet used on the site).
+
 ## Other channels
 
 - **Instagram** `trektrails_org` via the Metricool connector (brand/blog id `8158576`, timezone Europe/Brussels).
