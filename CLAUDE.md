@@ -100,6 +100,9 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
   (deletion there needs his approval once per session). Do not touch other files in Downloads.
   Done so far: `Pacific Crest Trail/Unsplash` (not yet used on the site) and `The Salkantay Trail` (used on
   `salkantay-trek`, full template, real photos; credits via the optional `credits` field, captions end "Photo: name / Unsplash").
+  Cape Peninsula Trail (`cape-peninsula-trail`, the Hoerikwaggo line, 23 Nov 2026): 16 Unsplash photos in
+  `trektrailpics/Cape Peninsula Trail` plus 3 Travelbase (SAN) photos. fetch-osm.py now splits dense OSM tiles,
+  bridges gaps with a grid index, and takes `"straight": [[a, b]]` for unmapped beach walks.
   The profile script hides a stop when its `profileLabels` entry is "" and shows repeated labels once.
   Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 

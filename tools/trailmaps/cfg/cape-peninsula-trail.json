@@ -1,0 +1,185 @@
+{
+ "slug": "cape-peninsula-trail",
+ "title": "Cape Peninsula Trail",
+ "titleLines": [
+  "Cape Peninsula",
+  "Trail"
+ ],
+ "geo": "geo/cape-peninsula-trail.json",
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 7,
+ "borders": false,
+ "legendLabel": "Cape Peninsula Trail",
+ "stops": [
+  {
+   "name": "Cape Point",
+   "lat": -34.352,
+   "lon": 18.4889,
+   "type": "start",
+   "label": "Cape Point · start"
+  },
+  {
+   "name": "Smitswinkel",
+   "lat": -34.2573,
+   "lon": 18.4614,
+   "label": "Smitswinkel camp"
+  },
+  {
+   "name": "Swartkop",
+   "lat": -34.2159,
+   "lon": 18.4507,
+   "hidden": true
+  },
+  {
+   "name": "Red Hill",
+   "lat": -34.1744,
+   "lon": 18.39,
+   "hidden": true
+  },
+  {
+   "name": "Slangkop",
+   "lat": -34.1459,
+   "lon": 18.32,
+   "label": "Slangkop camp"
+  },
+  {
+   "name": "Long Beach",
+   "lat": -34.136,
+   "lon": 18.33,
+   "hidden": true
+  },
+  {
+   "name": "Noordhoek North",
+   "lat": -34.1,
+   "lon": 18.356,
+   "hidden": true
+  },
+  {
+   "name": "Chapman's Peak",
+   "lat": -34.0884,
+   "lon": 18.3596,
+   "hidden": true
+  },
+  {
+   "name": "Noordhoek Peak",
+   "lat": -34.0727,
+   "lon": 18.3802,
+   "hidden": true
+  },
+  {
+   "name": "Silvermine",
+   "lat": -34.0776,
+   "lon": 18.4074,
+   "label": "Silvermine"
+  },
+  {
+   "name": "Constantiaberg",
+   "lat": -34.051,
+   "lon": 18.388,
+   "hidden": true
+  },
+  {
+   "name": "Constantia Nek",
+   "lat": -34.012,
+   "lon": 18.4052,
+   "hidden": true
+  },
+  {
+   "name": "Orange Kloof",
+   "lat": -34.0044,
+   "lon": 18.3921,
+   "label": "Orange Kloof camp"
+  },
+  {
+   "name": "Maclear's Beacon",
+   "lat": -33.9668,
+   "lon": 18.4256,
+   "label": "Maclear's Beacon"
+  },
+  {
+   "name": "Upper Cable Station",
+   "lat": -33.9573,
+   "lon": 18.4029,
+   "hidden": true
+  },
+  {
+   "name": "Platteklip Wash Houses",
+   "lat": -33.9464,
+   "lon": 18.418,
+   "type": "end",
+   "label": "Cape Town · finish"
+  }
+ ],
+ "legs": [],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Swartkop",
+   "ele": "678 m",
+   "lat": -34.2159,
+   "lon": 18.4507
+  },
+  {
+   "kind": "peak",
+   "name": "Chapman's Peak",
+   "ele": "593 m",
+   "lat": -34.0884,
+   "lon": 18.3596
+  },
+  {
+   "kind": "peak",
+   "name": "Noordhoek Peak",
+   "ele": "754 m",
+   "lat": -34.0727,
+   "lon": 18.3802
+  },
+  {
+   "kind": "minor",
+   "name": "Simon's Town",
+   "lat": -34.192,
+   "lon": 18.433
+  },
+  {
+   "kind": "minor",
+   "name": "Noordhoek Beach",
+   "lat": -34.115,
+   "lon": 18.346
+  },
+  {
+   "kind": "minor",
+   "name": "Constantia Nek",
+   "lat": -34.012,
+   "lon": 18.4052
+  },
+  {
+   "kind": "minor",
+   "name": "Hout Bay",
+   "lat": -34.045,
+   "lon": 18.355
+  },
+  {
+   "kind": "minor",
+   "name": "Upper Cable Station",
+   "lat": -33.9573,
+   "lon": 18.4029
+  }
+ ],
+ "profileLabels": {
+  "Swartkop": "Swartkop",
+  "Red Hill": "",
+  "Chapman's Peak": "Chapman's Peak",
+  "Noordhoek Peak": "",
+  "Constantiaberg": "Constantiaberg",
+  "Constantia Nek": "",
+  "Upper Cable Station": "",
+  "Platteklip Wash Houses": "Cape Town",
+  "Maclear's Beacon": "Maclear's Beacon",
+  "Long Beach": "",
+  "Noordhoek North": "Noordhoek Beach",
+  "Cape Point": "Cape Point",
+  "Smitswinkel": "Smitswinkel",
+  "Slangkop": "Slangkop",
+  "Orange Kloof": "Orange Kloof"
+ }
+}

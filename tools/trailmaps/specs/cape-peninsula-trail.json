@@ -1,0 +1,177 @@
+{
+ "slug": "cape-peninsula-trail",
+ "box": 0.02,
+ "snap": 1.5,
+ "network": true,
+ "local": false,
+ "ratio": [
+  0.5,
+  2.2
+ ],
+ "stops": [
+  {
+   "name": "Cape Point",
+   "lat": -34.352,
+   "lon": 18.4889,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Smitswinkel",
+   "lat": -34.2573,
+   "lon": 18.4614,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Swartkop",
+   "lat": -34.2159,
+   "lon": 18.4507,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Red Hill",
+   "lat": -34.1744,
+   "lon": 18.39,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Slangkop",
+   "lat": -34.1459,
+   "lon": 18.32,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Long Beach",
+   "lat": -34.136,
+   "lon": 18.33,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Noordhoek North",
+   "lat": -34.1,
+   "lon": 18.356,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Chapman's Peak",
+   "lat": -34.0884,
+   "lon": 18.3596,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Noordhoek Peak",
+   "lat": -34.0727,
+   "lon": 18.3802,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Silvermine",
+   "lat": -34.0776,
+   "lon": 18.4074,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Constantiaberg",
+   "lat": -34.051,
+   "lon": 18.388,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Constantia Nek",
+   "lat": -34.012,
+   "lon": 18.4052,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Orange Kloof",
+   "lat": -34.0044,
+   "lon": 18.3921,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Maclear's Beacon",
+   "lat": -33.9668,
+   "lon": 18.4256,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Upper Cable Station",
+   "lat": -33.9573,
+   "lon": 18.4029,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Platteklip Wash Houses",
+   "lat": -33.9464,
+   "lon": 18.418,
+   "q": "zzz-no-match"
+  }
+ ],
+ "stages": [
+  [
+   "Cape Point",
+   "Smitswinkel"
+  ],
+  [
+   "Smitswinkel",
+   "Swartkop"
+  ],
+  [
+   "Swartkop",
+   "Red Hill"
+  ],
+  [
+   "Red Hill",
+   "Slangkop"
+  ],
+  [
+   "Slangkop",
+   "Long Beach"
+  ],
+  [
+   "Long Beach",
+   "Noordhoek North"
+  ],
+  [
+   "Noordhoek North",
+   "Chapman's Peak"
+  ],
+  [
+   "Chapman's Peak",
+   "Noordhoek Peak"
+  ],
+  [
+   "Noordhoek Peak",
+   "Silvermine"
+  ],
+  [
+   "Silvermine",
+   "Constantiaberg"
+  ],
+  [
+   "Constantiaberg",
+   "Constantia Nek"
+  ],
+  [
+   "Constantia Nek",
+   "Orange Kloof"
+  ],
+  [
+   "Orange Kloof",
+   "Maclear's Beacon"
+  ],
+  [
+   "Maclear's Beacon",
+   "Upper Cable Station"
+  ],
+  [
+   "Upper Cable Station",
+   "Platteklip Wash Houses"
+  ]
+ ],
+ "straight": [
+  [
+   "Long Beach",
+   "Noordhoek North"
+  ]
+ ]
+}

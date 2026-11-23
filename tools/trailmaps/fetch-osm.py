@@ -106,22 +106,38 @@ def components():
         c += 1
     return comp
 def bridge():
-    gap = spec.get('gap', 0.7)
+    """Join loose way ends to the nearest node of another component within `gap` km (grid-indexed)."""
+    gap = spec.get('gap', 0.7); cs = 0.01
     for _ in range(3):
-        comp = components(); keys = list(G); joined = 0
-        ends = set(x for w in allways for x in (w[0], w[-1]))
+        comp = components(); grid = {}
+        for k in G:
+            x, y = nodes[k]; grid.setdefault((int(x // cs), int(y // cs)), []).append(k)
+        ends = set(x for w in allways for x in (w[0], w[-1]) if x in G); joined = 0
+        r = int(gap / 111 / cs) + 1
         for e in ends:
-            best = None
-            for k in keys:
-                if comp[k] == comp[e] or abs(nodes[k][1]-nodes[e][1]) > 0.012: continue
-                d = dist(nodes[e], nodes[k])
-                if d < gap and (best is None or d < best[0]): best = (d, k)
+            ex, ey = nodes[e]; gx, gy = int(ex // cs), int(ey // cs); best = None
+            for i in range(gx - r, gx + r + 1):
+                for j in range(gy - r, gy + r + 1):
+                    for k in grid.get((i, j), ()):
+                        if comp[k] == comp[e]: continue
+                        d = dist(nodes[e], nodes[k])
+                        if d < gap and (best is None or d < best[0]): best = (d, k)
             if best: add(e, best[1]); joined += 1
         if not joined: break
 for rid in cand: load(rid)
 # "network": true -> also route over every mapped path and track in the area (for treks without a route relation)
 if spec.get('network'):
     W = {'path': 1.0, 'footway': 1.0, 'steps': 1.0, 'bridleway': 1.0, 'track': 1.25, 'unclassified': 1.6, 'residential': 1.4, 'service': 1.6, 'living_street': 1.4, 'tertiary': 2.5, 'secondary': 3.5, 'primary': 5}
+    def netload(a, b, c, d, depth=0):
+        """Fetch one bbox from the OSM map API; split it in four when it is too dense (API refuses >50k nodes)."""
+        bbox = f"{a:.4f},{b:.4f},{c:.4f},{d:.4f}"; f = 'osm/n_' + bbox.replace(',', '_') + '.xml'
+        if not os.path.exists(f) or os.path.getsize(f) < 150:
+            subprocess.run(['curl', '-sS', '-m', '200', '-o', f, f'https://api.openstreetmap.org/api/0.6/map?bbox={bbox}']); time.sleep(1)
+        try: return [ET.parse(f).getroot()]
+        except Exception:
+            if depth >= 3: print('!! area', bbox, 'unreadable'); return []
+            mx, my = (a + c) / 2, (b + d) / 2
+            return [r for q in ((a, b, mx, my), (mx, b, c, my), (a, my, mx, d), (mx, my, c, d)) for r in netload(*q, depth=depth + 1)]
     W.update(spec.get('weights', {}))
     lats = [s['lat'] for s in stops if s.get('lat') is not None]; lons = [s['lon'] for s in stops if s.get('lon') is not None]
     m = spec.get('netmargin', 0.02); cell = 0.05
@@ -130,19 +146,15 @@ if spec.get('network'):
     while la < la1:
         lo = lo0
         while lo < lo1:
-            bbox = f"{lo:.4f},{la:.4f},{min(lo+cell, lo1):.4f},{min(la+cell, la1):.4f}"; f = 'osm/n_' + bbox.replace(',', '_') + '.xml'
-            if not os.path.exists(f) or os.path.getsize(f) < 150:
-                subprocess.run(['curl', '-sS', '-m', '200', '-o', f, f'https://api.openstreetmap.org/api/0.6/map?bbox={bbox}']); time.sleep(1)
-            try: r = ET.parse(f).getroot()
-            except Exception: print('!! area', bbox, 'unreadable'); lo += cell; continue
-            for n in r.findall('node'): nodes[n.get('id')] = (float(n.get('lon')), float(n.get('lat')))
-            for w in r.findall('way'):
-                t = {x.get('k'): x.get('v') for x in w.findall('tag')}
-                fw = W.get(t.get('highway'))
-                if fw is None: continue
-                refs = [x.get('ref') for x in w.findall('nd') if x.get('ref') in nodes]
-                for a2, b2 in zip(refs, refs[1:]): add(a2, b2, fw)
-                allways.append(refs); nw += 1
+            for r in netload(lo, la, min(lo+cell, lo1), min(la+cell, la1)):
+                for n in r.findall('node'): nodes[n.get('id')] = (float(n.get('lon')), float(n.get('lat')))
+                for w in r.findall('way'):
+                    t = {x.get('k'): x.get('v') for x in w.findall('tag')}
+                    fw = W.get(t.get('highway'))
+                    if fw is None: continue
+                    refs = [x.get('ref') for x in w.findall('nd') if x.get('ref') in nodes]
+                    for a2, b2 in zip(refs, refs[1:]): add(a2, b2, fw)
+                    allways.append(refs); nw += 1
             lo += cell
         la += cell
     print('network ways', nw)
@@ -193,6 +205,10 @@ def run_stages():
     for st in spec['stages']:
         a, b = st[0], st[1]; site = st[2] if len(st) > 2 else None
         p = d = None
+        if [a, b] in spec.get('straight', []) and pos.get(a) and pos.get(b):  # e.g. a beach walk with no mapped path
+            A, B = pos[a], pos[b]; n = 40; pts = [(A[0] + (B[0]-A[0])*i/n, A[1] + (B[1]-A[1])*i/n) for i in range(n+1)]
+            d = sum(dist(x, y) for x, y in zip(pts, pts[1:]))
+            res[a+'|'+b] = dict(km=round(d, 1), real=True, site=site); lines.append({'cls': 'main', 'key': a+'|'+b, 'pts': pts}); continue
         if a in snap and b in snap and snap[a] != snap[b]: p, d = path(snap[a], snap[b])
         if p: d = sum(dist(nodes[x], nodes[y]) for x, y in zip(p, p[1:]))  # true length, not the weighted cost
         lo, hi = spec.get('ratio', [0.5, 1.9])
