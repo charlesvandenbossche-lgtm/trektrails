@@ -1,0 +1,22 @@
+{
+ "slug": "fish-river-canyon", "title": "Fish River Canyon", "titleLines": ["Fish River", "Canyon"],
+ "geo": "geo/fish-river-canyon.json", "autoPeaks": 0, "autoTowns": 0, "glyphs": 7, "borders": false,
+ "legendLabel": "Fish River Canyon Trail",
+ "stops": [
+  {"name": "Hiker's Point", "lat": -27.5778, "lon": 17.6061, "type": "start", "label": "Hiker's Point · start"},
+  {"name": "Camp 1", "lat": -27.6380, "lon": 17.6079, "label": "Night 1"},
+  {"name": "Palm Springs", "lat": -27.6601, "lon": 17.6182, "label": "Palm Springs"},
+  {"name": "Camp 2", "lat": -27.6959, "lon": 17.5866, "label": "Night 2"},
+  {"name": "Camp 3", "lat": -27.7621, "lon": 17.5849, "label": "Night 3"},
+  {"name": "Von Trotha's grave", "lat": -27.8074, "lon": 17.5858, "hidden": true},
+  {"name": "Camp 4", "lat": -27.8385, "lon": 17.5379, "label": "Night 4"},
+  {"name": "Ai-Ais", "lat": -27.9198, "lon": 17.4898, "type": "end", "label": "|Ai-|Ais · finish"}
+ ],
+ "legs": [],
+ "places": [
+  {"kind": "minor", "name": "Hobas", "lat": -27.6230, "lon": 17.7010},
+  {"kind": "minor", "name": "Von Trotha's grave", "lat": -27.8074, "lon": 17.5858},
+  {"kind": "minor", "name": "Main viewpoint", "lat": -27.5891, "lon": 17.6144}
+ ],
+ "profileLabels": {"Hiker's Point": "Hiker's Point", "Camp 1": "Night 1", "Camp 2": "Night 2", "Camp 3": "Night 3", "Camp 4": "Night 4", "Von Trotha's grave": "", "Ai-Ais": "|Ai-|Ais"}
+}

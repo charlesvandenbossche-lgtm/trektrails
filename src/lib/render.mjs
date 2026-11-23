@@ -10,7 +10,7 @@ const card=(t,big)=>'<a class="card'+(big?' big':'')+'" href="/treks/'+t.slug+'/
 const row=t=>'<a class="row" href="/treks/'+t.slug+'/" data-m="'+t.months.join(',')+'">'+(t.img?'<img src="/img/'+t.img+'.jpg" alt="" loading="lazy">':'<span class="thumb" aria-hidden="true"></span>')+'<div><h3>'+esc(t.name)+'</h3><span class="num">'+esc(t.where)+' · '+t.days+' days · '+t.km.toLocaleString('en')+' km'+(t.up?' · +'+t.up.toLocaleString('en')+' m':'')+' · '+LEVELS[t.level]+'</span></div><span class="go" aria-hidden="true">→</span></a>';
 const opt=(v,l,cur)=>'<option value="'+v+'"'+(String(cur)===String(v)?' selected':'')+'>'+esc(l)+'</option>';
 function home(){
-  const km=T.reduce((a,t)=>a+t.km,0), countries=23;
+  const km=T.reduce((a,t)=>a+t.km,0), countries=24;
   const mp=maps();
   const f=[bySlug('ak-suu-traverse'),bySlug('tour-du-mont-blanc'),bySlug('laugavegur')];
   return `

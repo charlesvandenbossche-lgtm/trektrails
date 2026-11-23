@@ -103,6 +103,10 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
   Cape Peninsula Trail (`cape-peninsula-trail`, the Hoerikwaggo line, 23 Nov 2026): 16 Unsplash photos in
   `trektrailpics/Cape Peninsula Trail` plus 3 Travelbase (SAN) photos. fetch-osm.py now splits dense OSM tiles,
   bridges gaps with a grid index, and takes `"straight": [[a, b]]` for unmapped beach walks.
+  Fish River Canyon (`fish-river-canyon`, 23 Nov 2026): 16 Unsplash photos (all from the rim) plus 4 Gemini/Nano
+  Banana images of the canyon floor (made in Claude in Chrome at gemini.google.com, Charles's account), all in
+  `trektrailpics/Fish River Canyon`. Nothing in the Travelbase library. OSM relation 9517875; the mapped line takes
+  shortcuts (69 km) against the usual 85–90 km along the river.
   The profile script hides a stop when its `profileLabels` entry is "" and shows repeated labels once.
   Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 

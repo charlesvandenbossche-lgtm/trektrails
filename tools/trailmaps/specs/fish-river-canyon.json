@@ -1,0 +1,97 @@
+{
+ "slug": "fish-river-canyon",
+ "box": 0.03,
+ "snap": 2.0,
+ "network": true,
+ "local": true,
+ "ratio": [
+  0.5,
+  2.5
+ ],
+ "netmargin": 0.03,
+ "weights": {
+  "path": 1.0,
+  "footway": 1.0,
+  "track": 1.2
+ },
+ "stops": [
+  {
+   "name": "Hiker's Point",
+   "lat": -27.5778,
+   "lon": 17.6061,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Camp 1",
+   "lat": -27.638,
+   "lon": 17.6079,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Palm Springs",
+   "lat": -27.6601,
+   "lon": 17.6182,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Camp 2",
+   "lat": -27.6959,
+   "lon": 17.5866,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Camp 3",
+   "lat": -27.7621,
+   "lon": 17.5849,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Von Trotha's grave",
+   "lat": -27.8074,
+   "lon": 17.5858,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Camp 4",
+   "lat": -27.8385,
+   "lon": 17.5379,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Ai-Ais",
+   "lat": -27.9198,
+   "lon": 17.4898,
+   "q": "zzz-no-match"
+  }
+ ],
+ "stages": [
+  [
+   "Hiker's Point",
+   "Camp 1"
+  ],
+  [
+   "Camp 1",
+   "Palm Springs"
+  ],
+  [
+   "Palm Springs",
+   "Camp 2"
+  ],
+  [
+   "Camp 2",
+   "Camp 3"
+  ],
+  [
+   "Camp 3",
+   "Von Trotha's grave"
+  ],
+  [
+   "Von Trotha's grave",
+   "Camp 4"
+  ],
+  [
+   "Camp 4",
+   "Ai-Ais"
+  ]
+ ]
+}
