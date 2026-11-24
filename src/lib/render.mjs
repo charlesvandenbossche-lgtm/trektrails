@@ -15,7 +15,7 @@ function home(){
   const f=[bySlug('ak-suu-traverse'),bySlug('tour-du-mont-blanc'),bySlug('laugavegur')];
   return `
 <div class="hero">
-  <img src="/img/kyrgyzstan.jpg" alt="Two hikers climbing a grass slope below a glacier in the Tian Shan, Kyrgyzstan">
+  <img src="/img/home-cover.jpg" alt="Illustration: a hiker with poles looking out over a green meadow and a trail towards snow-covered mountains">
   <div class="inner"><div class="wrap"><div class="panel">
     <h1>Discover the world hiking</h1>
     <p>A growing field guide to the most famous and most beautiful multi-day treks on earth. Honest figures, real seasons and enough detail to decide which one is yours.</p>

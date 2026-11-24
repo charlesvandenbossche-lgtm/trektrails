@@ -115,6 +115,10 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
   The profile script hides a stop when its `profileLabels` entry is "" and shows repeated labels once.
   Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 
+- **Homepage cover** (24 Nov 2026): `public/img/home-cover.jpg`, a Gemini image recreated from Charles's mockup
+  (hiker at the far left, Tian Shan massif, trail through a meadow); original in `trektrailpics/Homepage`. On desktop the
+  text column starts at 12.5vw so the hiker stands just left of it (last block in `styles.css`).
+
 ## Other channels
 
 - **Instagram** `trektrails_org` via the Metricool connector (brand/blog id `8158576`, timezone Europe/Brussels).

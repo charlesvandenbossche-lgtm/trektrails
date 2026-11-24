@@ -413,3 +413,10 @@ table.costs tr:nth-last-child(-n+2) td{border-top-width:2px}
 footer nav{flex-wrap:wrap;row-gap:12px}
 
 .credits{font-size:.8rem;opacity:.7;margin-top:8px}
+
+/* ---- Front-page cover (24 Nov 2026): hiker at the far left, text column just right of him ---- */
+@media (min-width:900px){
+  .hero img{object-position:0% 45%}
+  .hero::before{background:linear-gradient(90deg,rgba(20,28,22,.35) 0%,rgba(20,28,22,.42) 12%,rgba(20,28,22,.38) 40%,rgba(20,28,22,0) 66%)}
+  .hero .inner .wrap{max-width:none;padding-left:12.5vw;padding-right:24px}
+}
