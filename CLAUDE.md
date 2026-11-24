@@ -107,6 +107,11 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
   Banana images of the canyon floor (made in Claude in Chrome at gemini.google.com, Charles's account), all in
   `trektrailpics/Fish River Canyon`. Nothing in the Travelbase library. OSM relation 9517875; the mapped line takes
   shortcuts (69 km) against the usual 85–90 km along the river.
+  The Amalfi Trail (`amalfi-trail`, 24 Nov 2026): Charles's own six-day line Ravello → Valle delle Ferriere → Agerola →
+  Path of the Gods → Positano → Alta Via dei Monti Lattari → Sant'Agata → Nerano → Punta Campanella → Termini (57 km
+  mapped, network routing). Photos: 14 Travelbase (TVT, The Vespa Trip, no scooters shown), 14 Unsplash and 5 Gemini
+  images in `trektrailpics/Amalfi Trail`. Gemini full-size downloads stall after one or two per page load; the 1024 px
+  version can be saved by injecting a button that downloads the blob as a data URL and clicking it.
   The profile script hides a stop when its `profileLabels` entry is "" and shows repeated labels once.
   Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 

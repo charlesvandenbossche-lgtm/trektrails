@@ -1,0 +1,223 @@
+{
+ "slug": "amalfi-trail",
+ "box": 0.02,
+ "snap": 1.0,
+ "network": true,
+ "local": true,
+ "ratio": [
+  0.5,
+  2.5
+ ],
+ "netmargin": 0.012,
+ "weights": {
+  "path": 1.0,
+  "footway": 1.0,
+  "steps": 1.0,
+  "track": 1.1,
+  "unclassified": 2.5,
+  "residential": 1.6,
+  "tertiary": 4,
+  "secondary": 8,
+  "primary": 12
+ },
+ "stops": [
+  {
+   "name": "Ravello",
+   "lat": 40.6491,
+   "lon": 14.6119,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Scala",
+   "lat": 40.6537,
+   "lon": 14.6078,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Valle delle Ferriere",
+   "lat": 40.6514,
+   "lon": 14.5818,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Bomerano",
+   "lat": 40.6266,
+   "lon": 14.5448,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Nocelle",
+   "lat": 40.6288,
+   "lon": 14.5037,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Montepertuso",
+   "lat": 40.6332,
+   "lon": 14.4928,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Positano",
+   "lat": 40.6287,
+   "lon": 14.4855,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Santa Maria del Castello",
+   "lat": 40.6384,
+   "lon": 14.48,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Monte Comune",
+   "lat": 40.63,
+   "lon": 14.4598,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Monte Vico Alvano",
+   "lat": 40.6238,
+   "lon": 14.4345,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Colli di San Pietro",
+   "lat": 40.6176,
+   "lon": 14.4273,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Colli di Fontanelle",
+   "lat": 40.6132,
+   "lon": 14.4079,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Sant'Agata",
+   "lat": 40.6058,
+   "lon": 14.3745,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Torca",
+   "lat": 40.5999,
+   "lon": 14.384,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Recommone",
+   "lat": 40.5838,
+   "lon": 14.3641,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Nerano",
+   "lat": 40.5835,
+   "lon": 14.3563,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Baia di Ieranto",
+   "lat": 40.576,
+   "lon": 14.342,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Monte San Costanzo",
+   "lat": 40.5843,
+   "lon": 14.3433,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Punta Campanella",
+   "lat": 40.5695,
+   "lon": 14.3249,
+   "q": "zzz-no-match"
+  },
+  {
+   "name": "Termini",
+   "lat": 40.5893,
+   "lon": 14.3291,
+   "q": "zzz-no-match"
+  }
+ ],
+ "stages": [
+  [
+   "Ravello",
+   "Scala"
+  ],
+  [
+   "Scala",
+   "Valle delle Ferriere"
+  ],
+  [
+   "Valle delle Ferriere",
+   "Bomerano"
+  ],
+  [
+   "Bomerano",
+   "Nocelle"
+  ],
+  [
+   "Nocelle",
+   "Montepertuso"
+  ],
+  [
+   "Montepertuso",
+   "Positano"
+  ],
+  [
+   "Positano",
+   "Santa Maria del Castello"
+  ],
+  [
+   "Santa Maria del Castello",
+   "Monte Comune"
+  ],
+  [
+   "Monte Comune",
+   "Monte Vico Alvano"
+  ],
+  [
+   "Monte Vico Alvano",
+   "Colli di San Pietro"
+  ],
+  [
+   "Colli di San Pietro",
+   "Colli di Fontanelle"
+  ],
+  [
+   "Colli di Fontanelle",
+   "Sant'Agata"
+  ],
+  [
+   "Sant'Agata",
+   "Torca"
+  ],
+  [
+   "Torca",
+   "Recommone"
+  ],
+  [
+   "Recommone",
+   "Nerano"
+  ],
+  [
+   "Nerano",
+   "Baia di Ieranto"
+  ],
+  [
+   "Baia di Ieranto",
+   "Monte San Costanzo"
+  ],
+  [
+   "Monte San Costanzo",
+   "Punta Campanella"
+  ],
+  [
+   "Punta Campanella",
+   "Termini"
+  ]
+ ]
+}

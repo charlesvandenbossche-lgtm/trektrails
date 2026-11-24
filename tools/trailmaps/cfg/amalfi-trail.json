@@ -1,0 +1,228 @@
+{
+ "slug": "amalfi-trail",
+ "title": "The Amalfi Trail",
+ "titleLines": [
+  "The Amalfi",
+  "Trail"
+ ],
+ "geo": "geo/amalfi-trail.json",
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 6,
+ "borders": false,
+ "legendLabel": "The Amalfi Trail",
+ "size": [
+  1600,
+  1100
+ ],
+ "stops": [
+  {
+   "name": "Ravello",
+   "lat": 40.6491,
+   "lon": 14.6119,
+   "type": "start",
+   "label": "Ravello \u00b7 start",
+   "labelPos": "E"
+  },
+  {
+   "name": "Scala",
+   "lat": 40.6537,
+   "lon": 14.6078,
+   "hidden": true
+  },
+  {
+   "name": "Valle delle Ferriere",
+   "lat": 40.6514,
+   "lon": 14.5818,
+   "label": "Valle delle Ferriere",
+   "labelPos": "NW"
+  },
+  {
+   "name": "Bomerano",
+   "lat": 40.6266,
+   "lon": 14.5448,
+   "label": "Agerola (Bomerano)",
+   "labelPos": "S"
+  },
+  {
+   "name": "Nocelle",
+   "lat": 40.6288,
+   "lon": 14.5037,
+   "label": "Nocelle",
+   "labelPos": "N"
+  },
+  {
+   "name": "Montepertuso",
+   "lat": 40.6332,
+   "lon": 14.4928,
+   "hidden": true
+  },
+  {
+   "name": "Positano",
+   "lat": 40.6287,
+   "lon": 14.4855,
+   "label": "Positano",
+   "labelPos": "S"
+  },
+  {
+   "name": "Santa Maria del Castello",
+   "lat": 40.6384,
+   "lon": 14.48,
+   "label": "S. Maria del Castello",
+   "labelPos": "N"
+  },
+  {
+   "name": "Monte Comune",
+   "lat": 40.63,
+   "lon": 14.4598,
+   "hidden": true
+  },
+  {
+   "name": "Monte Vico Alvano",
+   "lat": 40.6238,
+   "lon": 14.4345,
+   "hidden": true
+  },
+  {
+   "name": "Colli di San Pietro",
+   "lat": 40.6176,
+   "lon": 14.4273,
+   "label": "Colli di San Pietro",
+   "labelPos": "S"
+  },
+  {
+   "name": "Colli di Fontanelle",
+   "lat": 40.6132,
+   "lon": 14.4079,
+   "hidden": true
+  },
+  {
+   "name": "Sant'Agata",
+   "lat": 40.6058,
+   "lon": 14.3745,
+   "label": "Sant'Agata",
+   "labelPos": "N"
+  },
+  {
+   "name": "Torca",
+   "lat": 40.5999,
+   "lon": 14.384,
+   "hidden": true
+  },
+  {
+   "name": "Recommone",
+   "lat": 40.5838,
+   "lon": 14.3641,
+   "hidden": true
+  },
+  {
+   "name": "Nerano",
+   "lat": 40.5835,
+   "lon": 14.3563,
+   "label": "Nerano",
+   "labelPos": "S"
+  },
+  {
+   "name": "Baia di Ieranto",
+   "lat": 40.576,
+   "lon": 14.342,
+   "hidden": true
+  },
+  {
+   "name": "Monte San Costanzo",
+   "lat": 40.5843,
+   "lon": 14.3433,
+   "hidden": true
+  },
+  {
+   "name": "Punta Campanella",
+   "lat": 40.5695,
+   "lon": 14.3249,
+   "label": "Punta Campanella",
+   "labelPos": "S"
+  },
+  {
+   "name": "Termini",
+   "lat": 40.5893,
+   "lon": 14.3291,
+   "type": "end",
+   "label": "Termini \u00b7 finish",
+   "labelPos": "N"
+  }
+ ],
+ "legs": [],
+ "places": [
+  {
+   "kind": "peak",
+   "name": "Monte Comune",
+   "ele": "877 m",
+   "lat": 40.63,
+   "lon": 14.4598
+  },
+  {
+   "kind": "peak",
+   "name": "Monte San Costanzo",
+   "ele": "497 m",
+   "lat": 40.5843,
+   "lon": 14.3433,
+   "labelPos": "W"
+  },
+  {
+   "kind": "minor",
+   "name": "Amalfi",
+   "lat": 40.6337,
+   "lon": 14.6028
+  },
+  {
+   "kind": "minor",
+   "name": "Praiano",
+   "lat": 40.6115,
+   "lon": 14.5335
+  },
+  {
+   "kind": "minor",
+   "name": "Torca",
+   "lat": 40.5999,
+   "lon": 14.384
+  },
+  {
+   "kind": "minor",
+   "name": "Baia di Ieranto",
+   "lat": 40.574,
+   "lon": 14.3404
+  },
+  {
+   "kind": "minor",
+   "name": "Sorrento",
+   "lat": 40.6263,
+   "lon": 14.3758
+  }
+ ],
+ "profileLabels": {
+  "Ravello": "Ravello",
+  "Scala": "",
+  "Valle delle Ferriere": "Ferriere",
+  "Bomerano": "Agerola",
+  "Nocelle": "Nocelle",
+  "Montepertuso": "",
+  "Positano": "Positano",
+  "Santa Maria del Castello": "S. M. del Castello",
+  "Monte Comune": "Monte Comune",
+  "Monte Vico Alvano": "",
+  "Colli di San Pietro": "Colli di S. Pietro",
+  "Colli di Fontanelle": "",
+  "Sant'Agata": "Sant'Agata",
+  "Torca": "Torca",
+  "Recommone": "",
+  "Nerano": "Nerano",
+  "Baia di Ieranto": "Ieranto",
+  "Monte San Costanzo": "S. Costanzo",
+  "Punta Campanella": "Campanella",
+  "Termini": "Termini"
+ },
+ "margin": {
+  "r": 300,
+  "b": 120,
+  "t": 150
+ }
+}
