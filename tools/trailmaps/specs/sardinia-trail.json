@@ -1,0 +1,139 @@
+{
+ "slug": "sardinia-trail",
+ "box": 0.02,
+ "snap": 1.0,
+ "network": true,
+ "local": true,
+ "ratio": [
+  0.5,
+  2.5
+ ],
+ "netmargin": 0.015,
+ "weights": {
+  "path": 1.0,
+  "footway": 1.0,
+  "steps": 1.0,
+  "track": 1.1,
+  "unclassified": 2.0,
+  "residential": 1.6,
+  "tertiary": 4,
+  "secondary": 8,
+  "primary": 12
+ },
+ "stops": [
+  {
+   "name": "Dorgali",
+   "lat": 40.2928,
+   "lon": 9.5888,
+   "q": "zzz"
+  },
+  {
+   "name": "Lanaitto",
+   "lat": 40.257,
+   "lon": 9.4954,
+   "q": "zzz"
+  },
+  {
+   "name": "Tiscali",
+   "lat": 40.2418,
+   "lon": 9.4923,
+   "q": "zzz"
+  },
+  {
+   "name": "Sa Barva",
+   "lat": 40.2237,
+   "lon": 9.5159,
+   "q": "zzz"
+  },
+  {
+   "name": "Gorropu",
+   "lat": 40.1853,
+   "lon": 9.5016,
+   "q": "zzz"
+  },
+  {
+   "name": "Genna Silana",
+   "lat": 40.1585,
+   "lon": 9.5079,
+   "q": "zzz"
+  },
+  {
+   "name": "Golgo",
+   "lat": 40.0875,
+   "lon": 9.6628,
+   "q": "zzz"
+  },
+  {
+   "name": "Cala Goloritze",
+   "lat": 40.1083,
+   "lon": 9.6898,
+   "q": "zzz"
+  },
+  {
+   "name": "Baunei",
+   "lat": 40.0324,
+   "lon": 9.6634,
+   "q": "zzz"
+  },
+  {
+   "name": "Pedra Longa",
+   "lat": 40.028,
+   "lon": 9.706,
+   "q": "zzz"
+  },
+  {
+   "name": "Santa Maria Navarrese",
+   "lat": 39.9897,
+   "lon": 9.6873,
+   "q": "zzz"
+  },
+  {
+   "name": "Su Gologone",
+   "lat": 40.2888,
+   "lon": 9.497,
+   "q": "zzz"
+  }
+ ],
+ "stages": [
+  [
+   "Dorgali",
+   "Su Gologone"
+  ],
+  [
+   "Su Gologone",
+   "Lanaitto"
+  ],
+  [
+   "Lanaitto",
+   "Tiscali"
+  ],
+  [
+   "Tiscali",
+   "Sa Barva"
+  ],
+  [
+   "Sa Barva",
+   "Gorropu"
+  ],
+  [
+   "Gorropu",
+   "Genna Silana"
+  ],
+  [
+   "Baunei",
+   "Golgo"
+  ],
+  [
+   "Golgo",
+   "Cala Goloritze"
+  ],
+  [
+   "Golgo",
+   "Pedra Longa"
+  ],
+  [
+   "Pedra Longa",
+   "Santa Maria Navarrese"
+  ]
+ ]
+}

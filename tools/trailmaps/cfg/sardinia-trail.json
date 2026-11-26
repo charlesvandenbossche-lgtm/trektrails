@@ -1,0 +1,199 @@
+{
+ "slug": "sardinia-trail",
+ "title": "The Sardinia Trail",
+ "titleLines": [
+  "The Sardinia",
+  "Trail"
+ ],
+ "geo": "geo/sardinia-trail.json",
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 6,
+ "borders": false,
+ "legendLabel": "The Sardinia Trail",
+ "size": [
+  1100,
+  1500
+ ],
+ "stops": [
+  {
+   "name": "Dorgali",
+   "lat": 40.2928,
+   "lon": 9.5888,
+   "type": "start",
+   "label": "Dorgali \u00b7 start",
+   "labelPos": "E"
+  },
+  {
+   "name": "Su Gologone",
+   "lat": 40.2888,
+   "lon": 9.497,
+   "label": "Su Gologone",
+   "labelPos": "N"
+  },
+  {
+   "name": "Lanaitto",
+   "lat": 40.257,
+   "lon": 9.4954,
+   "label": "Valle di Lanaitto",
+   "labelPos": "W"
+  },
+  {
+   "name": "Tiscali",
+   "lat": 40.2418,
+   "lon": 9.4923,
+   "label": "Tiscali",
+   "labelPos": "W"
+  },
+  {
+   "name": "Sa Barva",
+   "lat": 40.2237,
+   "lon": 9.5159,
+   "label": "Sa Barva",
+   "labelPos": "E"
+  },
+  {
+   "name": "Gorropu",
+   "lat": 40.1853,
+   "lon": 9.5016,
+   "label": "Gola Su Gorropu",
+   "labelPos": "W"
+  },
+  {
+   "name": "Genna Silana",
+   "lat": 40.1585,
+   "lon": 9.5079,
+   "label": "Genna Silana",
+   "labelPos": "E"
+  },
+  {
+   "name": "Baunei",
+   "lat": 40.0324,
+   "lon": 9.6634,
+   "label": "Baunei",
+   "labelPos": "W"
+  },
+  {
+   "name": "Golgo",
+   "lat": 40.0875,
+   "lon": 9.6628,
+   "label": "Golgo plateau",
+   "labelPos": "W"
+  },
+  {
+   "name": "Cala Goloritze",
+   "lat": 40.1083,
+   "lon": 9.6898,
+   "label": "Cala Goloritz\u00e9",
+   "labelPos": "E"
+  },
+  {
+   "name": "Pedra Longa",
+   "lat": 40.028,
+   "lon": 9.706,
+   "label": "Pedra Longa",
+   "labelPos": "E"
+  },
+  {
+   "name": "Santa Maria Navarrese",
+   "lat": 39.9897,
+   "lon": 9.6873,
+   "type": "end",
+   "label": "Santa Maria Navarrese \u00b7 finish",
+   "labelPos": "W"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Dorgali",
+   "to": "Su Gologone",
+   "chip": false
+  },
+  {
+   "from": "Su Gologone",
+   "to": "Lanaitto",
+   "chip": false
+  },
+  {
+   "from": "Lanaitto",
+   "to": "Tiscali",
+   "chip": false
+  },
+  {
+   "from": "Tiscali",
+   "to": "Sa Barva",
+   "chip": false
+  },
+  {
+   "from": "Sa Barva",
+   "to": "Gorropu",
+   "chip": false
+  },
+  {
+   "from": "Gorropu",
+   "to": "Genna Silana",
+   "chip": false
+  },
+  {
+   "from": "Baunei",
+   "to": "Golgo",
+   "chip": false
+  },
+  {
+   "from": "Golgo",
+   "to": "Cala Goloritze",
+   "chip": false
+  },
+  {
+   "from": "Golgo",
+   "to": "Pedra Longa",
+   "chip": false
+  },
+  {
+   "from": "Pedra Longa",
+   "to": "Santa Maria Navarrese",
+   "chip": false
+  },
+  {
+   "from": "Genna Silana",
+   "to": "Baunei",
+   "mode": "transfer",
+   "chip": false
+  }
+ ],
+ "places": [
+  {
+   "kind": "minor",
+   "name": "Cala Gonone",
+   "lat": 40.2836,
+   "lon": 9.6328
+  },
+  {
+   "kind": "minor",
+   "name": "Oliena",
+   "lat": 40.2717,
+   "lon": 9.404
+  },
+  {
+   "kind": "minor",
+   "name": "Urzulei",
+   "lat": 40.0937,
+   "lon": 9.5078
+  }
+ ],
+ "profileLabels": {
+  "Dorgali": "Dorgali",
+  "Su Gologone": "Su Gologone",
+  "Lanaitto": "Lanaitto",
+  "Tiscali": "Tiscali",
+  "Sa Barva": "Sa Barva",
+  "Gorropu": "Gorropu",
+  "Genna Silana": "Genna Silana",
+  "Baunei": "Baunei",
+  "Golgo": "Golgo",
+  "Cala Goloritze": "Goloritz\u00e9",
+  "Pedra Longa": "Pedra Longa",
+  "Santa Maria Navarrese": "S. M. Navarrese"
+ },
+ "titleCorner": "NE"
+}

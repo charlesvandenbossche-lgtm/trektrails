@@ -112,6 +112,11 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
   mapped, network routing). Photos: 14 Travelbase (TVT, The Vespa Trip, no scooters shown), 14 Unsplash and 5 Gemini
   images in `trektrailpics/Amalfi Trail`. Gemini full-size downloads stall after one or two per page load; the 1024 px
   version can be saved by injecting a button that downloads the blob as a data URL and clicking it.
+  The Sardinia Trail (`sardinia-trail`, 26 Nov 2026): Charles's six-day line Dorgali → Su Gologone → Lanaitto → Tiscali →
+  Sa Barva → Gola Su Gorropu → Genna Silana, road transfer to Baunei, Golgo plateau (2 nights) → Cala Goloritzé and back →
+  Pedra Longa → Santa Maria Navarrese (71 km mapped). The gorge entrance where trails B485 and B505 meet is at
+  40.1853, 9.5016 (not the 'Campo Base' node). Map legs set explicitly with a `mode: transfer` leg and `chip: false`.
+  Photos: 20 Unsplash + 3 Gemini in `trektrailpics/Sardinia Trail`; Travelbase has nothing usable (Charles).
   The profile script hides a stop when its `profileLabels` entry is "" and shows repeated labels once.
   Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 
