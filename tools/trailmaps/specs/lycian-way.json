@@ -1,0 +1,20 @@
+{"slug":"lycian-way","box":0.03,"snap":3.0,"ratio":[0.3,3.5],"relations":[51855],"only":true,
+ "stops":[
+  {"name":"Ovacık","lat":36.5590,"lon":29.1560,"q":"zzz"},
+  {"name":"Faralya","lat":36.4945,"lon":29.1355,"q":"Faralya"},
+  {"name":"Kabak","lat":36.4660,"lon":29.1270,"q":"zzz"},
+  {"name":"Alınca","lat":36.4040,"lon":29.1920,"q":"Alınca"},
+  {"name":"Patara","lat":36.2650,"lon":29.3150,"q":"zzz"},
+  {"name":"Kalkan","lat":36.2650,"lon":29.4150,"q":"zzz"},
+  {"name":"Kaş","lat":36.2010,"lon":29.6380,"q":"zzz"},
+  {"name":"Üçağız","lat":36.1940,"lon":29.8440,"q":"Üçağız"},
+  {"name":"Demre","lat":36.2450,"lon":29.9850,"q":"zzz"},
+  {"name":"Finike","lat":36.2970,"lon":30.1470,"q":"zzz"},
+  {"name":"Adrasan","lat":36.3060,"lon":30.4770,"q":"zzz"},
+  {"name":"Çıralı","lat":36.4100,"lon":30.4780,"q":"zzz"},
+  {"name":"Gedelme","lat":36.5960,"lon":30.4560,"q":"Gedelme"},
+  {"name":"Göynük","lat":36.6750,"lon":30.5190,"q":"zzz"},
+  {"name":"Hisarçandır","lat":36.8130,"lon":30.5470,"q":"Hisarçandır"},
+  {"name":"Geyikbayırı","lat":36.8770,"lon":30.4730,"q":"Geyikbayırı"}
+ ],
+ "stages":[["Ovacık","Faralya"],["Faralya","Kabak"],["Kabak","Alınca"],["Alınca","Patara"],["Patara","Kalkan"],["Kalkan","Kaş"],["Kaş","Üçağız"],["Üçağız","Demre"],["Demre","Finike"],["Finike","Adrasan"],["Adrasan","Çıralı"],["Çıralı","Gedelme"],["Gedelme","Göynük"],["Göynük","Hisarçandır"],["Hisarçandır","Geyikbayırı"]]}

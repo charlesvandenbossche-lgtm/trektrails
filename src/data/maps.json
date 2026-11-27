@@ -153,5 +153,10 @@
   "w": 1100,
   "h": 1500,
   "note": "The grey dotted line is the road transfer from Genna Silana to Baunei; Cala Goloritzé is a there-and-back walk from the Golgo plateau."
+ },
+ "lycian-way": {
+  "w": 1600,
+  "h": 1100,
+  "note": "The main waymarked line as mapped in OpenStreetMap; the network has more variants than shown here."
  }
 }

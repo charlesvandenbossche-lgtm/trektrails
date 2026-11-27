@@ -1,0 +1,251 @@
+{
+ "slug": "lycian-way",
+ "title": "The Lycian Way",
+ "titleLines": [
+  "The Lycian",
+  "Way"
+ ],
+ "geo": "geo/lycian-way.json",
+ "autoPeaks": 0,
+ "autoTowns": 0,
+ "glyphs": 6,
+ "borders": false,
+ "legendLabel": "The Lycian Way",
+ "size": [
+  1600,
+  1100
+ ],
+ "stops": [
+  {
+   "name": "Ovacık",
+   "lat": 36.559,
+   "lon": 29.156,
+   "label": "Ovacık · start",
+   "labelPos": "E",
+   "type": "start"
+  },
+  {
+   "name": "Faralya",
+   "lat": 36.49369,
+   "lon": 29.13545,
+   "hidden": true
+  },
+  {
+   "name": "Kabak",
+   "lat": 36.466,
+   "lon": 29.127,
+   "label": "Kabak",
+   "labelPos": "W"
+  },
+  {
+   "name": "Alınca",
+   "lat": 36.404,
+   "lon": 29.192,
+   "hidden": true
+  },
+  {
+   "name": "Patara",
+   "lat": 36.265,
+   "lon": 29.315,
+   "label": "Patara",
+   "labelPos": "W"
+  },
+  {
+   "name": "Kalkan",
+   "lat": 36.265,
+   "lon": 29.415,
+   "label": "Kalkan",
+   "labelPos": "S"
+  },
+  {
+   "name": "Kaş",
+   "lat": 36.201,
+   "lon": 29.638,
+   "label": "Kaş",
+   "labelPos": "S"
+  },
+  {
+   "name": "Üçağız",
+   "lat": 36.19807,
+   "lon": 29.848,
+   "label": "Kekova (Üçağız)",
+   "labelPos": "S"
+  },
+  {
+   "name": "Demre",
+   "lat": 36.245,
+   "lon": 29.985,
+   "label": "Demre (Myra)",
+   "labelPos": "S"
+  },
+  {
+   "name": "Finike",
+   "lat": 36.297,
+   "lon": 30.147,
+   "label": "Finike",
+   "labelPos": "S"
+  },
+  {
+   "name": "Adrasan",
+   "lat": 36.306,
+   "lon": 30.477,
+   "label": "Adrasan",
+   "labelPos": "E"
+  },
+  {
+   "name": "Çıralı",
+   "lat": 36.41,
+   "lon": 30.478,
+   "label": "Olympos · Çıralı",
+   "labelPos": "E"
+  },
+  {
+   "name": "Gedelme",
+   "lat": 36.6147,
+   "lon": 30.44556,
+   "label": "Gedelme",
+   "labelPos": "E"
+  },
+  {
+   "name": "Göynük",
+   "lat": 36.675,
+   "lon": 30.519,
+   "label": "Göynük",
+   "labelPos": "E"
+  },
+  {
+   "name": "Hisarçandır",
+   "lat": 36.813,
+   "lon": 30.547,
+   "hidden": true
+  },
+  {
+   "name": "Geyikbayırı",
+   "lat": 36.87752,
+   "lon": 30.47352,
+   "label": "Geyikbayırı · finish",
+   "labelPos": "W",
+   "type": "end"
+  }
+ ],
+ "legs": [
+  {
+   "from": "Ovacık",
+   "to": "Faralya",
+   "chip": false
+  },
+  {
+   "from": "Faralya",
+   "to": "Kabak",
+   "chip": false
+  },
+  {
+   "from": "Kabak",
+   "to": "Alınca",
+   "chip": false
+  },
+  {
+   "from": "Alınca",
+   "to": "Patara",
+   "chip": false
+  },
+  {
+   "from": "Patara",
+   "to": "Kalkan",
+   "chip": false
+  },
+  {
+   "from": "Kalkan",
+   "to": "Kaş",
+   "chip": false
+  },
+  {
+   "from": "Kaş",
+   "to": "Üçağız",
+   "chip": false
+  },
+  {
+   "from": "Üçağız",
+   "to": "Demre",
+   "chip": false
+  },
+  {
+   "from": "Demre",
+   "to": "Finike",
+   "chip": false
+  },
+  {
+   "from": "Finike",
+   "to": "Adrasan",
+   "chip": false
+  },
+  {
+   "from": "Adrasan",
+   "to": "Çıralı",
+   "chip": false
+  },
+  {
+   "from": "Çıralı",
+   "to": "Gedelme",
+   "chip": false
+  },
+  {
+   "from": "Gedelme",
+   "to": "Göynük",
+   "chip": false
+  },
+  {
+   "from": "Göynük",
+   "to": "Hisarçandır",
+   "chip": false
+  },
+  {
+   "from": "Hisarçandır",
+   "to": "Geyikbayırı",
+   "chip": false
+  }
+ ],
+ "places": [
+  {
+   "kind": "town",
+   "name": "Fethiye",
+   "rank": 1,
+   "lat": 36.6215,
+   "lon": 29.1164,
+   "labelPos": "W"
+  },
+  {
+   "kind": "town",
+   "name": "Antalya",
+   "rank": 2,
+   "lat": 36.8969,
+   "lon": 30.7133
+  },
+  {
+   "kind": "peak",
+   "name": "Tahtalı Dağı",
+   "ele": "2,365 m",
+   "lat": 36.537,
+   "lon": 30.444
+  }
+ ],
+ "profileLabels": {
+  "Ovacık": "Ovacık",
+  "Faralya": "",
+  "Kabak": "Kabak",
+  "Alınca": "Alınca",
+  "Patara": "Patara",
+  "Kalkan": "Kalkan",
+  "Kaş": "Kaş",
+  "Üçağız": "Kekova",
+  "Demre": "Demre",
+  "Finike": "Finike",
+  "Adrasan": "Adrasan",
+  "Çıralı": "Çıralı",
+  "Gedelme": "Gedelme",
+  "Göynük": "Göynük",
+  "Hisarçandır": "Hisarçandır",
+  "Geyikbayırı": "Geyikbayırı"
+ },
+ "titleCorner": "SW"
+}

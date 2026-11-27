@@ -15,7 +15,8 @@ const LL = {
   'ak-suu-traverse': [42.4, 78.6], 'kilimanjaro-lemosho': [-3.07, 37.35], 'camino-de-santiago': [42.85, -8.0],
   'west-highland-way': [56.4, -4.7], 'inca-trail': [-13.2, -72.5], 'salkantay-trek': [-13.36, -72.62], 'cape-peninsula-trail': [-34.15, 18.42], 'fish-river-canyon': [-27.70, 17.58],
   'amalfi-trail': [40.62, 14.48],
-  'sardinia-trail': [40.15, 9.58], 'annapurna-circuit': [28.6, 84.1],
+  'sardinia-trail': [40.15, 9.58],
+  'lycian-way': [36.45, 29.85], 'annapurna-circuit': [28.6, 84.1],
   'alta-via-1': [46.25, 12.3], 'pacific-crest-trail': [40.5, -121.5], 'arizona-trail': [34.2, -111.4], 'reunion-trail': [-21.13, 55.53],
 };
 const EUROPE = { w: -26, e: 47, s: 26, n: 71.5 };

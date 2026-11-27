@@ -117,6 +117,10 @@ Logo: the round badge with mountains and a trail (`public/img/logo.png`).
   Pedra Longa → Santa Maria Navarrese (71 km mapped). The gorge entrance where trails B485 and B505 meet is at
   40.1853, 9.5016 (not the 'Campo Base' node). Map legs set explicitly with a `mode: transfer` leg and `chip: false`.
   Photos: 20 Unsplash + 3 Gemini in `trektrailpics/Sardinia Trail`; Travelbase has nothing usable (Charles).
+  The Lycian Way (`lycian-way`, 27 Nov 2026): long trail (`long: true`, 7 parts) on OSM relation 51855 (`only: true`),
+  Ovacık → Geyikbayırı, 478 km mapped. Overpass and Nominatim are blocked here; the OSM API (`api.openstreetmap.org`)
+  works for bbox maps and `relation/<id>/full`. Photos: 20 Unsplash + 2 Gemini in `trektrailpics/Lycian Way`
+  (Travelbase has only Cappadocia). Gemini refused one hiker prompt without saying why.
   The profile script hides a stop when its `profileLabels` entry is "" and shows repeated labels once.
   Michael Brawn's Salkantay photos come from a Peruvian tour operator (branded shirts, their glass-dome camp).
 
